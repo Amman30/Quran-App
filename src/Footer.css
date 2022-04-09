@@ -1,0 +1,15 @@
+.footer{
+  
+position:static;
+    background-color: #B5DEFF;
+   
+  
+}
+.social{
+    padding: 10px 10px 10px 10px;
+    size: 20px;
+    cursor: pointer;
+
+ color: black;
+    
+}

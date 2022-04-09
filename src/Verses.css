@@ -1,0 +1,29 @@
+.verses{
+    display: grid;
+  
+ text-align:left;
+
+    padding: 20px 20px 20px 20px;
+    margin-top: 0;
+    
+   
+background-color: #CAB8FF;
+cursor: pointer;
+
+
+
+    
+}
+
+.text{
+font-size: x-large;
+font-family:Georgia, 'Times New Roman', Times, serif;
+text-decoration:double;
+letter-spacing: 0px;
+color: black;
+
+  
+tab-size: 2;   
+  
+
+}

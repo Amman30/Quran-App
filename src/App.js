@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import "./App.css";
+import React from 'react';
+
+
+import Chapters from "./Chapters";
+import Verses from "./Verses";
+import Topbar from "./Topbar";
+import Surahs from "./Surahs";
+import Footer from "./Footer";
+import About from "./About";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Topbar />
+      <br /><br />  <br /> <br /><br /> <br /> <br /> <br />
+      <div className="route">
+        <Routes>
+          <Route path="/" element={<Chapters />} />
+          <Route path="/:id" element={<Verses />} />
+          <Route path="/surahs" element={<Surahs />} />
+          <Route path="/About" element={<About />} />
+
+        </Routes>
+
+      <Footer />
+
+      </div>
+
     </div>
   );
 }
 
 export default App;
+
