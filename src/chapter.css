@@ -40,3 +40,13 @@ height: 300px;
 .bismillah:hover{
   color: black;
 }
+.day{
+  display: flex;
+  flex-direction:initial;
+  font-size: x-large;
+margin-left: 400px;
+margin-top: 10px;
+}
+.day:hover{
+   color: green;
+}

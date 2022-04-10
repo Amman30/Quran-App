@@ -4,44 +4,37 @@ const Topbar = () => {
     return (
         <div className="topbar">
 
-<nav className="navbar navbar-expand-lg navbar-light fixed-top">
-  <div className="container">
-    <h1 className="navbar-brand">THE QURAN</h1>
+        <nav class="navbar">
+
+         <div class="logo">THE QURAN</div>
+
+         <ul class="nav-links">
+
+         <input type="checkbox" id="checkbox_toggle" />
+         <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+         <div class="menu">
+         <li><a href="/"><i class="fa-solid fa-house"></i> Home</a></li>
+         <li><a href="/About"><i class="fa-solid fa-address-card"></i>About</a></li>
+         <li class="services">
+         <a ><i class="fa-solid fa-link"></i>Links</a>
+
+         <ul class="dropdown">
+         <li><a href="/">Audios </a></li>
+         <li><a href="/">Dua's</a></li>
+         <li><a href="/Hadith">Hadith</a></li>
+         <li><a href="/">Developers</a></li>
+         <li><a href="/">Contact</a></li>
+         </ul>
+         </li>
+         <li><a href="/Surahs"><i class="fa-solid fa-book-quran"></i>Quran</a></li>
+         <li><a href="/"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+         </div>
  
-
-    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul className="navbar-nav ml-auto">
-     
-      <li className="nav-item">
-      <a className="nav-link" href="/"> <i class="fa-solid fa-house-chimney"></i> Home </a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="/surahs"><i className="icons fa-solid fa-book-quran"></i>Quran</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="/About"><i className="icons fa-solid fa-address-card"></i> About</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="/Developers"> <i className="icons fa-brands fa-connectdevelop"></i>Developers</a>
-        </li>
-       
-        <li className="nav-item">
-          <a className="nav-link" href="/SEARCH"><i className="icons fa-solid fa-magnifying-glass"></i></a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-
-
-
-
-
+         </ul>
+         </nav>
         </div>
     );
 }
 
 export default Topbar;
-
-

@@ -1,6 +1,7 @@
 .footer{
   
-position:static;
+position:absolute;
+width: 1450px;
     background-color: #B5DEFF;
    
   

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import "./chapter.css"
+import Day from "./Day.js";
 
 const Chapters = () => {
 
@@ -22,13 +23,14 @@ const Chapters = () => {
         <div className='chapter'>
 
             <div className="bis">
+    
                
                 {
                     Object.keys(data).length > 0 ?
                     <h3 className="date">
                      
                         {data.hijri.weekday.ar} 
-                        {data.hijri.day} 
+                        ({data.hijri.day})
                        
                         {data.hijri.month.ar} ,
                        
@@ -42,9 +44,14 @@ const Chapters = () => {
                 <h1 className='bismillah'>
                     ﷽
                 </h1>
+   
 
             </div>
             <h2>
+            <div className="day">
+HOURS YOU HAVE TO FAST TODAY:&nbsp;<Day />
+</div>
+    
                 <br /> <br />
                 TRANSLATIONS BELOW
             </h2>
@@ -56,7 +63,7 @@ const Chapters = () => {
                             
                                 <h3>
                                     <br />{chapter.id}&nbsp;
-                                    <a href={`/${chapter.id}`}>    {chapter.name_arabic}</a>
+                                    <a href={`/${chapter.id}`}>  {chapter.name_simple}  </a>
                                 </h3>
                             </ol>
                         </div>

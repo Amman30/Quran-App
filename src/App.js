@@ -9,23 +9,31 @@ import Topbar from "./Topbar";
 import Surahs from "./Surahs";
 import Footer from "./Footer";
 import About from "./About";
+import Hadith from "./Hadith";
 
 
 function App() {
   return (
     <div className="app">
+
       <Topbar />
-      <br /><br />  <br /> <br /><br /> <br /> <br /> <br />
+
+
+      <br /> <br /> <br /><br /> <br /> <br />
+
+
       <div className="route">
+
         <Routes>
           <Route path="/" element={<Chapters />} />
           <Route path="/:id" element={<Verses />} />
           <Route path="/surahs" element={<Surahs />} />
           <Route path="/About" element={<About />} />
+          <Route path="/Hadith" element={<Hadith />} />
 
         </Routes>
 
-      <Footer />
+        <Footer />
 
       </div>
 
