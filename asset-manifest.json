@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Quran-App/static/css/main.79739e62.css",
+    "main.js": "/Quran-App/static/js/main.235e3874.js",
+    "index.html": "/Quran-App/index.html",
+    "main.79739e62.css.map": "/Quran-App/static/css/main.79739e62.css.map",
+    "main.235e3874.js.map": "/Quran-App/static/js/main.235e3874.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.79739e62.css",
+    "static/js/main.235e3874.js"
+  ]
+}
