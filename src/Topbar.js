@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import "./Topbar.css";
 const Topbar = () => {
     return (
@@ -14,22 +15,22 @@ const Topbar = () => {
          <label htmlFor="checkbox_toggle" className="hamburger">&#9776;</label>
 
          <div className="menu">
-         <li><a href="/"><i className="fa-solid fa-house"></i> Home</a></li>
-         <li><a href="/Surahs"><i className="fa-solid fa-book-quran"></i>Quran</a></li>
+         <li><Link to="/"><i className="fa-solid fa-house"></i> Home</Link></li>
+         <li><Link to="/Surahs"><i className="fa-solid fa-book-quran"></i>Quran</Link></li>
          <li className="services">
-         <a ><i className="fa-solid fa-link"></i>Links</a>
+         <a href="#"><i className="fa-solid fa-link"></i>Links</a>
 
          <ul className="dropdown">
-         <li><a href="/">Audios(soon..)</a></li>
-         <li><a href="/">Dua's(soon..)</a></li>
-         <li><a href="/Hadith">Hadith</a></li>
-         <li><a href="/developers">Developers</a></li>
+         <li><Link to="/">Audios(soon..)</Link></li>
+         <li><Link to="/">Dua's(soon..)</Link></li>
+         <li><Link to="/Hadith">Hadith</Link></li>
+         <li><Link to="/developers">Developers</Link></li>
     
          </ul>
          </li>
         
-         <li><a href="/About"><i className="fa-solid fa-address-card"></i>About</a></li>
-         <li><a href="/"><i className="fa-solid fa-magnifying-glass"></i></a></li>
+         <li><Link to="/About"><i className="fa-solid fa-address-card"></i>About</Link></li>
+         <li><Link to="/"><i className="fa-solid fa-magnifying-glass"></i></Link></li>
          </div>
  
          </ul>
