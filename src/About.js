@@ -3,10 +3,8 @@ import "./about.css";
 
 
 const About = () => {
-
     return (
         <div className="about">
-
             <p>
                 <h1>About us</h1>
                 The Arabic Quran is considered by Muslims to be verbatim word of God.
@@ -20,13 +18,11 @@ const About = () => {
             <hr color="red" />
             <h2 >Credits</h2>
             <span >
-
                 <ul>
                     This project wouldn't have been possible without the many open source libraries and projects we've used:
                     <li>
-                        Quran.com
-
-                    </li>
+                        Quran.com 
+                          </li>
                     <li>
                         Al Quran
 
