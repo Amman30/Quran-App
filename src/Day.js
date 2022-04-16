@@ -4,7 +4,7 @@ const Day = () => {
     const[results,setresults]=useState({});
 
     useEffect(()=>{
-        fetch("https://api.sunrise-sunset.org/json?lat=33.2778&lng=75.3412&date=2022-04-16")
+        fetch("https://api.sunrise-sunset.org/json?lat=33.2778&lng=75.3412")
         .then( async (res)=>{
             setresults((await res.json()).results)
         })

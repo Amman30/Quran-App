@@ -17,6 +17,7 @@ const Topbar = () => {
          <div className="menu">
          <li><Link to="/"><i className="fa-solid fa-house"></i> Home</Link></li>
          <li><Link to="/Surahs"><i className="fa-solid fa-book-quran"></i>Quran</Link></li>
+         <li><Link to="developers"><i class="fa-brands fa-connectdevelop"></i>Developers</Link></li>
          <li className="services">
          <a href="#"><i className="fa-solid fa-link"></i>Links</a>
 
@@ -24,7 +25,7 @@ const Topbar = () => {
          <li><Link to="/">Audios(soon..)</Link></li>
          <li><Link to="/">Dua's(soon..)</Link></li>
          <li><Link to="/Hadith">Hadith</Link></li>
-         <li><Link to="/developers">Developers</Link></li>
+     
 
          </ul>
          </li>
