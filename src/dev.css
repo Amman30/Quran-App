@@ -1,0 +1,43 @@
+.person1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: x-large;
+
+    width: 500px;
+    margin-left: 450px;
+    margin-top: 20px;
+    margin-bottom: 20px;}
+.person1:hover{
+color: slateblue;
+    }
+.person2{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: large;
+    width: 500px;
+margin-left: 450px;
+margin-top: 20px;
+margin-bottom: 20px;
+    border-radius: 14em;
+}
+.person2:hover{
+    color:purple;
+}
+.person3{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+  margin-top: 10px;
+   width: 500px;
+display:inline-block;
+border-radius: 4em;
+}
+.person3:hover{
+    color:#C84B31;
+    
+}
+.icon{
+    padding: 10px 10px 10px 10px;
+    color: black;
+}
+.dev1{
+    
+    background-color: #FEF5ED;
+}

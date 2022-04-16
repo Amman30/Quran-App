@@ -1,33 +1,28 @@
-import React,{useState,useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import "./hadith.css";
 
 const Hadith = () => {
     const [chapters, setChapters] = useState([]);
 
-    useEffect(()=>{
+    useEffect(() => {
         fetch(`https://ahadith-api.herokuapp.com/api/ahadith/all/en`)
-        .then(async (res)=>{
-      
-            setChapters((await res.json()).AllChapters)
-        
-        })
+            .then(async (res) => {
+
+                setChapters((await res.json()).AllChapters)
+
+            })
     })
-    
+
     return (
         <div>
             {
-                chapters.map((chap)=>(
+                chapters.map((chap) => (
                     <div className="had">
                         <span>
-
-                      
- 
-                        ({chap.Hadith_ID})
-                       
-                        {chap.En_Text}
-                        
+                            ({chap.Hadith_ID})
+                            {chap.En_Text}
                         </span>
-                        </div>
+                    </div>
                 ))
             }
         </div>

@@ -1,5 +1,8 @@
 .had{
   background-color:  #E2DEA9;
+  color:black;
   font-family: 'Times New Roman', Times, serif;
   font-size: x-large;
+  text-overflow: auto;
+  height: 100%;
 }

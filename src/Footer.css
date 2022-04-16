@@ -3,7 +3,9 @@
 position:absolute;
 width: 1450px;
     background-color: #B5DEFF;
-   
+    min-height: 70%;
+
+    /* grid-template-rows: auto 1fr auto; */
   
 }
 .social{

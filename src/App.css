@@ -1,8 +1,11 @@
 .app{
     box-sizing: border-box;
-    
+   
+    background-color: azure;
 }
 .route{
     font-family: 'BIZ UDPMincho', serif;
     text-align: center;
+    font-size: x-large;
+ 
 }

@@ -1,27 +1,20 @@
 .link{
-  
-    
     width: 400px;
   display:inline-block;
     border: 6px solid ;
     border-radius: 50px;
   text-decoration:black;
     padding: 20px 20px 20px 20px;
-
     border-color: #30AADD;
     background-color: #FFF8F3;
-    
 }
 .bis{
-  background-color: #B6FFCE;
+ 
   background-image: url("http://quotesofislam.com/wp-content/uploads/2017/03/quran.jpg");
   border-radius: 100px;
-  background-size: 1450px;
-  color: azure;
- 
 
-  
-  
+  background-size: 1450px;
+  color: white;
 margin-bottom: 0px;
 height: 300px;
 }
@@ -48,5 +41,5 @@ margin-left: 400px;
 margin-top: 10px;
 }
 .day:hover{
-   color: green;
+   color: #711A75;
 }

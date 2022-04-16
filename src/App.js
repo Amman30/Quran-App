@@ -10,7 +10,7 @@ import Surahs from "./Surahs";
 import Footer from "./Footer";
 import About from "./About";
 import Hadith from "./Hadith";
-
+import Dev from "./Dev.js"
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
       <Topbar />
 
 
-      <br /> <br /> <br /><br /> <br /> <br />
+      <br /> <br /> <br /><br /> 
 
 
       <div className="route">
@@ -30,6 +30,7 @@ function App() {
           <Route path="/surahs" element={<Surahs />} />
           <Route path="/About" element={<About />} />
           <Route path="/Hadith" element={<Hadith />} />
+          <Route path="/developers" element={<Dev />} />
 
         </Routes>
 
