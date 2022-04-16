@@ -8,7 +8,7 @@ const Surahs = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch(`http://api.alquran.cloud/v1/quran/quran-uthmani#`).then(
+        fetch(`https://api.alquran.cloud/v1/quran/quran-uthmani#`).then(
             async (res) => {
                 setSurahs((await res.json()).data.surahs);
                 setLoading(false);
