@@ -2,7 +2,6 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import React from 'react';
 
-
 import Chapters from "./Chapters";
 import Verses from "./Verses";
 import Topbar from "./Topbar";
@@ -13,6 +12,8 @@ import Hadith from "./Hadith";
 import Dev from "./Dev.js"
 
 function App() {
+
+
   return (
     <div className="app">
 

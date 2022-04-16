@@ -25,14 +25,14 @@ const Topbar = () => {
          <li><Link to="/">Dua's(soon..)</Link></li>
          <li><Link to="/Hadith">Hadith</Link></li>
          <li><Link to="/developers">Developers</Link></li>
-    
+
          </ul>
          </li>
-        
+
          <li><Link to="/About"><i className="fa-solid fa-address-card"></i>About</Link></li>
          <li><Link to="/"><i className="fa-solid fa-magnifying-glass"></i></Link></li>
          </div>
- 
+
          </ul>
          </nav>
         </div>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import "./chapter.css"
 import Day from "./Day.js";
 
@@ -23,35 +24,35 @@ const Chapters = () => {
         <div className='chapter'>
 
             <div className="bis">
-    
-               
+
+
                 {
                     Object.keys(data).length > 0 ?
                     <h3 className="date">
-                     
-                        {data.hijri.weekday.ar} 
+
+                        {data.hijri.weekday.ar}
                         ({data.hijri.day})
-                       
+
                         {data.hijri.month.ar} ,
-                       
+
                    {data.hijri.year}
-                  
-                     
+
+
                     </h3>
                     : null
                 }
-                <br /> <br />  
+                <br /> <br />
                 <h1 className='bismillah'>
                     ﷽
                 </h1>
-   
+
 
             </div>
             <h2>
             <div className="day">
 HOURS YOU HAVE TO FAST TODAY:&nbsp;<Day />
 </div>
-    
+
                 <br /> <br />
                 TRANSLATIONS BELOW
             </h2>
@@ -60,10 +61,10 @@ HOURS YOU HAVE TO FAST TODAY:&nbsp;<Day />
                     chapters.map((chapter) => (
                         <div className='link' key={chapter.id}>
                             <ol>
-                            
+
                                 <h3>
                                     <br />{chapter.id}&nbsp;
-                                    <a href={`/${chapter.id}`}>  {chapter.name_simple}  </a>
+                                     <Link to={`/${chapter.id}`}>{chapter.name_simple} </Link>
                                 </h3>
                             </ol>
                         </div>
@@ -74,5 +75,3 @@ HOURS YOU HAVE TO FAST TODAY:&nbsp;<Day />
 }
 
 export default Chapters;
-
-

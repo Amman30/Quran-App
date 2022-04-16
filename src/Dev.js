@@ -21,10 +21,11 @@ IUST,KASHMIR
 </div>
 <hr /> 
 <div className="person2">
-<Card className="card1" name="Sadaf Shafi" contribution="Leader" />
+<Card className="card1" name="Sadaf Shafi" contribution="Team Leader" />
 <h3>
     Student ,
 Department of CSE &nbsp; 
+<br />
 {<a href="https://github.com/sadafshafi"><i className="icon fa-brands fa-github"></i></a>}
 {<a href="https://www.linkedin.com/in/sadaf-shafi-4a05b646/"><i className="icon fa-brands fa-linkedin"></i></a>}</h3>
 </div>
