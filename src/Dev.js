@@ -45,7 +45,7 @@ Department of CSE &nbsp;
     Student ,
 Department of CSE &nbsp; 
 <br />
-{<a href="https://github.com/Tabeed-H"><i class="icon fa-brands fa-github"></i></a>}
+{<a href="https://github.com/Tabeed-H"><i className="icon fa-brands fa-github"></i></a>}
 {<a href="https://www.linkedin.com/in/tabeed-hameed-ahangar-26491b1ba/"><i className="icon fa-brands fa-linkedin"></i></a>}</h3>
 </div>
 

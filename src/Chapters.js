@@ -58,8 +58,8 @@ HOURS YOU HAVE TO FAST TODAY:&nbsp;<Day />
             <div className="chap">
                 {
                     chapters.map((chapter) => (
-                        <div className='link'>
-                            <ol key={chapter.id}>
+                        <div className='link' key={chapter.id}>
+                            <ol>
                             
                                 <h3>
                                     <br />{chapter.id}&nbsp;
