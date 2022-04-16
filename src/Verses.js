@@ -14,7 +14,10 @@ const Verses = () => {
                 setVerses((await res.json()).verses)
 
             })
-    }, [])
+            .catch((error)=>{
+                console.log(error);
+            })
+    }, [params.id])
 
     return (
         <div className='verses'>
@@ -22,7 +25,7 @@ const Verses = () => {
             {
                 verses.map((verse) => (
                     <div className="text">
-                        {verse.verse_key} &nbsp;
+                        {verse.verse_key} 
 
                         {verse.words.map((word) => (
                             <span className="text">
@@ -33,6 +36,7 @@ const Verses = () => {
                     </div>
                 ))
             }
+   
         </div>
     );
 }
