@@ -10,7 +10,7 @@ import Footer from "./Footer";
 import About from "./About";
 import Hadith from "./Hadith";
 import Dev from "./Dev.js"
-
+alert("pls use PC for best case scenario..")
 function App() {
 
 
