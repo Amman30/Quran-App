@@ -5,23 +5,22 @@
     margin-top: 0;
 background-color: #CAB8FF;
 cursor: pointer;
-
 overflow: auto;
 
 }
 .bis{
     text-align: center;
 }
-
 .text{
 font-size: x-large;
 font-family:Georgia, 'Times New Roman', Times, serif;
 text-decoration:double;
 letter-spacing: 0px;
 color: black;
-
-  
 tab-size: 2;   
-  
-
+}
+.bism{
+    margin-left: 600px;
+    margin-bottom: 20px;
+    margin-top: -9px;
 }

@@ -22,8 +22,9 @@ setLoading(false)
                 chapters.map((chap) => (
                     <div className="had">
                         <span>
-                            ({chap.Hadith_ID})
-                            {chap.En_Text}
+                            ({chap.Hadith_ID})&nbsp;
+                             {chap.En_Text}
+                             <br />
                         </span>
                     </div>
                 ))

@@ -6,7 +6,7 @@ let year = d.getFullYear();
     return (
         <div className='footer'>
 
-              <h4> {year}</h4> 
+              <h4> ©&nbsp;{year}</h4> 
               All Rights Reserved
                <br />
             <h2 className="social">

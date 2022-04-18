@@ -23,11 +23,12 @@ const Verses = () => {
         <Spinner />
     ) : (
         <div className="verses">
-
+                <div className="bism" > ﷽ </div> 
             {
                 verses.map((verse) => (
                     <div className="text">
-                        {verse.verse_key} 
+                        
+                        ({verse.verse_key}) &nbsp;
 
                         {verse.words.map((word) => (
                             <span className="text">
