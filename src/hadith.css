@@ -6,14 +6,14 @@
   text-overflow: auto;
   height: 100%;
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 500px) {
   .had{
 
     background-color:  #E2DEA9;
     color:black;
     font-family: 'Times New Roman', Times, serif;
     font-size: x-large;
-    width: 900px;
+    width: 500px;
     height: 100%;
     
 }

@@ -83,7 +83,7 @@
     user-select: none;
    }
    /* APPLYING MEDIA QUERIES */
-   @media (max-width: 900px) {
+   @media (max-width:500px) {
    .menu {
     display:inline-flexbox;
     position: absolute;
@@ -96,7 +96,7 @@
    .menu li:hover {
     display: inline-block;
     background-color:#4c9e9e;
-    transition: 0.7s ease;
+    transition: 0.1s ease;
    }
    .menu li + li {
     margin-top: 10px;
