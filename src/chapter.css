@@ -9,6 +9,26 @@
     background-color: #FFF8F3;
   
 }
+@media only screen and (max-width: 900px) {
+  .link{
+    
+ width: 300px;
+    margin: 1rem 2rem;
+    border: 2px solid ;
+    border-radius: 45px;
+    text-decoration:black;
+    padding: 20px;
+    text-align: justify;
+    border-color: #69b8d9;
+    background-color: #FFF8F3;
+    margin-left: 30px;
+
+  }
+  .bis{
+    background-image: url("https://quotesofislam.com/wp-content/uploads/2017/03/quran.jpg");
+    margin-top: 50px;
+  }
+}
 .bis{
  
   background-image: url("https://quotesofislam.com/wp-content/uploads/2017/03/quran.jpg");

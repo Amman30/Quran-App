@@ -5,3 +5,15 @@
   text-align:center;
   
 }
+@media only screen and (max-width: 900px) {
+  .surahs{
+    background-color: #E9D5DA;
+    width: 900px;
+text-align: right;
+    cursor: pointer;
+  font-size: xxx-large;
+margin-bottom: -8px;
+  
+}
+
+}

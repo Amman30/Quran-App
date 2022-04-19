@@ -9,3 +9,10 @@
     font-size: xx-large;
  
 }
+@media only screen and (max-width: 330px) {
+    .route {
+        width: 79rem;
+        max-height:max-content;
+    }
+
+}

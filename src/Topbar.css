@@ -83,36 +83,40 @@
     user-select: none;
    }
    /* APPLYING MEDIA QUERIES */
-   @media (max-width: 768px) {
+   @media (max-width: 900px) {
    .menu {
-    display:none;
+    display:inline-flexbox;
     position: absolute;
     background-color:teal;
     right: 0;
     left: 0;
     text-align: center;
-    padding: 16px 0;
+    padding: 16px 10px 10px 10px ;
    }
    .menu li:hover {
     display: inline-block;
     background-color:#4c9e9e;
-    transition: 0.3s ease;
+    transition: 0.7s ease;
    }
    .menu li + li {
-    margin-top: 12px;
+    margin-top: 10px;
    }
    input[type=checkbox]:checked ~ .menu{
-    display: block;
+    display:grid;
    }
    .hamburger {
     display: block;
+
    }
    .dropdown {
-    left: 50%;
+    left: 40%;
     top: 30px;
     transform: translateX(35%);
    }
    .dropdown li:hover {
     background-color: #4c9e9e;
+
    }
    }
+ 
+   

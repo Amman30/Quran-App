@@ -17,7 +17,7 @@ setLoading(false)
     return loading ? (
         <Spinner />
     ) : (
-        <div>
+        <div className="hdd">
             {
                 chapters.map((chap) => (
                     <div className="had">

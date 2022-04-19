@@ -6,3 +6,18 @@
   text-overflow: auto;
   height: 100%;
 }
+@media only screen and (max-width: 900px) {
+  .had{
+
+    background-color:  #E2DEA9;
+    color:black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-large;
+    width: 900px;
+    height: 100%;
+    
+}
+.hdd{
+  margin-top: 35px;
+}
+}

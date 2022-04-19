@@ -8,6 +8,23 @@ width: 1450px;
     /* grid-template-rows: auto 1fr auto; */
   
 }
+@media only screen and (max-width: 900px) {
+    .footer{
+  
+        position:absolute;
+        width: 900px;
+            background-color: #B5DEFF;
+            min-height: 70%;
+    }
+    .social{
+        padding: 10px 10px 10px 10px;
+        size: 20px;
+        cursor: pointer;
+    
+     color: black;
+        
+    }
+}
 .social{
     padding: 10px 10px 10px 10px;
     size: 20px;
