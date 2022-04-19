@@ -9,11 +9,11 @@
     background-color: #FFF8F3;
   
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 330px) {
   .link{
     display:flex;
     flex-direction:row;
- width: 300px;
+ width: 330px;
     margin: 1rem 2rem;
     border: 2px solid ;
     border-radius: 45px;

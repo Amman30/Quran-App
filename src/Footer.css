@@ -8,11 +8,11 @@ width: 1450px;
     /* grid-template-rows: auto 1fr auto; */
   
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 330px) {
     .footer{
   
         position:absolute;
-        width: 500px;
+        width: 330px;
             background-color: #B5DEFF;
             min-height: 70%;
     }
