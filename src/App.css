@@ -15,9 +15,9 @@
         max-height:max-content;
     }
     .app{
-        box-sizing: border-box;
-       
-        background-color: azure;
-    }
+    box-sizing: border-box;
+   
+    background-color: azure;
+}
 
 }

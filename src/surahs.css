@@ -7,13 +7,14 @@
 }
 @media only screen and (max-width: 330px) {
   .surahs{
+  margin-top: 50px;
     background-color: #E9D5DA;
-    width: 500px;
+    width: 480px;
 text-align: right;
     cursor: pointer;
-  font-size: xxx-large;
-margin-bottom: -8px;
-  
+  font-size: medium;
+  margin-bottom: -8px;
+
 }
 
 }

@@ -10,7 +10,7 @@ body {
   
 
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 330px) {
   body {
 
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

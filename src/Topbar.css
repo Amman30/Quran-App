@@ -86,13 +86,14 @@
    @media (max-width: 680px) {
    .menu {
     display:inline-flexbox;
-    position: absolute;
+    position:fixed;
     background-color:teal;
-    right: 0;
+right: 0;
     left: 0;
     text-align: center;
-    padding: 16px 10px 10px 10px ;
+    padding: 10px 10px 10px 10px ;
    }
+   
    .menu li:hover {
     display: inline-block;
     background-color:#4c9e9e;
@@ -116,6 +117,15 @@
    .dropdown li:hover {
     background-color: #4c9e9e;
 
+   }
+   .menu{
+       padding: 10px 10px 10px 10px;
+       margin-left: -20px;
+   }
+   .logo{
+       text-align: center;
+       margin-left: 150px;
+       margin-bottom: 20px;
    }
    }
  
