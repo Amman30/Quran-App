@@ -11,8 +11,13 @@
 }
 @media only screen and (max-width: 330px) {
     .route {
-        width: 79rem;
+        width: 330px;
         max-height:max-content;
+    }
+    .app{
+        box-sizing: border-box;
+       
+        background-color: azure;
     }
 
 }

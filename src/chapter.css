@@ -24,10 +24,12 @@
     background-color: #FFF8F3;
     margin-left: 100px;
 
+
   }
   .bis{
     background-image: url("https://quotesofislam.com/wp-content/uploads/2017/03/quran.jpg");
     margin-top: 50px;
+
   }
 }
 .bis{
@@ -39,10 +41,12 @@
   color: white;
 margin-bottom: 0px;
 height: 300px;
+margin-top: 60px;
 }
 .chap{
   background-color: azure;
   margin-top: 100px;
+  display:inline-block;
 }
 .date{
   padding: 10px 10px 10px 10px;
