@@ -8,7 +8,7 @@ cursor: pointer;
 overflow: auto;
 
 }
-@media only screen and (max-width: 330px) {
+@media (max-width: 200px) {
     .verses{
         display: grid;
         padding: 20px 20px 20px 20px;

@@ -83,7 +83,7 @@
     user-select: none;
    }
    /* APPLYING MEDIA QUERIES */
-   @media (max-width: 300px) {
+   @media only screen and (max-width: 330px) {
    .menu {
     display:inline-flexbox;
     position: absolute;

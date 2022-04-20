@@ -8,7 +8,7 @@
    
 }
 @media only screen and (max-width: 330px) {
-    p {
+    .p {
         margin: 1.5rem;
         padding: 3.6rem;
         text-align: justify;
