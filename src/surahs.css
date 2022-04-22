@@ -5,12 +5,11 @@
   text-align:center;
   
 }
-@media only screen and (max-width: 330px) {
+@media only screen and (max-width: 1000px) {
   .surahs{
-  margin-top: 50px;
+  margin-top: 65px;
     background-color: #E9D5DA;
-    width: 480px;
-text-align: right;
+text-align: center;
     cursor: pointer;
   font-size: medium;
   margin-bottom: -8px;
