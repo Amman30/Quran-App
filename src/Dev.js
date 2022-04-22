@@ -12,6 +12,7 @@ const Dev = () => {
     }
     return (
         <div className="dev1">
+            <br />
 <div className="person1">
 <Card className="card1" name="Dr.Zubair Ahmad Shah"  contribution="Supervisor" />
 Assistant Professor

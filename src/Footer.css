@@ -3,26 +3,26 @@
 position:absolute;
 width: 1450px;
     background-color: #B5DEFF;
-    min-height: 70%;
-
-    /* grid-template-rows: auto 1fr auto; */
-  
+    min-height: 60%;  
 }
-@media only screen and (max-width: 730px) {
+@media only screen and (max-width: 780px) {
     .footer{
-  
-    
+      margin-top: 3px;
+    font-size: medium;
         width: 500px;
             background-color: #B5DEFF;
-            min-height: 70%;
+max-height: 20px;
     }
     .social{
-        padding: 10px 10px 10px 10px;
+        padding: 5px 5px 5px 5px;
         size: 20px;
         cursor: pointer;
-    
+        font-size: medium;
      color: black;
         
+    }
+    .year{
+        font-size: medium;
     }
 }
 .social{

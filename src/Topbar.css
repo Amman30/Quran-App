@@ -85,14 +85,16 @@
    /* APPLYING MEDIA QUERIES */
    @media (max-width: 680px) {
    .menu {
-    display:inline-flexbox;
+ 
     position:fixed;
     background-color:teal;
 right: 0;
     left: 0;
+
     text-align: center;
-    padding: 10px 10px 10px 10px ;
+
    }
+  
    
    .menu li:hover {
     display: inline-block;

@@ -23,6 +23,7 @@ const Verses = () => {
         <Spinner />
     ) : (
         <div className="verses">
+            <br />
                 <div className="bism" > ﷽ </div> 
             {
                 verses.map((verse) => (

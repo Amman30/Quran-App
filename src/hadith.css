@@ -7,17 +7,17 @@
   height: 100%;
 }
 
-@media only screen and (max-width: 330px) {
+@media only screen and (max-width: 780px) {
   .had {
 
     background-color: #E2DEA9;
     color: black;
     font-family: 'Times New Roman', Times, serif;
     font-size: large;
-    width: 480px;
 
-
-
+  }
+  .hddd{
+    margin-top: 18px;
   }
 
 }

@@ -19,10 +19,11 @@ const Surahs = () => {
         <Spinner />
     ) : (
         <div className="surahs">
+            <br /> 
             {surahs.map((surah) => (
-                <div>
+                <div key={surah.number}>
                     {surah.ayahs.map((ayah) => (
-                        <div>
+                        <div key={ayah.numberInSurah}>
                             <h3> ۞{ayah.text} </h3>
                         </div>
                     ))}

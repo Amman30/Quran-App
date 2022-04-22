@@ -18,13 +18,14 @@ setLoading(false)
         <Spinner />
     ) : (
         <div className="hddd">
+            <br />     
             {
                 chapters.map((chap) => (
                     <div className="had">
                         <span>
                             ({chap.Hadith_ID})&nbsp;
                              {chap.En_Text}
-                             <br />
+                      
                         </span>
                     </div>
                 ))
