@@ -1,7 +1,7 @@
 .app{
     box-sizing: border-box;
    
-    background-color: azure;
+    background-color: white;
 }
 .route{
     font-family: 'BIZ UDPMincho', serif;
@@ -17,7 +17,7 @@
     .app{
     box-sizing: border-box;
    
-    background-color: azure;
+    background-color: white;
 }
 
 }

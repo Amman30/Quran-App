@@ -22,13 +22,11 @@ const Chapters = () => {
 
     return (
         <div className='chapter'>
-
             <div className="bis">
-
-
+<h1 >  ﷽ </h1> <br />
                 {
                     Object.keys(data).length > 0 ?
-                        <h3 className="date">
+                        <h3 className="bismillah">
 
                             {data.hijri.weekday.ar}
                             ({data.hijri.day})
@@ -39,13 +37,11 @@ const Chapters = () => {
                         </h3>
                         : null
                 }
-                <br /> <br />
-                <h1 className='bismillah'>
-                    ﷽
-                </h1>
+
+                
             </div>
             <h2>
-                <br /> <br />
+                <br /> 
                 TRANSLATIONS BELOW
             </h2>
             <div className="chap">

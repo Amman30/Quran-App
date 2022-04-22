@@ -9,11 +9,11 @@
     background-color: #FFF8F3;
   
 }
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 1000px) {
   .link{
     
 
-     width: 330px;
+
     margin: 1rem 2rem;
     border: 3px semi-solid ;
     border-radius: 45px;
@@ -23,36 +23,61 @@
     border-color: #69b8d9;
     background-color: #FFF8F3;
     margin-left: 100px;
-
-
   }
   .bis{
-    background-image: url("https://quotesofislam.com/wp-content/uploads/2017/03/quran.jpg");
+    background-image: url("https://image.shutterstock.com/image-photo/holy-al-quran-written-arabic-600w-2145394919.jpg");
     margin-top: 50px;
+background-color: aquamarine;
+  }
+  .date{
+z-index: 2;
+    letter-spacing: 2px;
+
+  
+  }
+  .bismillah{
+    font-size:medium;
 
   }
 }
 .bis{
  
-  background-image: url("https://quotesofislam.com/wp-content/uploads/2017/03/quran.jpg");
-  background-size: 1450px;
+  background-image: url("https://th-thumbnailer.cdn-si-edu.com/1duQKPGJbq9AhgdwcPg_jyJbGjQ=/1000x750/filters:no_upscale()/https://tf-cmsv2-photocontest-smithsonianmag-prod-approved.s3.amazonaws.com/4906f7b0f0a90f59faabb73b68ed0455e9000b7d.jpg");
+  /* background-size: 1450px;
   color: white;
 margin-bottom: 0px;
 height: 300px;
-margin-top: 60px;
+margin-top: 60px; */
+
+background-size: cover;
+background-attachment: fixed;
+position:static;
+color: white;
+
+height: 90vh;
+align-items: center;
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: center;
+
+
 }
 .chap{
-  background-color: azure;
+  background-color: white;
   margin-top: 100px;
   display:inline-block;
 }
 .date{
-  padding: 10px 10px 10px 10px;
+
   letter-spacing: 2px;
+margin-bottom: 200px;
+
 }
 .bismillah{
   font-size: xxx-large;
+margin-bottom: 400px;
+
 }
-.bismillah:hover{
-  color: black;
-}
+

@@ -16,15 +16,9 @@ function App() {
 
   return (
     <div className="app">
-
       <Topbar />
-
-
       <br /> <br /> <br /><br /> 
-
-
       <div className="route">
-
         <Routes>
           <Route path="/" element={<Chapters />} />
           <Route path="/:id" element={<Verses />} />
