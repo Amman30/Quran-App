@@ -26,19 +26,18 @@ color: black;
     margin-bottom: 20px;
     margin-top: -9px;
 }
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 1000px) {
     .verses{
- 
 justify-content: left;
         text-align: left;
-        text-overflow:unset;
+
         padding: 20px 20px 20px 20px;
         margin-top: 30px;
         background-color: #CAB8FF;
     }
     .text{
         font-size:large;
-width: 450px;
+
         font-family: 'Times New Roman', Times, serif;
     }
     .bis{

@@ -11,9 +11,6 @@
 }
 @media only screen and (max-width: 1000px) {
   .link{
-    
-
-
     margin: 1rem 2rem;
     border: 3px semi-solid ;
     border-radius: 45px;
@@ -22,7 +19,7 @@
     text-align: justify;
     border-color: #69b8d9;
     background-color: #FFF8F3;
-    margin-left: 100px;
+    margin-left: 30px;
   }
   .bis{
     background-image: url("https://image.shutterstock.com/image-photo/holy-al-quran-written-arabic-600w-2145394919.jpg");
@@ -43,11 +40,7 @@ z-index: 2;
 .bis{
  
   background-image: url("https://th-thumbnailer.cdn-si-edu.com/1duQKPGJbq9AhgdwcPg_jyJbGjQ=/1000x750/filters:no_upscale()/https://tf-cmsv2-photocontest-smithsonianmag-prod-approved.s3.amazonaws.com/4906f7b0f0a90f59faabb73b68ed0455e9000b7d.jpg");
-  /* background-size: 1450px;
-  color: white;
-margin-bottom: 0px;
-height: 300px;
-margin-top: 60px; */
+ 
 
 background-size: cover;
 background-attachment: fixed;
