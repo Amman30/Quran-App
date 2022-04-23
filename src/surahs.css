@@ -1,5 +1,5 @@
 .surahs{
-    background-color: #E9D5DA;
+    background-color: #F7F7F7;
     cursor: pointer;
   font-size: xxx-large;
   text-align:center;
@@ -8,7 +8,7 @@
 @media only screen and (max-width: 1000px) {
   .surahs{
   margin-top: 65px;
-    background-color: #E9D5DA;
+    background-color: #F7F7F7;
 text-align: center;
     cursor: pointer;
   font-size: medium;

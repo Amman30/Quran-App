@@ -5,6 +5,7 @@ import "./about.css";
 const About = () => {
     return (
         <div className="about">
+            <br />
             <p>
                 <h1>About us</h1>
                 The Arabic Quran is considered by Muslims to be verbatim word of God.

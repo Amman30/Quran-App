@@ -83,26 +83,24 @@
     user-select: none;
    }
    /* APPLYING MEDIA QUERIES */
-   @media (max-width: 680px) {
+   @media (max-width: 1000px) {
    .menu {
- 
     position:fixed;
     background-color:teal;
 right: 0;
     left: 0;
-
     text-align: center;
-
-   }
-  
    
+   }   
    .menu li:hover {
     display: inline-block;
     background-color:#4c9e9e;
     transition: 0.1s ease;
+
    }
    .menu li + li {
-    margin-top: 10px;
+    margin-top: 0px;
+  justify-items: right;
    }
    input[type=checkbox]:checked ~ .menu{
     display:grid;
@@ -122,12 +120,13 @@ right: 0;
    }
    .menu{
        padding: 10px 10px 10px 10px;
-       margin-left: -20px;
+
+       font-size: small;
    }
    .logo{
        text-align: center;
-       margin-left: 150px;
-       margin-bottom: 20px;
+       margin-left: 100px;
+       margin-bottom: 25px;
    }
    }
  

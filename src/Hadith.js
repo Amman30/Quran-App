@@ -25,8 +25,9 @@ setLoading(false)
                         <span>
                             ({chap.Hadith_ID})&nbsp;
                              {chap.En_Text}
-                      
+                             < hr color='black'/>
                         </span>
+                       
                     </div>
                 ))
             }

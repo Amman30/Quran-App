@@ -1,5 +1,5 @@
 .had {
-  background-color: #E2DEA9;
+  background-color: #F7F7F7;
   color: black;
   font-family: 'Times New Roman', Times, serif;
   font-size: x-large;
@@ -7,10 +7,10 @@
   height: 100%;
 }
 
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 1000px) {
   .had {
 
-    background-color: #E2DEA9;
+    background-color: #F7F7F7;
     color: black;
     font-family: 'Times New Roman', Times, serif;
     font-size: large;

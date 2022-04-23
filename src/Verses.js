@@ -34,8 +34,11 @@ const Verses = () => {
                         {verse.words.map((word) => (
                             <span className="text">
                                 {word.translation.text} &nbsp;
+                              
                             </span>
+                              
                         ))}
+                        <hr color="black"/>
                         <br />
                     </div>
                 ))

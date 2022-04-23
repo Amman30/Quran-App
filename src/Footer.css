@@ -1,17 +1,18 @@
+@media screen and (min-width: 769px) {
 .footer{
   
 position:absolute;
 width: 1450px;
-    background-color: #B5DEFF;
+    background-color: #F7F7F7;
     min-height: 60%;  
 }
-@media only screen and (max-width: 780px) {
+}
+@media screen and (min-device-width: 481px) and (max-device-width: 768px) { 
     .footer{
       margin-top: 3px;
     font-size: medium;
-        width: 500px;
-            background-color: #B5DEFF;
-max-height: 20px;
+
+            background-color: #F7F7F7;
     }
     .social{
         padding: 5px 5px 5px 5px;
