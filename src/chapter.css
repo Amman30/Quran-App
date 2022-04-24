@@ -1,12 +1,20 @@
 .link{
     width: 400px;
+    height: 100px;
   display:inline-block;
-    border: 6px solid ;
-    border-radius: 50px;
-  text-decoration:black;
-    padding: 20px 20px 20px 20px;
-    border-color: #30AADD;
+    border: 3px solid ;
+    border-radius: 10px;
+
+    padding: 10px 10px 10px 10px;
+    border-color: #92BA92;
     background-color: #FFF8F3;
+    margin-right: 12px;
+    margin-bottom: 12px;
+    margin-top: 12px;
+}
+.box:hover{
+  color: #92BA92;
+  transition: ease-in-out;
   
 }
 @media only screen and (max-width: 1000px) {
@@ -14,13 +22,13 @@
     margin: 1rem 2rem;
 
 width: 250px;
-    border-radius: 45px;
+   
     text-decoration:black;
-    padding: 20px;
+
     text-align: justify;
     border-color: #69b8d9;
     background-color: #FFF8F3;
-    margin-left: 30px;
+
   }
   .bis{
     background-image: url("https://th-thumbnailer.cdn-si-edu.com/1duQKPGJbq9AhgdwcPg_jyJbGjQ=/1000x750/filters:no_upscale()/https://tf-cmsv2-photocontest-smithsonianmag-prod-approved.s3.amazonaws.com/4906f7b0f0a90f59faabb73b68ed0455e9000b7d.jpg");
@@ -46,7 +54,16 @@ z-index: 2;
     font-size:medium;
 
   }
+  .englishname{
+    font-size: xx-small;
+    margin-left: -11px;
+  }
+  .arabicname{
+
+    font-size: xx-small;
+  }
 }
+
 /*  MEDIA QUERY END*/
 .bis{
  
@@ -85,3 +102,24 @@ margin-bottom: 400px;
 
 }
 
+.nameTranslation{
+  font-size: small;
+  text-align: left;
+}
+.arabicname{
+  font-size: small;
+ text-align: right;
+ margin-top: -45px;
+ margin-right: 15px;
+
+}
+.englishname{
+  font-size: large;
+
+
+
+}
+.englishname,.nameTranslation {
+text-align: left;
+padding: 5px 5px 5px 5px;
+}

@@ -5,34 +5,34 @@ const Topbar = () => {
     return (
         <div className="topbar">
 
-        <nav className="navbar">
+            <nav className="navbar">
 
-         <div className="logo">THE QURAN</div>
+                <div className="logo">THE QURAN</div>
 
-         <ul className="nav-links">
+                <ul className="nav-links">
 
-         <input type="checkbox" id="checkbox_toggle" />
-         <label htmlFor="checkbox_toggle" className="hamburger">&#9776;</label>
+                    <input type="checkbox" id="checkbox_toggle" />
+                    <label htmlFor="checkbox_toggle" className="hamburger">&#9776;</label>
 
-         <div className="menu">
-         <li><Link to="/"><i className="fa-solid fa-house"></i> Home</Link></li>
-         <li><Link to="/developers"><i class="fa-brands fa-connectdevelop"></i>Developers</Link></li>
-         <li><Link to="/Surahs"><i className="fa-solid fa-book-quran"></i>Quran</Link></li>
-        
-         <li className="services">
-         <i className="fa-solid fa-link"></i>Links
+                    <div className="menu">
+                        <li><Link to="/"><i className="fa-solid fa-house"></i> Home</Link></li>
+                        <li><Link to="/developers"><i className="fa-brands fa-connectdevelop"></i>Developers</Link></li>
 
-         <ul className="dropdown">
-         <li><Link to="/">Audios(soon..)</Link></li>
-         <li><Link to="/">Dua's(soon..)</Link></li>
-         <li><Link to="/Hadith">Hadith</Link></li>
-         </ul>
-         </li>
-         <li><Link to="/About"><i className="fa-solid fa-address-card"></i>About</Link></li>
-         <li><Link to="/"><i className="fa-solid fa-magnifying-glass"></i></Link></li>
-         </div>
-         </ul>
-         </nav>
+
+                        <li className="services">
+                            <i className="fa-solid fa-link"></i>Links
+
+                            <ul className="dropdown">
+                                <li><Link to="/">Audios(soon..)</Link></li>
+                                <li><Link to="/">Dua's(soon..)</Link></li>
+                                <li><Link to="/Hadith">Hadith</Link></li>
+                            </ul>
+                        </li>
+                        <li><Link to="/About"><i className="fa-solid fa-address-card"></i>About</Link></li>
+
+                    </div>
+                </ul>
+            </nav>
         </div>
     );
 }

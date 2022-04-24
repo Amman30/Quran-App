@@ -8,11 +8,11 @@ const Verses = () => {
     const [verses, setVerses] = useState([])
     useEffect(() => {
 
-        fetch(`https://api.quran.com/api/v4/verses/by_chapter/${params.id}?language=en&words=true&page=1&per_page=300`)
+        fetch(`https://api-scripture-iust-dev.herokuapp.com/v1/scripture/quraan/get?language=en&author=Ahmed%20Ali&text=simple&chapter=${params.id}`)
             .then(async (res) => {
-                setVerses((await res.json()).verses)
+                setVerses((await res.json()).data)
                 setLoading(false);
-
+                
             })
             .catch((error)=>{
                 console.log(error);
@@ -29,15 +29,10 @@ const Verses = () => {
                 verses.map((verse) => (
                     <div className="text">
                         
-                        ({verse.verse_key}) &nbsp;
-
-                        {verse.words.map((word) => (
-                            <span className="text">
-                                {word.translation.text} &nbsp;
-                              
-                            </span>
-                              
-                        ))}
+                        &nbsp;
+                      <div className='right'>   {verse.data.text}۝</div> 
+                       <div className='left'> ({verse.verse}) {verse.data.translation}  </div> 
+                  
                         <hr color="black"/>
                         <br />
                     </div>

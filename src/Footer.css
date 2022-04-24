@@ -6,6 +6,13 @@ width: 1450px;
     background-color: #F7F7F7;
     min-height: 60%;  
 }
+.address{
+    text-align: left;
+    margin-top:50px;
+    margin-left: 45px;
+}
+
+
 }
 @media screen and (min-device-width: 481px) and (max-device-width: 768px) { 
     .footer{
@@ -30,7 +37,13 @@ width: 1450px;
     padding: 10px 10px 10px 10px;
     size: 20px;
     cursor: pointer;
-
+font-size: medium;
  color: black;
     
+}
+.address{
+    text-align: left;
+    margin-top:50px;
+    margin-left: 45px;
+    font-size: small;
 }

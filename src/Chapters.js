@@ -1,17 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import "./chapter.css"
+import Spinner from "./Spinner";
 
 
 const Chapters = () => {
 
     const [chapters, setChapters] = useState([]);
     const [data, setData] = useState({})
+    const[loading,setLoading]=useState(true)
 
     useEffect(() => {
-        fetch("https://api.quran.com/api/v4/chapters?language=en")
+        fetch("https://api-scripture-iust-dev.herokuapp.com/v1/scripture/chapterMetaData/all")
             .then(async (response) => {
-                setChapters((await response.json()).chapters)
+                setChapters((await response.json()).data)
+                setLoading(false)
             });
         fetch(`https://api.aladhan.com/v1/gToH?`)
             .then(async (res) => {
@@ -20,10 +23,10 @@ const Chapters = () => {
     }, []);
 
 
-    return (
+    return loading?( <Spinner />):(
         <div className='chapter'>
             <div className="bis">
-<h1 >  ﷽ </h1> <br />
+                <h1 >  ﷽ </h1> <br />
                 {
                     Object.keys(data).length > 0 ?
                         <h3 className="bismillah">
@@ -38,21 +41,25 @@ const Chapters = () => {
                         : null
                 }
 
-                
+
             </div>
             <h2>
-                <br /> 
-                TRANSLATIONS BELOW
+                <br />
+     
+                WHAT DO YOU WANT TO READ TODAY
             </h2>
             <div className="chap">
                 {
                     chapters.map((chapter) => (
-                        <div className='link' key={chapter.id}>
+                        <div key={chapter.chapter} className='link' >
                             <ol>
 
                                 <h3>
-                                    <br />{chapter.id}&nbsp;
-                                    <Link to={`/${chapter.id}`}>{chapter.name_simple} </Link>
+                                    <div className='box'>
+                                   <div className='englishname'><br />({chapter.chapter})&nbsp; <Link style={{color:"green"}} to={`/${chapter.chapter}`}>{chapter.name} </Link></div>
+                                    <div className='nameTranslation'> {chapter.nameTranslation}</div>
+                                    <div className='arabicname'>{chapter.arabicName}<br />{chapter.totalVerses}&nbsp;Ayahs</div>
+                                    </div>
                                 </h3>
                             </ol>
                         </div>

@@ -17,7 +17,9 @@ let year = d.getFullYear();
            <Link to="https://www.facebook.com/">  <i className="social fa-brands fa-facebook"></i> </Link> 
            <Link to="https://discord.com/"> <i className="social fa-brands fa-discord"></i> </Link> 
             </h2>
-         
+         <p className='address'> 1-University Avenue, Awantipora, Pulwama,<br /> Jammu and Kashmir 192122 </p>
+      
+    
         </div>
     );
 }

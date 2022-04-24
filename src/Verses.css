@@ -26,6 +26,21 @@ color: black;
     margin-bottom: 20px;
     margin-top: -9px;
 }
+.right{
+    text-align: right;
+    font-size: xx-large;
+}
+.right:hover{
+    color: green;
+}
+
+.left{
+    font-size: x-large;
+    margin-top: 50px;
+}
+.left:hover{
+    color: green;
+}
 @media only screen and (max-width: 1000px) {
     .verses{
 justify-content: left;

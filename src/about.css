@@ -2,11 +2,10 @@
     background-color: #F7F7F7;
     color: black;
     width:fit-content;
+    margin-bottom: 20px;
 }
-.privacy{
-    text-align: center;
-   
-}
+
+
 @media only screen and (max-width: 1000px) {
  
   .about{

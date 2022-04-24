@@ -6,7 +6,7 @@ const About = () => {
     return (
         <div className="about">
             <br />
-            <p>
+            <p className="text">
                 <h1>About us</h1>
                 The Arabic Quran is considered by Muslims to be verbatim word of God.
                 It has been made accessible to non-Arabic speakers through translations.
@@ -18,18 +18,12 @@ const About = () => {
             </p>
             <hr color="red" />
             <h2 >Credits</h2>
-            <span >
+            <span className="text" >
                 <ul>
-                    This project wouldn't have been possible without the many open source libraries and projects we've used:
+                    This project wouldn't have been possible without the open source libraries and projects we've used:
+                
                     <li>
-                        Quran.com 
-                          </li>
-                    <li>
-                        Al Quran
-
-                    </li>
-                    <li>
-                        Hadith API Documentation
+                       # Hadith API Documentation
                     </li>
                 </ul>
             </span>
@@ -37,7 +31,7 @@ const About = () => {
             <h2>
                 Privacy policy
             </h2>
-            <span className="privacy">
+            <span className="text">
 
                 We do not serve you ads, so we do not need to track you or use your personal data to provide
                 you with better ads to increase our revenues. We don’t gather any personally identifiable information.
