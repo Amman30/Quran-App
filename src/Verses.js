@@ -12,9 +12,9 @@ const Verses = () => {
             .then(async (res) => {
                 setVerses((await res.json()).data)
                 setLoading(false);
-                
+
             })
-            .catch((error)=>{
+            .catch((error) => {
                 console.log(error);
             })
     }, [params.id])
@@ -24,21 +24,21 @@ const Verses = () => {
     ) : (
         <div className="verses">
             <br />
-                <div className="bism" > ﷽ </div> 
+            <div className="bism" > ﷽ </div>
             {
                 verses.map((verse) => (
-                    <div className="text">
-                        
+                    <div key={verse.verse} className="text">
+
                         &nbsp;
-                      <div className='right'>   {verse.data.text}۝</div> 
-                       <div className='left'> ({verse.verse}) {verse.data.translation}  </div> 
-                  
-                        <hr color="black"/>
+                        <div className='right'>   {verse.data.text}۝</div>
+                        <div className='left'> ({verse.verse}) {verse.data.translation}  </div>
+
+                        <hr style={{ height: "3px" }} color="black" />
                         <br />
                     </div>
                 ))
             }
-   
+
         </div>
     );
 }

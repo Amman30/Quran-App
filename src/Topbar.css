@@ -24,7 +24,7 @@
     background-color: teal;
     color: #fff;
     position:fixed;
-    width: 1450px;
+    width: 1550px;
    }
    .nav-links a {
     color: #fff;
@@ -38,6 +38,7 @@
     display: flex;
     gap: 1.4em;
     font-size: 18px;
+    margin-right: 100px;
    }
    .menu li:hover {
     background-color: #4c9e9e;
@@ -90,6 +91,7 @@
 right: 0;
     left: 0;
     text-align: center;
+    margin-right: -100px;
    
    }   
    .menu li:hover {

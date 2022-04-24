@@ -1,6 +1,6 @@
 .link{
-    width: 400px;
-    height: 100px;
+    width: 450px;
+    height: 120px;
   display:inline-block;
     border: 3px solid ;
     border-radius: 10px;
@@ -21,7 +21,7 @@
   .link{
     margin: 1rem 2rem;
 
-width: 250px;
+width: 300px;
    
     text-decoration:black;
 
@@ -103,13 +103,13 @@ margin-bottom: 400px;
 }
 
 .nameTranslation{
-  font-size: small;
+  font-size: large;
   text-align: left;
 }
 .arabicname{
-  font-size: small;
+  font-size: large;
  text-align: right;
- margin-top: -45px;
+ margin-top: -55px;
  margin-right: 15px;
 
 }

@@ -19,6 +19,7 @@ const Chapters = () => {
         fetch(`https://api.aladhan.com/v1/gToH?`)
             .then(async (res) => {
                 setData((await res.json()).data)
+                setLoading(false)
             })
     }, []);
 
@@ -50,6 +51,7 @@ const Chapters = () => {
             </h2>
             <div className="chap">
                 {
+                     Object.keys(data).length > 0 ?
                     chapters.map((chapter) => (
                         <div key={chapter.chapter} className='link' >
                             <ol>
@@ -63,7 +65,9 @@ const Chapters = () => {
                                 </h3>
                             </ol>
                         </div>
-                    ))}
+                       
+                    ))   : null
+                }
             </div>
         </div>
     );

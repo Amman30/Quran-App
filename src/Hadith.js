@@ -10,7 +10,7 @@ const Hadith = () => {
             .then(async (res) => {
 
                 setChapters((await res.json()).AllChapters)
-setLoading(false)
+                setLoading(false)
             })
     })
 
@@ -18,16 +18,16 @@ setLoading(false)
         <Spinner />
     ) : (
         <div className="hddd">
-            <br />     
+            <br />
             {
                 chapters.map((chap) => (
-                    <div className="had">
+                    <div key={chap.Hadith_ID}className="had">
                         <span>
                             ({chap.Hadith_ID})&nbsp;
-                             {chap.En_Text}
-                             < hr color='black'/>
+                            {chap.En_Text}
+                            < hr color='black' />
                         </span>
-                       
+
                     </div>
                 ))
             }
