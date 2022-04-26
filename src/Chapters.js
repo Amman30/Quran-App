@@ -47,9 +47,9 @@ const Chapters = () => {
             <h2>
                 <br />
      
-                WHAT DO YOU WANT TO READ TODAY
+                {/* WHAT DO YOU WANT TO READ TODAY */}
             </h2>
-            <div className="chap">
+            {/* <div className="chap">
                 {
                      Object.keys(data).length > 0 ?
                     chapters.map((chapter) => (
@@ -68,7 +68,8 @@ const Chapters = () => {
                        
                     ))   : null
                 }
-            </div>
+            </div> */}
+          <br /> <h1> WILL BE BACK SOON! </h1> 
         </div>
     );
 }
