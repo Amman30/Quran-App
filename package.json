@@ -12,6 +12,7 @@
         "bootstrap": "^5.0.1",
         "countapi": "^1.0.0",
         "countapi-js": "^1.0.2",
+        "font-awesome": "^4.7.0",
         "npm-watch": "^0.11.0",
         "params": "^0.1.1",
         "react": "^17.0.2",
