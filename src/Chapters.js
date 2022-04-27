@@ -69,7 +69,7 @@ const Chapters = () => {
                     ))   : null
                 }
             </div>
-          {/* <br /> <h1> WILL BE BACK SOON! </h1>  */}
+       
         </div>
     );
 }
