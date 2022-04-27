@@ -8,6 +8,7 @@ import Footer from "./Footer";
 import About from "./About";
 import Hadith from "./Hadith";
 import Dev from "./Dev.js"
+import Reading from "./Reading";
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/About" element={<About />} />
           <Route path="/Hadith" element={<Hadith />} />
           <Route path="/developers" element={<Dev />} />
+          <Route path="/reading/:id" element={<Reading />} />
 
         </Routes>
 

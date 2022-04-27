@@ -1,0 +1,43 @@
+.sura {
+    margin-left: 20px;
+    margin-top: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: xxx-large;
+}
+
+
+.righ {
+
+
+
+    margin-top: 20px;
+    font-size: xx-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 15px;
+}
+
+.reads {
+    text-align: left;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 20px;
+    margin-left: 10px;
+
+}
+
+@media only screen and (max-width: 1000px) {
+    .reads{
+        text-align: left;
+        margin-left:15px;
+        margin-top: 55px;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+  .sura{
+      font-size: xxx-large;
+      margin-top: 45px;
+
+  }
+  .righ:hover{
+      color: green;
+  }
+
+}

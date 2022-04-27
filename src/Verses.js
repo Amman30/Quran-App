@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import Spinner from "./Spinner";
+import { Link } from 'react-router-dom';
+
 import "./Verses.css"
 const Verses = () => {
     const params = useParams();
@@ -35,10 +37,11 @@ const Verses = () => {
     ) : (
         <div className="verses">
             <br />
-            <div className="bism" > ﷽    </div>
-          <div className='surah'>  {
+            <div className='reading'>  <Link style={{color:"green"}} to={`/reading/${params.id}`}>Read Without Translation</Link></div> 
+            <div className="bism" > ﷽    </div> 
+          <div className="surah">  {
                             chapters.map((chapter)=>(
-                                <div>
+                                <div key={chapter._id} >
                                   سورة     &nbsp; {chapter.arabicName}
                                 </div>
                             ))
@@ -64,6 +67,7 @@ const Verses = () => {
 
 
         </div>
+     
     );
 }
 
