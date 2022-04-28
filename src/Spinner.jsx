@@ -1,4 +1,4 @@
-import spinner from "./assets/spinner.svg";
+import spinner from "./assets/spii.svg";
 
 export default function Spinner() {
     return (

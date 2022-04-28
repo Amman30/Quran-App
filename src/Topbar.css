@@ -81,7 +81,7 @@
    .hamburger {
     display: none;
     font-size: 24px;
-    user-select: none;
+    user-select:none;
    }
    /* APPLYING MEDIA QUERIES */
    @media (max-width: 1000px) {

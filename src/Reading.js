@@ -41,7 +41,7 @@ const Reading = () => {
                 chapters.map((chapter) => (
 
                     <div key={chapter._id} >
-
+                        <div>﷽</div>
                         سورة     &nbsp; {chapter.arabicName}
                     </div>
                 ))

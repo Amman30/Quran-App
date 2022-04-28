@@ -22,7 +22,7 @@ font-size: xxx-large;
 }
 .text{
 font-size: x-large;
-   font-family: 'Times New Roman', Times, serif;
+   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 text-decoration:double;
 
 color: black;
@@ -50,6 +50,7 @@ color: black;
 .left:hover{
     color: green;
 }
+
 @media only screen and (max-width: 1000px) {
     .verses{
 justify-content: left;
@@ -79,3 +80,22 @@ display: none;
         margin-top: -9px;
     }
 }
+
+
+/* .button{
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    padding: 20px 50px;
+    border: 3px solid #3c67e3;
+border-radius: 10px;
+}
+.button:hover{
+    animation: pulsate 1s ease-in-out;
+}
+@keyframes pulsate {
+    0%{
+        box-shadow: 0 0 25px #5ddcff,
+        0 0 50px #4e00c2;
+    }
+} */

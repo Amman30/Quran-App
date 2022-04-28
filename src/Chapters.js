@@ -58,7 +58,7 @@ const Chapters = () => {
 
                                 <h3>
                                     <div className='box'>
-                                   <div className='englishname'><br />({chapter.chapter})&nbsp; <Link style={{color:"green"}} to={`/${chapter.chapter}`}>{chapter.name} </Link></div>
+                                   <div className='englishname'><br />({chapter.chapter})&nbsp; <Link style={{color:"green"}}  to={`/${chapter.chapter}`}>{chapter.name} </Link></div>
                                     <div className='nameTranslation'> {chapter.nameTranslation}</div>
                                     <div className='arabicname'>{chapter.arabicName}<br />{chapter.totalVerses}&nbsp;Ayahs</div>
                                     </div>
