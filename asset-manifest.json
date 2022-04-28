@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Quran-App/static/css/main.73144698.css",
-    "main.js": "/Quran-App/static/js/main.bf56fde6.js",
-    "static/media/spinner.svg": "/Quran-App/static/media/spinner.e3cd49e7d64b98ab1b3ec16b936439a9.svg",
+    "main.css": "/Quran-App/static/css/main.a3c1cb26.css",
+    "main.js": "/Quran-App/static/js/main.9153a0a0.js",
+    "static/media/spii.svg": "/Quran-App/static/media/spii.21093e68c1d8a1dfe583a2a99adba2c9.svg",
     "index.html": "/Quran-App/index.html",
-    "main.73144698.css.map": "/Quran-App/static/css/main.73144698.css.map",
-    "main.bf56fde6.js.map": "/Quran-App/static/js/main.bf56fde6.js.map"
+    "main.a3c1cb26.css.map": "/Quran-App/static/css/main.a3c1cb26.css.map",
+    "main.9153a0a0.js.map": "/Quran-App/static/js/main.9153a0a0.js.map"
   },
   "entrypoints": [
-    "static/css/main.73144698.css",
-    "static/js/main.bf56fde6.js"
+    "static/css/main.a3c1cb26.css",
+    "static/js/main.9153a0a0.js"
   ]
 }
