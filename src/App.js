@@ -27,7 +27,7 @@ function App() {
           <Route path="/Hadith" element={<Hadith />} />
           <Route path="/developers" element={<Dev />} />
           <Route path="/reading/:id" element={<Reading />} />
-          {/* <Route path="/audios" element={<Ads />} /> */}
+        
 
         </Routes>
 

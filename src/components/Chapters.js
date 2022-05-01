@@ -60,6 +60,23 @@ const Chapters = () => {
                 </div>
 
 
+
+            </div>
+            <div className='topsearchs'>
+                Top Search <br />
+                <div className='element'>
+                   <Link style={{ color: "green" }} to="/18">Al-Kahf</Link>
+                </div>
+                <div className='element'>
+                <Link style={{ color: "green" }} to="/36">Ya-Sin</Link>
+                </div>
+                <div className='element'>
+                <Link style={{ color: "green" }} to="/67">Al-Mulk</Link>
+                </div>
+                <div className='element'>
+                <Link style={{ color: "green" }} to="/112">Al-Ikhlas</Link>
+                </div>
+
             </div>
 
 
