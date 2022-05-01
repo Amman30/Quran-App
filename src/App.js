@@ -9,7 +9,7 @@ import About from "./components/About";
 import Hadith from "./components/Hadith";
 import Dev from "./components/Dev.js";
 import Reading from "./components/Reading";
-import Search from "./components/Search";
+
 
 function App() {
     return (
@@ -24,7 +24,7 @@ function App() {
                     <Route path="/Hadith" element={<Hadith />} />
                     <Route path="/developers" element={<Dev />} />
                     <Route path="/reading/:id" element={<Reading />} />
-                    <Route path="/search/:term" element={<Search />} />
+             
                 </Routes>
 
                 <Footer />
