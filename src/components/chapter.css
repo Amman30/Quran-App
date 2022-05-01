@@ -90,13 +90,16 @@ font-size: large;
   .form {
   position: relative;
   margin-top: -230px;
+  width: 300px;
+  margin-left: 20px;
 
 }
 .form .fa-search {
   position: absolute;
   top: 10px;
-margin-left: 400px;
+margin-left: -15px;
   color: #9ca3af;
+  cursor: pointer;
 
 }
 
