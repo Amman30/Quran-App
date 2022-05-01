@@ -80,8 +80,9 @@ font-size: large;
 @media only screen and (max-width: 1000px) {
   .element{
     display: inline-flex;
-    width: 220px;
+    width: 150px;
    margin-left: 10px;
+   font-size: medium;
   }
 .b{
   margin-top: 87px;
@@ -90,8 +91,8 @@ font-size: large;
   .form {
   position: relative;
   margin-top: -230px;
-  width: 300px;
-  margin-left: 20px;
+  width: 250px;
+  margin-left: 50px;
 
 }
 .form .fa-search {
