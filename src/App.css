@@ -1,14 +1,12 @@
-
-.app{
+.app {
     box-sizing: border-box;
-   
+
     background-color: white;
 }
-.route{
-    font-family: 'BIZ UDPMincho', serif;
+.route {
+    font-family: "BIZ UDPMincho", serif;
     text-align: center;
     font-size: xx-large;
- 
 }
 /* @media only screen and (max-width: 400px) {
     .app{
@@ -37,27 +35,22 @@
     }
 } */
 
-
-
 @media screen and (min-width: 769px) {
-    .route{
-        font-family: 'BIZ UDPMincho', serif;
+    .route {
+        font-family: "BIZ UDPMincho", serif;
         text-align: center;
         font-size: large;
-     
     }
 }
 
-@media screen and (min-device-width: 481px) and (max-device-width: 768px) { 
-    .app{
-        
-              background-color: white;
-          }
+@media screen and (min-device-width: 481px) and (max-device-width: 768px) {
+    .app {
+        background-color: white;
+    }
 }
 
 @media only screen and (max-device-width: 480px) {
-    .app{
-
-              background-color: white;
-          }
+    .app {
+        background-color: white;
+    }
 }

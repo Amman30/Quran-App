@@ -1,63 +1,63 @@
-.person1{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.person1 {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
     font-size: x-large;
     width: 500px;
     margin-left: 450px;
     margin-top: 20px;
-    margin-bottom: 20px;}
-.person1:hover{
-color: slateblue;
-    }
+    margin-bottom: 20px;
+}
+.person1:hover {
+    color: slateblue;
+}
 
-.person2{
-    font-family:Arial, Helvetica, sans-serif;
+.person2 {
+    font-family: Arial, Helvetica, sans-serif;
     font-size: large;
     width: 500px;
-margin-left: 450px;
-margin-top: 20px;
-margin-bottom: 20px;
+    margin-left: 450px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     border-radius: 14em;
 }
-.person2:hover{
-    color:purple;
+.person2:hover {
+    color: purple;
 }
-.person3{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+.person3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: medium;
-  margin-top: 10px;
-   width: 500px;
-display:inline-block;
-border-radius: 4em;
+    margin-top: 10px;
+    width: 500px;
+    display: inline-block;
+    border-radius: 4em;
 }
-.person3:hover{
-    color:#C84B31;
-    
+.person3:hover {
+    color: #c84b31;
 }
-.icon{
+.icon {
     padding: 10px 10px 10px 10px;
     color: black;
 }
-.dev1{
-    background-color: #FEF5ED;
+.dev1 {
+    background-color: #fef5ed;
 }
 
 @media only screen and (max-width: 1000px) {
-    .person1{
+    .person1 {
         margin-left: -10px;
         margin-top: 19px;
         size: x-small;
     }
-    .person2{
+    .person2 {
         margin-left: -10px;
         size: x-small;
     }
-    .person3{
-
+    .person3 {
         size: x-small;
     }
-    .dev1{
-width: 500px;
-justify-content: center;
-        background-color: #FEF5ED;
+    .dev1 {
+        width: 500px;
+        justify-content: center;
+        background-color: #fef5ed;
     }
 }

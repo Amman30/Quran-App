@@ -1,23 +1,20 @@
 .had {
-  background-color: #F7F7F7;
-  color: black;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: x-large;
-  text-overflow: auto;
-  height: 100%;
+    background-color: #f7f7f7;
+    color: black;
+    font-family: "Times New Roman", Times, serif;
+    font-size: x-large;
+    text-overflow: auto;
+    height: 100%;
 }
 
 @media only screen and (max-width: 1000px) {
-  .had {
-
-    background-color: #F7F7F7;
-    color: black;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: large;
-
-  }
-  .hddd{
-    margin-top: 18px;
-  }
-
+    .had {
+        background-color: #f7f7f7;
+        color: black;
+        font-family: "Times New Roman", Times, serif;
+        font-size: large;
+    }
+    .hddd {
+        margin-top: 18px;
+    }
 }

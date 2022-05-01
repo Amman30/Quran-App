@@ -1,87 +1,88 @@
-.verses{
+.verses {
     display: grid;
- text-align:left;
+    text-align: left;
     padding: 20px 20px 20px 20px;
     margin-top: 0;
-background-color: #F7F7F7;
-cursor: pointer;
-overflow: auto;
-
+    background-color: #f7f7f7;
+    cursor: pointer;
+    overflow: auto;
 }
-.surah{
+.surah {
     margin-left: 600px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-font-size: xxx-large;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: xxx-large;
 }
 
-.bis{
+.bis {
     text-align: center;
 }
-.reading{
+.reading {
     font-size: x-large;
 }
-.text{
-font-size: x-large;
-   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-text-decoration:double;
+.text {
+    font-size: x-large;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    text-decoration: double;
 
-color: black;
-
- 
+    color: black;
 }
-.bism{
+.bism {
     margin-left: 600px;
     margin-bottom: 20px;
     margin-top: -9px;
     font-size: xx-large;
 }
-.right{
+.right {
     text-align: right;
     font-size: xx-large;
-    font-family: 'Bebas Neue', cursive;
+    font-family: "Bebas Neue", cursive;
 }
-.right:hover{
+.right:hover {
     color: green;
 }
 
-.left{
+.left {
     font-size: x-large;
     margin-top: 50px;
 }
-.left:hover{
+.left:hover {
     color: green;
 }
 
 @media only screen and (max-width: 1000px) {
-    .verses{
-justify-content: left;
+    .verses {
+        justify-content: left;
         text-align: left;
 
         padding: 20px 20px 20px 20px;
         margin-top: 30px;
-        background-color: #F7F7F7;
+        background-color: #f7f7f7;
     }
-    .surah{
-margin-left: 70px;
-text-align: center;
-        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: xxx-large;
+    .surah {
+        margin-left: 70px;
+        text-align: center;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-size: xxx-large;
     }
-    .text{
-        font-size:large;
+    .text {
+        font-size: large;
 
-        font-family: 'Times New Roman', Times, serif;
+        font-family: "Times New Roman", Times, serif;
     }
-    .bis{
+    .bis {
         text-align: center;
     }
-    .bism{
-display: none;
+    .bism {
+        display: none;
         margin-bottom: 20px;
         margin-top: -9px;
     }
 }
 
+.controls button {
+    background-color: transparent;
+}
 
 /* .button{
     display: inline-block;
