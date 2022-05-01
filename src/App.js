@@ -1,14 +1,16 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import React from 'react';
-import Chapters from "./Chapters";
-import Verses from "./Verses";
-import Topbar from "./Topbar";
-import Footer from "./Footer";
-import About from "./About";
-import Hadith from "./Hadith";
-import Dev from "./Dev.js"
-import Reading from "./Reading";
+import Chapters from "./components/Chapters";
+import Verses from "./components/Verses";
+import Topbar from "./components/Topbar";
+import Footer from "./components/Footer";
+import About from "./components/About";
+import Hadith from "./components/Hadith";
+import Dev from "./components/Dev.js"
+import Reading from "./components/Reading";
+
+
 
 function App() {
 
@@ -25,6 +27,7 @@ function App() {
           <Route path="/Hadith" element={<Hadith />} />
           <Route path="/developers" element={<Dev />} />
           <Route path="/reading/:id" element={<Reading />} />
+          {/* <Route path="/audios" element={<Ads />} /> */}
 
         </Routes>
 

@@ -4,6 +4,7 @@ import Spinner from "./Spinner";
 import { Link } from 'react-router-dom';
 
 
+
 import "./Verses.css"
 
 const Verses = () => {
@@ -11,6 +12,8 @@ const Verses = () => {
     const [loading, setLoading] = useState(true);
     const [verses, setVerses] = useState([]);
     const [chapters, setChapters] = useState([]);
+
+
 
 
     useEffect(() => {
@@ -28,7 +31,7 @@ const Verses = () => {
                 setLoading(false);
 
             })
-       
+
 
 
             .catch((error) => {
@@ -36,7 +39,7 @@ const Verses = () => {
             })
     }, [params.id])
 
-   
+
     return loading ? (
         <Spinner />
     ) : (
@@ -57,10 +60,10 @@ const Verses = () => {
                     <div key={verse.verse} className="text">
                         &nbsp;
 
-                        <div className='right'>   {verse.data.text}۝</div>
+                        <div className='right'> {verse.data.text} ۝ </div>
 
                         <div className='left'> ({verse.verse})
-                
+
 
 
 

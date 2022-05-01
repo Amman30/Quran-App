@@ -23,7 +23,7 @@ const Topbar = () => {
                             <i className="fa-solid fa-link"></i>Links
 
                             <ul className="dropdown">
-                                <li><Link to="/">Audios(soon..)</Link></li>
+                                <li><Link to="/audios">Audios(soon..)</Link></li>
                                 <li><Link to="/">Dua's(soon..)</Link></li>
                                 <li><Link to="/Hadith">Hadith</Link></li>
                             </ul>

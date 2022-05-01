@@ -1,3 +1,44 @@
+
+.form {
+  position:relative;
+
+  margin-top: -230px;
+
+}
+.form .fa-search {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #9ca3af
+}
+
+.form span {
+  position: absolute;
+  right: 17px;
+  top: 13px;
+  padding: 2px;
+  border-left: 1px solid #d1d5db
+}
+
+.left-pan {
+  padding-left: 7px
+}
+
+.left-pan i {
+  padding-left: 10px
+}
+
+.form-input {
+  height: 55px;
+  text-indent: 33px;
+  border-radius: 10px
+}
+
+.form-input:focus {
+  box-shadow: none;
+  border: none
+}
+
 .link{
     width: 450px;
     height: 120px;
@@ -12,12 +53,56 @@
     margin-bottom: 12px;
     margin-top: 12px;
 }
+.bismillah,.what{
+  margin-top: 80px;
+}
+.what{
+  margin-bottom: -50px;
+font-size: large;
+}
 .box:hover{
   color: #92BA92;
   transition: ease-in-out;
   
 }
 @media only screen and (max-width: 1000px) {
+
+.b{
+  margin-top: 87px;
+}
+  .form {
+  position: relative;
+  margin-top: -230px;
+}
+.form .fa-search {
+  position: absolute;
+  top: 10px;
+  right: -390px;
+  color: #9ca3af;
+  size: small;
+}
+
+.form span {
+  position: absolute;
+
+  top: 13px;
+  padding: 2px;
+  border-left: 1px solid #d1d5db
+}
+
+
+
+.form-input {
+  height: 55px;
+  text-indent: 33px;
+  border-radius: 10px
+}
+
+.form-input:focus {
+  box-shadow: none;
+  border: none
+}
+
   .link{
     margin: 1rem 2rem;
 
