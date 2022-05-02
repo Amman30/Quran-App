@@ -1,6 +1,7 @@
 .topsearchs{
 font-size: xx-large;
-color: #92BA92;
+color: white;
+margin-top: -300px;
 }
 .element{
  display:inline-block;
@@ -13,7 +14,7 @@ color: #92BA92;
 }
 .form {
   position:relative;
-
+  z-index: 999;
   margin-top: -230px;
 
 }
@@ -21,7 +22,8 @@ color: #92BA92;
   position: absolute;
   top: 20px;
   left: 20px;
-  color: #9ca3af
+  color: #9ca3af;
+  z-index: -1;
 }
 
 .form span {
@@ -51,6 +53,7 @@ color: #92BA92;
   border: none
 }
 
+
 .link{
     width: 450px;
     height: 120px;
@@ -58,8 +61,8 @@ color: #92BA92;
     border: 3px solid ;
     border-radius: 10px;
 
-    padding: 10px 10px 10px 10px;
-    border-color: #92BA92;
+    padding: 3px 3px 3px 3px;
+    background-color: #066163;
     background-color: #FFF8F3;
     margin-right: 12px;
     margin-bottom: 12px;
@@ -83,53 +86,28 @@ font-size: large;
     width: 150px;
    margin-left: 10px;
    font-size: medium;
+
   }
 .b{
   margin-top: 87px;
 
 }
-  .form {
-  position: relative;
-  margin-top: -230px;
-  width: 250px;
-  margin-left: 50px;
-
+.topsearchs{
+  margin-bottom: -70px;
 }
-.form .fa-search {
-  position: absolute;
-  top: 10px;
-margin-left: -15px;
-  color: #9ca3af;
-  cursor: pointer;
+
+.element{
+  margin-top: 40px;
 
 }
 
-.form span {
-  position: absolute;
-
-  top: 13px;
-  padding: 2px;
-  border-left: 1px solid #d1d5db
-}
-
-
-
-.form-input {
-  height: 55px;
-  text-indent: 33px;
-  border-radius: 10px
-}
-
-.form-input:focus {
-  box-shadow: none;
-  border: none
-}
 
   .link{
     margin: 1rem 2rem;
 
 width: 300px;
-   
+height: 120px;
+
     text-decoration:black;
 
     text-align: justify;
@@ -138,7 +116,7 @@ width: 300px;
 
   }
   .bis{
-    background-image: url("https://th-thumbnailer.cdn-si-edu.com/1duQKPGJbq9AhgdwcPg_jyJbGjQ=/1000x750/filters:no_upscale()/https://tf-cmsv2-photocontest-smithsonianmag-prod-approved.s3.amazonaws.com/4906f7b0f0a90f59faabb73b68ed0455e9000b7d.jpg");
+
     background-size: cover;
     background-attachment: fixed;
     position:static;
@@ -174,9 +152,9 @@ z-index: 2;
 /*  MEDIA QUERY END*/
 .bis{
  
-  background-image: url("https://th-thumbnailer.cdn-si-edu.com/1duQKPGJbq9AhgdwcPg_jyJbGjQ=/1000x750/filters:no_upscale()/https://tf-cmsv2-photocontest-smithsonianmag-prod-approved.s3.amazonaws.com/4906f7b0f0a90f59faabb73b68ed0455e9000b7d.jpg");
- 
-
+  /* background-image: url("https://th-thumbnailer.cdn-si-edu.com/1duQKPGJbq9AhgdwcPg_jyJbGjQ=/1000x750/filters:no_upscale()/https://tf-cmsv2-photocontest-smithsonianmag-prod-approved.s3.amazonaws.com/4906f7b0f0a90f59faabb73b68ed0455e9000b7d.jpg");
+  */
+background-color: #066163;
 background-size: cover;
 background-attachment: fixed;
 position:static;
@@ -193,9 +171,10 @@ text-align: center;
 
 }
 .chap{
-  background-color: white;
+  background-color: #066163;
   margin-top: 100px;
   display:inline-block;
+
 }
 .date{
 

@@ -1,55 +1,61 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
 import "./Topbar.css";
 const Topbar = () => {
     return (
         <div className="topbar">
-            <nav className="navbar">
-                <div className="logo">THE QURAN</div>
+   <div class="menu-container">
+  
+  <input type="checkbox" id="openmenu" class="hamburger-checkbox" />
+  
+  <div class="hamburger-icon">
+    <label for="openmenu" id="hamburger-label">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>    
+  </div>
 
-                <ul className="nav-links">
-                    <input type="checkbox" id="checkbox_toggle" />
-                    <label htmlFor="checkbox_toggle" className="hamburger">
-                        &#9776;
-                    </label>
+    <div class="menu-pane">
+      
+      <nav>
+        <ul class="menu-links">
+          <li><a href="/Quran-App">Home</a><span id="QC-info">
+    
+          </span>
+            
+          </li>
+          
+          <li><a href="/Quran-App/developers">Developers</a>
+           
+          </li>
+          <li><a href="/Quran-App/Hadith">Hadith</a></li>
+     
+        </ul>
+         <ul class="menu-links">
+                     <li><a href="/Quran-App/About">About</a>
+                       <span id="DC-info">
+            {/* <p>+1 202-472-3850</p> */}
+          </span></li>
 
-                    <div className="menu">
-                        <li>
-                            <Link to="/">
-                                <i className="fa-solid fa-house"></i> Home
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/developers">
-                                <i className="fa-brands fa-connectdevelop"></i>
-                                Developers
-                            </Link>
-                        </li>
+          <li><a href="/Quran-App">Dua's(soon...)</a></li>
+        
+            <li><a href="/Quran-App">Audios(soon...)</a></li>
+        </ul>
+        
+        
+      </nav>
+    </div>
+  <div class="body-text">
+    <h1 className="Quran"> The Quran</h1>
 
-                        <li className="services">
-                            <i className="fa-solid fa-link"></i>Links
-                            <ul className="dropdown">
-                                <li>
-                                    <Link to="/audios">Audios(soon..)</Link>
-                                </li>
-                                <li>
-                                    <Link to="/">Dua's(soon..)</Link>
-                                </li>
-                                <li>
-                                    <Link to="/Hadith">Hadith</Link>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <Link to="/About">
-                                <i className="fa-solid fa-address-card"></i>
-                                About
-                            </Link>
-                        </li>
-                    </div>
-                </ul>
-            </nav>
-        </div>
+ 
+  </div>
+</div>
+</div>
+
+
     );
 };
 

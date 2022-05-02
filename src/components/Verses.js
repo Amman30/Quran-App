@@ -66,7 +66,7 @@ const Verses = () => {
         <Spinner />
     ) : (
         <div className="verses">
-            <br />
+       
             <div className="reading">
                 <button
                     style={{ color: "green" }}

@@ -51,13 +51,13 @@ const Chapters = () => {
 
 
 
-                <div className="container">
+                {/* <div className="container">
                     <div className="row height d-flex justify-content-center align-items-center">
                         <div className="col-md-6">
                             <div className="form"> <i className="fa fa-search"></i> <input type="text" className="form-control form-input" placeholder="Enter Chapter(Surah) No." />  </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
 
 
@@ -65,16 +65,16 @@ const Chapters = () => {
             <div className='topsearchs'>
                 Top Search <br />
                 <div className='element'>
-                    <Link style={{ color: "green" }} to="/18">Al-Kahf</Link>
+                    <Link style={{ color: "white" }} to="/18">Al-Kahf</Link>
                 </div>
                 <div className='element'>
-                    <Link style={{ color: "green" }} to="/36">Ya-Sin</Link>
+                    <Link style={{ color: "white" }}to="/36">Ya-Sin</Link>
                 </div>
                 <div className='element'>
-                    <Link style={{ color: "green" }} to="/67">Al-Mulk</Link>
+                    <Link style={{ color: "white" }} to="/67">Al-Mulk</Link>
                 </div>
                 <div className='element'>
-                    <Link style={{ color: "green" }} to="/112">Al-Ikhlas</Link>
+                    <Link style={{ color: "white" }} to="/112">Al-Ikhlas</Link>
                 </div>
 
             </div>

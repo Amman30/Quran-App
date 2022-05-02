@@ -1,34 +1,45 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
 import "./Footer.css";
 const Footer = () => {
     const d = new Date();
     let year = d.getFullYear();
     return (
         <div className="footer">
-            <h4 className="year"> ©&nbsp;{year}</h4>
-            All Rights Reserved
-            <br />
-            <h2 className="social">
-                <a href="https://www.instagram.com/">
-                    <i className="social fa-brands fa-instagram"></i>
-                </a>
-                <Link to="https://www.facebook.com/">
-                    {" "}
-                    <i className="social fa-brands fa-facebook"></i>{" "}
-                </Link>
-                <Link to="https://discord.com/">
-                    {" "}
-                    <i className="social fa-brands fa-discord"></i>{" "}
-                </Link>
-            </h2>
-            <p className="address">
-                {" "}
-                1-University Avenue, Awantipora, Pulwama,
-                <br /> Jammu and Kashmir 192122{" "}
-            </p>
+            <footer className="footer">
+             
+                    <h1 className="footer__logo"> For The Humanity!!</h1>
+                    <br />     <br />
+
+                    <h2>Contact</h2>
+
+                    <address>
+
+                        1-University Avenue,
+                        Awantipora, Pulwama,
+                        Jammu and Kashmir 192122<br />
+
+                  
+                    </address>
+           
+                <div class="legal">
+                    <p>&copy; {year} All rights reserved.</p>
+                </div>
+            </footer>
+
         </div>
     );
 };
 
 export default Footer;
+
+
+
+
+
+
+
+
+
+
+
