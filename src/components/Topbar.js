@@ -1,15 +1,15 @@
 import React from "react";
-
+import { Link } from 'react-router-dom';
 import "./Topbar.css";
 const Topbar = () => {
     return (
         <div className="topbar">
-   <div class="menu-container">
+   <div className="menu-container">
   
-  <input type="checkbox" id="openmenu" class="hamburger-checkbox" />
+  <input type="checkbox" id="openmenu" className="hamburger-checkbox" />
   
-  <div class="hamburger-icon">
-    <label for="openmenu" id="hamburger-label">
+  <div className="hamburger-icon">
+    <label htmlFor="openmenu" id="hamburger-label">
       <span></span>
       <span></span>
       <span></span>
@@ -17,37 +17,37 @@ const Topbar = () => {
     </label>    
   </div>
 
-    <div class="menu-pane">
+    <div className="menu-pane">
       
       <nav>
-        <ul class="menu-links">
-          <li><a href="/Quran-App">Home</a><span id="QC-info">
+        <ul className="menu-links">
+          <li><Link to="/">Home</Link><span id="QC-info">
     
           </span>
             
           </li>
           
-          <li><a href="/developers">Developers</a>
+          <li><Link to="/developers">Developers</Link>
            
           </li>
-          <li><a href="/Hadith">Hadith</a></li>
+          <li><Link to="/Hadith">Hadith</Link></li>
      
         </ul>
-         <ul class="menu-links">
-                     <li><a href="/Quran-App/About">About</a>
+         <ul className="menu-links">
+                     <li><Link to="/About">About</Link>
                        <span id="DC-info">
-          
+            
           </span></li>
 
-          <li><a href="/">Dua's(soon...)</a></li>
+          <li><Link to="/Quran-App">Dua's(soon...)</Link></li>
         
-            <li><a href="/">Audios(soon...)</a></li>
+            <li><Link to="/Quran-App">Audios(soon...)</Link></li>
         </ul>
         
         
       </nav>
     </div>
-  <div class="body-text">
+  <div className="body-text">
     <h1 className="Quran"> The Quran</h1>
 
  

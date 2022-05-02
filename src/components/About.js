@@ -5,7 +5,7 @@ import "./about.css";
 const About = () => {
     return (
         <div className="about">
-            <br />
+         
             <span className="text">
                 <h1>About us</h1>
                 The Arabic Quran is considered by Muslims to be verbatim word of God.
@@ -16,7 +16,7 @@ const About = () => {
                 of the Quran to people the world over.
                 We also intend to focus on local languages of Jammu & Kashmir and bring  translations in these languages to the fore.
             </span>
-            <hr color="red" />
+            <hr color="white" />
             <h2 >Credits</h2>
             <span className="text" >
                 <ul>
@@ -27,7 +27,7 @@ const About = () => {
                     </li>
                 </ul>
             </span>
-            <hr color="red" />
+            <hr color="white" />
             <h2>
                 Privacy policy
             </h2>
