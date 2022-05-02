@@ -27,21 +27,21 @@ const Topbar = () => {
             
           </li>
           
-          <li><a href="/Quran-App/developers">Developers</a>
+          <li><a href="/developers">Developers</a>
            
           </li>
-          <li><a href="/Quran-App/Hadith">Hadith</a></li>
+          <li><a href="/Hadith">Hadith</a></li>
      
         </ul>
          <ul class="menu-links">
                      <li><a href="/Quran-App/About">About</a>
                        <span id="DC-info">
-            {/* <p>+1 202-472-3850</p> */}
+          
           </span></li>
 
-          <li><a href="/Quran-App">Dua's(soon...)</a></li>
+          <li><a href="/">Dua's(soon...)</a></li>
         
-            <li><a href="/Quran-App">Audios(soon...)</a></li>
+            <li><a href="/">Audios(soon...)</a></li>
         </ul>
         
         
