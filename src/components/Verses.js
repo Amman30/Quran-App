@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
 import Spinner from "./Spinner";
-import { Link } from 'react-router-dom';
+
 import "./Verses.css";
+
 
 const Verses = () => {
     const params = useParams();
@@ -30,12 +31,12 @@ const Verses = () => {
                 setLoading(false);
             })
 
-        // fetch(`https://api.quran.sutanlab.id/surah/${params.id}`).then(
-        //     async (res) => {
-        //         setVersesWithAudio((await res.json()).data.verses);
-        //         setLoading(false);
-        //     }
-        // )
+            // fetch(`https://api.quran.sutanlab.id/surah/${params.id}`).then(
+            //     async (res) => {
+            //         setVersesWithAudio((await res.json()).data.verses);
+            //         setLoading(false);
+            //     }
+            // )
             .catch((error) => {
                 console.log(error);
             });
@@ -67,12 +68,13 @@ const Verses = () => {
         <Spinner />
     ) : (
         <div className="verses">
-       
+
             <div className="reading">
                 <button
-                    style={{ color: "green" }}
+                    style={{ color: "white" }}
                     onClick={() => { setShowTranslation(!showTranslation); abc(); }}
-className="buttonn"
+                    type="button"
+                    className="btn btn-outline-info"
                 >
                     {title}
                 </button>
@@ -98,17 +100,17 @@ className="buttonn"
                                 ({verse.verse}){verse.data.translation}{" "}
                             </div>
                             <hr style={{ height: "3px" }} color="black" />
-                        
+
                         </>
                     ) : null}
                     <br />
-                   
-                </div>
-                 
-            ))}
-       
 
-        
+                </div>
+
+            ))}
+
+
+
         </div>
     );
 };
