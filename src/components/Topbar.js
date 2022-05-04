@@ -21,27 +21,27 @@ const Topbar = () => {
       
       <nav>
         <ul className="menu-links">
-          <li><Link to="/">Home</Link><span id="QC-info">
+          <li><Link className="liii" to="/">Home</Link><span id="QC-info">
     
           </span>
             
           </li>
           
-          <li><Link to="/developers">Developers</Link>
+          <li><Link className="liii" to="/developers">Developers</Link>
            
           </li>
-          <li><Link to="/Hadith">Hadith</Link></li>
+          <li><Link className="liii" to="/Hadith">Hadith</Link></li>
      
         </ul>
          <ul className="menu-links">
-                     <li><Link to="/About">About</Link>
+                     <li><Link className="liii" to="/About">About</Link>
                        <span id="DC-info">
             
           </span></li>
 
-          <li><Link to="/Quran-App">Dua's(soon...)</Link></li>
+          <li><Link className="liii" to="/Quran-App">Dua's(soon...)</Link></li>
         
-            <li><Link to="/Quran-App">Audios(soon...)</Link></li>
+            <li><Link className="liii" to="/Quran-App">Audios(soon...)</Link></li>
         </ul>
         
         

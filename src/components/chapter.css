@@ -1,7 +1,7 @@
 .topsearchs{
 font-size: xx-large;
 color: white;
-margin-top: -300px;
+margin-top: -360px;
 }
 .element{
  display:inline-block;
@@ -9,10 +9,11 @@ margin-top: -300px;
  border-style: double;
  padding: 20px 20px 20px 20px;
  margin-right: 15px;
- margin-top: 40px;
+ margin-top: 70px;
+ margin-bottom: 70px;
  font-size: x-large;
 }
-.form {
+/* .form {
   position:relative;
   z-index: 999;
   margin-top: -230px;
@@ -51,7 +52,7 @@ margin-top: -300px;
 .form-input:focus {
   box-shadow: none;
   border: none
-}
+} */
 
 
 .link{
@@ -66,7 +67,7 @@ margin-top: -300px;
     background-color: #FFF8F3;
     margin-right: 12px;
     margin-bottom: 12px;
-    margin-top: 12px;
+    margin-top: 15px;
 }
 .bismillah,.what{
   margin-top: 80px;
@@ -86,19 +87,28 @@ font-size: large;
     width: 150px;
    margin-left: 10px;
    font-size: medium;
+margin-top: -20px;
 
   }
+  .bismillah{
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  /* .ele{
+    margin-bottom: -66px;
+  } */
 .b{
   margin-top: 87px;
-
 }
+
 .topsearchs{
-  margin-bottom: -70px;
+
+padding: 20px 20px 20px 20px;
+
+
 }
-
-.element{
-  margin-top: 40px;
-
+.what{
+  margin-top: 30px;
 }
 
 
@@ -116,12 +126,11 @@ height: 120px;
 
   }
   .bis{
-
     background-size: cover;
     background-attachment: fixed;
     position:static;
     color: white;
-    margin-top: 10%;
+    margin-top: 20px;
     height: 90vh;
     align-items: center;
     
@@ -171,14 +180,15 @@ text-align: center;
 }
 .chap{
   background-color: #066163;
-  margin-top: 100px;
+
   display:inline-block;
+
 
 }
 .date{
 
-  letter-spacing: 2px;
-margin-bottom: 200px;
+  /* letter-spacing: 2px; */
+/* margin-bottom: 200px; */
 
 }
 .bismillah{

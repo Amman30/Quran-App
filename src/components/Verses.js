@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
 import Spinner from "./Spinner";
+import { Link } from 'react-router-dom';
 import "./Verses.css";
 
 const Verses = () => {
@@ -71,7 +72,7 @@ const Verses = () => {
                 <button
                     style={{ color: "green" }}
                     onClick={() => { setShowTranslation(!showTranslation); abc(); }}
-
+className="buttonn"
                 >
                     {title}
                 </button>
@@ -97,11 +98,17 @@ const Verses = () => {
                                 ({verse.verse}){verse.data.translation}{" "}
                             </div>
                             <hr style={{ height: "3px" }} color="black" />
+                        
                         </>
                     ) : null}
                     <br />
+                   
                 </div>
+                 
             ))}
+       
+
+        
         </div>
     );
 };

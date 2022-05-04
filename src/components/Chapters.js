@@ -39,10 +39,7 @@ const Chapters = () => {
                             {data.hijri.month.ar} ,
 
                             {data.hijri.year}
-                            <div className='what'>
-
-                                WHAT DO YOU WANT TO READ TODAY
-                            </div>
+                         
 
                         </h3>
 
@@ -62,22 +59,23 @@ const Chapters = () => {
 
 
             </div>
-            <div className='topsearchs'>
-                Top Search <br />
-                <div className='element'>
-                    <Link style={{ color: "white" }} to="/18">Al-Kahf</Link>
-                </div>
-                <div className='element'>
-                    <Link style={{ color: "white" }}to="/36">Ya-Sin</Link>
-                </div>
-                <div className='element'>
-                    <Link style={{ color: "white" }} to="/67">Al-Mulk</Link>
-                </div>
-                <div className='element'>
-                    <Link style={{ color: "white" }} to="/112">Al-Ikhlas</Link>
-                </div>
+            <div className="topsearchs">
+                Top Search  </div>
+            <div className='ele'>
+                <Link className="element" style={{ color: "white" }} to="/67">Al-Mulk</Link>
 
+
+                <Link className="element" style={{ color: "white" }} to="/112">Al-Ikhlas</Link>
+
+
+                <Link className="element" style={{ color: "white" }} to="/18">Al-Kahf</Link>
+
+
+                <Link className="element" style={{ color: "white" }} to="/36">Ya-Sin</Link>
             </div>
+
+          
+
 
 
             <div className="chap">

@@ -39,17 +39,13 @@ color: white;
     font-size: xx-large;
     font-family: "Bebas Neue", cursive;
 }
-.right:hover {
-  
-}
+
 
 .left {
     font-size: x-large;
     margin-top: 50px;
 }
-.left:hover {
- 
-}
+
 
 @media only screen and (max-width: 1000px) {
     .verses {
@@ -59,6 +55,12 @@ color: white;
         padding: 20px 20px 20px 20px;
         margin-top: 30px;
         background-color: #066163;
+    }
+    .buttonn{
+   
+        width: 130px;
+        font-size: x-small;
+        
     }
     .surah {
         margin-left: 70px;
@@ -76,9 +78,10 @@ color: white;
         text-align: center;
     }
     .bism {
-        display: none;
-        margin-bottom: 20px;
-        margin-top: -9px;
+   
+display: none;
+     
+   
     }
 }
 
