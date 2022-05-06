@@ -13,7 +13,7 @@ const Verses = () => {
     // const audioRefs = useRef({});
     // const [versesWithAudio, setVersesWithAudio] = useState([]);
     const [showTranslation, setShowTranslation] = useState(true);
-    const [title, setTitle] = useState("Read Without Translation");
+    const [title, setTitle] = useState(false);
 
     useEffect(() => {
         fetch(
@@ -57,10 +57,7 @@ const Verses = () => {
     //     });
     // };
 
-    function abc() {
-        setTitle("Read With Translation");
-    }
-
+  
 
 
 
@@ -72,11 +69,12 @@ const Verses = () => {
             <div className="reading">
                 <button
                     style={{ color: "white" }}
-                    onClick={() => { setShowTranslation(!showTranslation); abc(); }}
+                    onClick={() => { setShowTranslation(!showTranslation);setTitle(!title) ; }}
                     type="button"
                     className="btn btn-outline-info"
                 >
-                    {title}
+                    {`${title?"Read With Translation":"Read Without Translation"}`}
+              
                 </button>
             </div>
             <div className="bism"> ﷽ </div>
