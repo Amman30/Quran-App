@@ -16,11 +16,6 @@ const Chapters = () => {
                 setChapters((await response.json()).data)
                 setLoading(false)
             });
-        // fetch(`https://api.aladhan.com/v1/gToH?`)
-        //     .then(async (res) => {
-        //         setData((await res.json()).data)
-        //         setLoading(false)
-        //     })
         fetch(`https://api.aladhan.com/v1/timingsByCity?city=Srinagar&country=india&method=8`)
             .then(async (res) => {
                 setData((await res.json()).data)
@@ -31,8 +26,9 @@ const Chapters = () => {
     return loading ? (<Spinner />) : (
         <div className='chapter'>
 
-            <div className="bis">
 
+            <div className="bis">
+            
                 <h1 className='b'>  ﷽ </h1>
 
                 <div className="date">
