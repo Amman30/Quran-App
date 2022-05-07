@@ -87,6 +87,7 @@ const Verses = () => {
                 ))}
             </div>
             <br />
+      
             {versess.map((verse) => (
                 <div key={verse.verse} className="text">
 
@@ -95,7 +96,7 @@ const Verses = () => {
                     {showTranslation ? (
                         <>
                             <div className="left">
-                                ({verse.verse}){verse.data.translation}{" "}
+                                ({verse.verse}). {verse.data.translation} 
                             </div>
                             <hr style={{ height: "3px" }} color="black" />
 
