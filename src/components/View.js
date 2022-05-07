@@ -3,23 +3,23 @@ import React from 'react';
 const View = () => {
 
 
-    function counter_fn() {
-        var counter = document.getElementById("cntr");
-        var count = 0;
-        count = parseInt(counter.innerHTML);
-     
-        count = count + 1;
-        counter.innerHTML = count;
-      }
-      window.onload = counter_fn;
+   const view=document.getElementById("count");
+
+   function updateviews(){
+     fetch(`https://api.countapi.xyz/update/amman/reactjs/?amount=1`)
+     .then(res=>res.json())
+     .then(res=>{
+       view.innerHTML=res.value;
+     })
+   }
 
 
 
     return (
         <div>
-               <div>
-    <p>Total Views Till Now : <span id="cntr">0</span></p>
-  </div>
+<p>This Page Has</p>
+<h1 id="count">0 </h1>
+<p>views</p>
         </div>
     );
 }
