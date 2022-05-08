@@ -18,7 +18,7 @@ const View = () => {
     return (
         <div>
 <p>This Page Has</p>
-<h1 id="count">0 </h1>
+<h1 id="count">{view} </h1>
 <p>views</p>
         </div>
     );

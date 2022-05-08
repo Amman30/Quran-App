@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./Footer.css";
-import View from "./View";
+// import View from "./View";
 const Footer = () => {
     const d = new Date();
     let year = d.getFullYear();
@@ -26,7 +26,7 @@ const Footer = () => {
                 <div className="legal">
                     <p>&copy; {year} All rights reserved.</p>
                 </div>
-                <View />
+                {/* <View /> */}
             </footer>
 
         </div>

@@ -1,7 +1,6 @@
 .about{
   background-color: #066163;
     color: white;
-    width:fit-content;
    
 }
 
@@ -10,7 +9,7 @@
  
   .about{
       font-size: medium;
-      margin-top: 60px;
+  
   }
 
 }
