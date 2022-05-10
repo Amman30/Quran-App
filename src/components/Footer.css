@@ -4,19 +4,19 @@
     flex-flow: row wrap;
     padding: 30px 30px 20px 30px;
     color: #2f2f2f;
-    background-color: black;
+    background-color: white;
     border-top: 1px solid #e5e5e5;
   }
   
   .footer > * {
     flex:  1 100%;
-    color: white;
+    color: #2f2f2f;
   }
   
   .footer__addr {
     margin-right: 1.25em;
     margin-bottom: 2em;
-    color: white;
+    color: #2f2f2f;
   }
   
   .footer__logo {
@@ -24,7 +24,7 @@
     font-weight: 400;
   
     font-size: 1.5rem;
-    color: white;
+    color: #2f2f2f;
     text-align: right;
   }
   
@@ -32,7 +32,7 @@
     margin-top: 1.3em;
     font-size: 15px;
     font-weight: 400;
-    color: white;
+    color: #2f2f2f;
   }
   
   .nav__title {
@@ -43,7 +43,7 @@
   .footer address {
     font-style: normal;
 
-    color: white;
+    color: #2f2f2f;
   }
   
  

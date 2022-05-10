@@ -4,7 +4,9 @@ export default function Spinner() {
     return (
         <div className="spinner">
             <br />
-            <img src={spinner} alt="Loading..." />
+            <img src={spinner}  alt="Loading..." />
+            <br />
+           <h1 style={{color:"green"}}> Loading...   </h1> 
             <br />
         </div>
     );

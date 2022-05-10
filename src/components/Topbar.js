@@ -3,61 +3,35 @@ import { Link } from 'react-router-dom';
 import "./Topbar.css";
 
 const Topbar = () => {
-    return (
-        <div className="topbar">
-   <div className="menu-container">
-  
-  <input type="checkbox" id="openmenu" className="hamburger-checkbox" />
-  
-  <div className="hamburger-icon">
-    <label htmlFor="openmenu" id="hamburger-label">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>    
-  </div>
-
-    <div className="menu-pane">
-      
+  return (
+    <div className="topbar">
       <nav>
-        <ul className="menu-links">
-          <li><Link className="liii" to="/">Home</Link><span id="QC-info">
-    
-          </span>
-            
-          </li>
-          
-          <li><Link className="liii" to="/developers">Developers</Link>
-           
-          </li>
-          <li><Link className="liii" to="/Hadith">Hadith</Link></li>
-     
-        </ul>
-         <ul className="menu-links">
-                     <li><Link className="liii" to="/About">About</Link>
-                       <span id="DC-info">
-            
-          </span></li>
-
-          <li><Link className="liii" to="/duas">Dua's(soon...)</Link></li>
-        
-            <li><Link className="liii" to="/audios">Audios(soon...)</Link></li>
-        </ul>
-        
-        
+        <div className="navbar">
+          <div className="container nav-container">
+            <input className="checkbox" type="checkbox" name="" id="" />
+            <div className="hamburger-lines">
+              <span className="line line1"></span>
+              <span className="line line2"></span>
+              <span className="line line3"></span>
+            </div>
+            <div className="logo">
+              <h1>The Quran</h1>
+            </div>
+            <div className="menu-items">
+              <li><Link to="/"><i className="iconn fa-solid fa-house-user"></i>Home</Link></li>
+              <li><Link to="/developers"><i className="iconn fa-brands fa-connectdevelop"></i>Developers</Link></li>
+              <li><Link to="About"><i className="iconn fa-solid fa-address-card"></i>About Us</Link></li>
+              <li><Link to="Hadith"><i className="iconn fa-solid fa-book"></i>Hadith</Link></li>
+              <li><Link to="duas"><i className="iconn fa-solid fa-hands-praying"></i>Dua's(soon)</Link></li>
+              <li><Link to="audios"><i className="iconn fa-solid fa-circle-play"></i>Audios(soon)</Link></li>
+            </div>
+          </div>
+        </div>
       </nav>
     </div>
-  <div className="body-text">
-    <h1 className="Quran"> The Quran </h1>
-
- 
-  </div>
-</div>
-</div>
 
 
-    );
+  );
 };
 
 export default Topbar;

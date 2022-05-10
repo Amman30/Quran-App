@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, /*useRef*/ } from "react";
 import { useParams } from "react-router-dom";
 import Spinner from "./Spinner";
 
@@ -10,54 +10,37 @@ const Verses = () => {
     const [loading, setLoading] = useState(true);
     const [versess, setVersess] = useState([]);
     const [chapters, setChapters] = useState([]);
-    // const audioRefs = useRef({});
-    // const [versesWithAudio, setVersesWithAudio] = useState([]);
     const [showTranslation, setShowTranslation] = useState(true);
     const [title, setTitle] = useState(false);
 
+
+
     useEffect(() => {
-        fetch(
-            `https://api-scripture-iust-dev.herokuapp.com/v1/scripture/chapterMetaData/chapter/${params.id}`
-        ).then(async (res) => {
-            setChapters((await res.json()).data);
-            setLoading(false);
-        });
-
-        fetch(
-            `https://api-scripture-iust-dev.herokuapp.com/v1/scripture/quraan/get?language=en&author=Ahmed%20Ali&text=simple&chapter=${params.id}`
-        )
-            .then(async (res) => {
-                setVersess((await res.json()).data);
+ 
+            fetch(
+                `https://api-scripture-iust-dev.herokuapp.com/v1/scripture/chapterMetaData/chapter/${params.id}`
+            ).then(async (res) => {
+                setChapters((await res.json()).data);
                 setLoading(false);
-            })
-
-            // fetch(`https://api.quran.sutanlab.id/surah/${params.id}`).then(
-            //     async (res) => {
-            //         setVersesWithAudio((await res.json()).data.verses);
-            //         setLoading(false);
-            //     }
-            // )
-            .catch((error) => {
-                console.log(error);
             });
+
+            fetch(
+                `https://api-scripture-iust-dev.herokuapp.com/v1/scripture/quraan/get?language=en&author=Ahmed%20Ali&text=simple&chapter=${params.id}`
+            )
+                .then(async (res) => {
+                    setVersess((await res.json()).data);
+                    setLoading(false);
+                })
+
+
+                .catch((error) => {
+                    console.log(error);
+                });
+        
     }, [params.id]);
 
-    // const playNextAudio = (currentIndex) => {
-    //     if (currentIndex < versesWithAudio.length - 1) {
-    //         audioRefs.current[currentIndex + 1].play();
-    //     }
-    // };
 
 
-    // const pauseAllExcept = (currentIndex) => {
-    //     Object.keys(audioRefs.current).forEach((key) => {
-    //         if (parseInt(key) !== currentIndex) {
-    //             audioRefs.current[key].pause();
-    //         }
-    //     });
-    // };
-
-  
 
 
 
@@ -69,12 +52,12 @@ const Verses = () => {
             <div className="reading">
                 <button
                     style={{ color: "white" }}
-                    onClick={() => { setShowTranslation(!showTranslation);setTitle(!title) ; }}
+                    onClick={() => { setShowTranslation(!showTranslation); setTitle(!title); }}
                     type="button"
                     className="btn btn-outline-info"
                 >
-                    {`${title?"Read With Translation":"Read Without Translation"}`}
-              
+                    {`${title ? "Read With Translation" : "Read Without Translation"}`}
+
                 </button>
             </div>
             <div className="bism"> ﷽ </div>
@@ -87,7 +70,7 @@ const Verses = () => {
                 ))}
             </div>
             <br />
-      
+
             {versess.map((verse) => (
                 <div key={verse.verse} className="text">
 
@@ -96,7 +79,7 @@ const Verses = () => {
                     {showTranslation ? (
                         <>
                             <div className="left">
-                                ({verse.verse}). {verse.data.translation} 
+                                ({verse.verse}). {verse.data.translation}
                             </div>
                             <hr style={{ height: "3px" }} color="black" />
 
@@ -122,7 +105,12 @@ export default Verses;
 
 
 
-
+// fetch(`https://api.quran.sutanlab.id/surah/${params.id}`).then(
+//     async (res) => {
+//         setVersesWithAudio((await res.json()).data.verses);
+//         setLoading(false);
+//     }
+// )
 
 
 
@@ -144,3 +132,28 @@ export default Verses;
                             />
                         </audio>
                     </div> */}
+
+
+
+
+                        // const playNextAudio = (currentIndex) => {
+    //     if (currentIndex < versesWithAudio.length - 1) {
+    //         audioRefs.current[currentIndex + 1].play();
+    //     }
+    // };
+
+
+    // const pauseAllExcept = (currentIndex) => {
+    //     Object.keys(audioRefs.current).forEach((key) => {
+    //         if (parseInt(key) !== currentIndex) {
+    //             audioRefs.current[key].pause();
+    //         }
+    //     });
+    // };
+
+
+
+
+
+        // const audioRefs = useRef({});
+    // const [versesWithAudio, setVersesWithAudio] = useState([]);
