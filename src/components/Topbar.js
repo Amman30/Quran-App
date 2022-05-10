@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import "./Topbar.css";
+
 const Topbar = () => {
     return (
         <div className="topbar">
@@ -39,16 +40,16 @@ const Topbar = () => {
             
           </span></li>
 
-          <li><Link className="liii" to="/Quran-App">Dua's(soon...)</Link></li>
+          <li><Link className="liii" to="/duas">Dua's(soon...)</Link></li>
         
-            <li><Link className="liii" to="/Quran-App">Audios(soon...)</Link></li>
+            <li><Link className="liii" to="/audios">Audios(soon...)</Link></li>
         </ul>
         
         
       </nav>
     </div>
   <div className="body-text">
-    <h1 className="Quran"> The Quran</h1>
+    <h1 className="Quran"> The Quran </h1>
 
  
   </div>

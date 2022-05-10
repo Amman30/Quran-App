@@ -42,7 +42,7 @@ const Chapters = () => {
                          <div className='timing'> Fajr <span className='timings'>&nbsp; {data.timings.Fajr}</span></div>
                          <div className='timing'> Dhuhr <span className='timings'>&nbsp;     {data.timings.Dhuhr}</span></div>
                          <div className='timing'> Asr <span className='timings'>&nbsp;    {data.timings.Asr}</span></div>
-                         <div className='timing'> Magrib <span className='timings'>&nbsp;  19:19  {data.timings.Magrib}</span></div>
+                         <div className='timing'> Magrib <span className='timings'>&nbsp;  {data.timings.Maghrib}</span></div>
                          <div className='timing'> Isha <span className='timings'>&nbsp;      {data.timings.Isha}</span></div>
                 </div>
 

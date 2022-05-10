@@ -8,6 +8,8 @@ import Footer from "./components/Footer";
 import About from "./components/About";
 import Hadith from "./components/Hadith";
 import Dev from "./components/Dev.js";
+import Audios from "./components/Audios";
+import Duas from "./components/Duas";
 
 
 
@@ -22,7 +24,8 @@ function App() {
                     <Route path="/About" element={<About />} />
                     <Route path="/Hadith" element={<Hadith />} />
                     <Route path="/developers" element={<Dev />} />
-          
+                    <Route path="/audios" element={<Audios />} />
+                    <Route path="/duas" element={<Duas />} />
              
                 </Routes>
 
