@@ -1,7 +1,9 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import "./chapter.css"
 import Spinner from "./Spinner";
+
 
 
 const Chapters = () => {
@@ -21,6 +23,7 @@ const Chapters = () => {
                 setData((await res.json()).data)
             })
     }, []);
+
 
 
     return loading ? (<Spinner />) : (
@@ -100,10 +103,3 @@ const Chapters = () => {
 export default Chapters;
 
 
-{/* <div className="container">
-                    <div className="row height d-flex justify-content-center align-items-center">
-                        <div className="col-md-6">
-                            <div className="form"> <i className="fa fa-search"></i> <input type="text" className="form-control form-input" placeholder="Enter Chapter(Surah) No." />  </div>
-                        </div>
-                    </div>
-                </div> */}

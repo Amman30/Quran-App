@@ -5,6 +5,7 @@
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
 .person1:hover {
     color: slateblue;
 }
@@ -17,9 +18,11 @@
     margin-bottom: 20px;
     border-radius: 14em;
 }
+
 .person2:hover {
     color: purple;
 }
+
 .person3 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: medium;
@@ -28,13 +31,16 @@
     display: inline-block;
     border-radius: 4em;
 }
+
 .person3:hover {
     color: #c84b31;
 }
+
 .icon {
     padding: 10px 10px 10px 10px;
     color: black;
 }
+
 .dev1 {
     background-color: #fef5ed;
 }
@@ -45,13 +51,16 @@
         margin-top: 19px;
         size: x-small;
     }
+
     .person2 {
-    
+
         size: x-small;
     }
+
     .person3 {
         size: x-small;
     }
+
     .dev1 {
 
         background-color: #fef5ed;

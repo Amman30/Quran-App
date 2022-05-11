@@ -8,6 +8,7 @@
     cursor: pointer;
     overflow: auto;
 }
+
 .surah {
     margin-left: 600px;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -23,17 +24,19 @@
     font-size: x-large;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
         sans-serif;
-color: white;
+    color: white;
     text-decoration: double;
 
 
 }
+
 .bism {
     margin-left: 600px;
     margin-bottom: 20px;
     margin-top: -9px;
     font-size: xx-large;
 }
+
 .right {
     text-align: right;
     font-size: xx-large;
@@ -56,12 +59,14 @@ color: white;
         margin-top: 30px;
         background-color: #066163;
     }
-    .buttonn{
-   
+
+    .buttonn {
+
         width: 130px;
         font-size: x-small;
-        
+
     }
+
     .surah {
         margin-left: 70px;
         text-align: center;
@@ -69,24 +74,25 @@ color: white;
         font-size: xxx-large;
         color: white;
     }
+
     .text {
         font-size: large;
         color: white;
         font-family: "Times New Roman", Times, serif;
     }
+
     .bis {
         text-align: center;
     }
+
     .bism {
-   
-display: none;
-     
-   
+
+        display: none;
+
+
     }
 }
 
 .controls button {
     background-color: transparent;
 }
-
-
