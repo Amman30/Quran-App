@@ -78,7 +78,7 @@ const Chapters = () => {
 
                                     <h3>
                                         <div className='box'>
-                         <Link style={{ color: "green" }} to={`/${chapter.chapter}`}> 
+                         <Link style={{ color: "#066163"}} to={`/${chapter.chapter}`}> 
                          
                              <div className='englishname'><br />({chapter.chapter})&nbsp;{chapter.name}</div>
                              

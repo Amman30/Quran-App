@@ -1,25 +1,19 @@
-import React from 'react';
-
+import React,{useEffect} from 'react';
+import ReactGa from "react-ga";
 const View = () => {
 
 
-   const view=document.getElementById("count");
+ useEffect(() => {
+  ReactGa.initialize('G-41FG5RD597 ')
 
-   function updateviews(){
-     fetch(`https://api.countapi.xyz/update/amman/reactjs/?amount=1`)
-     .then(res=>res.json())
-     .then(res=>{
-       view.innerHTML=res.value;
-     })
-   }
 
+  ReactGa.pageview(window.location.pathname + window.location.search)
+ }, []);
 
 
     return (
         <div>
-<p>This Page Has</p>
-<h1 id="count">{view} </h1>
-<p>views</p>
+This page has {  ReactGa.pageview(window.location.pathname + window.location.search)} views
         </div>
     );
 }

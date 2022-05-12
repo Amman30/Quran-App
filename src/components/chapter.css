@@ -57,11 +57,14 @@ margin-top: 10px;
     border-radius: 10px;
 cursor: pointer;
     padding: 3px 3px 3px 3px;
-    background-color: #066163;
     background-color: #FFF8F3;
     margin-right: 12px;
     margin-bottom: 12px;
     margin-top: 15px;
+    text-decoration: none;
+}
+.link:hover{
+  color: white;
 }
 .bismillah{
   margin-top: 80px;
@@ -128,6 +131,7 @@ height: 100px;
     background-color: #FFF8F3;
 
   }
+ 
   .date{
    
     font-size: large;
