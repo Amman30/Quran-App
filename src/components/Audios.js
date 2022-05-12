@@ -5,7 +5,7 @@ const Audios = () => {
         <div>
             <br />
               <h3>
-                THIS PAGE IS UNDER PROCESS....
+                AUDIOS PAGE IS UNDER PROCESS....
             </h3>
             <br />
             <span>
@@ -13,7 +13,7 @@ const Audios = () => {
             </span>
             <br />
             <h1>
-                <Link to="/">Back to Home</Link>
+                <Link style={{ color: "green" }}   to="/">Back to Home</Link>
             </h1>
         </div>
     );

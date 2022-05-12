@@ -63,12 +63,9 @@ const Chapters = () => {
                 <div className='ele'>
                     <Link className="element" style={{ color: "white" }} to="/67">Al-Mulk</Link>
 
-
                     <Link className="element" style={{ color: "white" }} to="/112">Al-Ikhlas</Link>
 
-
                     <Link className="element" style={{ color: "white" }} to="/18">Al-Kahf</Link>
-
 
                     <Link className="element" style={{ color: "white" }} to="/36">Ya-Sin</Link>
                 </div>
@@ -81,9 +78,14 @@ const Chapters = () => {
 
                                     <h3>
                                         <div className='box'>
-                                            <div className='englishname'><br />({chapter.chapter})&nbsp; <Link style={{ color: "green" }} to={`/${chapter.chapter}`}>{chapter.name} </Link></div>
-                                            <div className='nameTranslation'> {chapter.nameTranslation}</div>
+                         <Link style={{ color: "green" }} to={`/${chapter.chapter}`}> 
+                         
+                             <div className='englishname'><br />({chapter.chapter})&nbsp;{chapter.name}</div>
+                             
+                             <div className='nameTranslation'> {chapter.nameTranslation}</div>
                                             <div className='arabicname'>{chapter.arabicName}<br />{chapter.totalVerses}&nbsp;Ayahs</div>
+                              </Link>
+                                          
                                         </div>
                                     </h3>
                                 </ol>

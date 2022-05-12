@@ -118,7 +118,7 @@ margin-top: -30px;
   .link{
     margin: 1rem 2rem;
 cursor: pointer;
-width: 320px;
+width: 370px;
 height: 100px;
 
     text-decoration:black;
@@ -188,11 +188,11 @@ margin-bottom: 400px;
 }
 
 .nameTranslation{
-  font-size: small;
+  font-size: medium;
   text-align: left;
 }
 .arabicname{
-  font-size: small;
+  font-size: medium;
  text-align: right;
  margin-top: -45px;
  margin-right: 5px;

@@ -12,10 +12,10 @@ const Footer = () => {
                     <h1 className="footer__logo"> For The Humanity!!</h1>
                     <br />     <br />
 
-                    <h2>Contact</h2>
+        
 
                     <address>
-
+                    <h2>Contact</h2>
                         1-University Avenue,
                         Awantipora, Pulwama,
                         Jammu and Kashmir 192122<br />
