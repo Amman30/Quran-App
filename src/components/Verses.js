@@ -14,29 +14,29 @@ const Verses = () => {
     const [title, setTitle] = useState(false);
 
 
-
     useEffect(() => {
- 
-            fetch(
-                `https://api-scripture-iust-dev.herokuapp.com/v1/scripture/chapterMetaData/chapter/${params.id}`
-            ).then(async (res) => {
-                setChapters((await res.json()).data);
+
+        fetch(
+            `https://api-scripture-iust-dev.herokuapp.com/v1/scripture/chapterMetaData/chapter/${params.id}`
+        ).then(async (res) => {
+            setChapters((await res.json()).data);
+            setLoading(false);
+
+        });
+
+        fetch(
+            `https://api-scripture-iust-dev.herokuapp.com/v1/scripture/quraan/get?language=en&author=Ahmed%20Ali&text=simple&chapter=${params.id}`
+        )
+            .then(async (res) => {
+                setVersess((await res.json()).data);
                 setLoading(false);
+            })
+
+
+            .catch((error) => {
+                console.log(error);
             });
 
-            fetch(
-                `https://api-scripture-iust-dev.herokuapp.com/v1/scripture/quraan/get?language=en&author=Ahmed%20Ali&text=simple&chapter=${params.id}`
-            )
-                .then(async (res) => {
-                    setVersess((await res.json()).data);
-                    setLoading(false);
-                })
-
-
-                .catch((error) => {
-                    console.log(error);
-                });
-        
     }, [params.id]);
 
 
@@ -65,7 +65,7 @@ const Verses = () => {
 
                 {chapters.map((chapter) => (
                     <div key={chapter._id}>
-                        سورة &nbsp; {chapter.arabicName}
+                        سورة &nbsp;  {chapter.arabicName}
                     </div>
                 ))}
             </div>
@@ -75,7 +75,10 @@ const Verses = () => {
                 <div key={verse.verse} className="text">
 
                     &nbsp;
-                    <div className="right"> {verse.data.text} ۝ </div>
+
+                    <div className="right">
+
+                        {verse.data.text} ۝ </div>
                     {showTranslation ? (
                         <>
                             <div className="left">
@@ -105,55 +108,3 @@ export default Verses;
 
 
 
-// fetch(`https://api.quran.sutanlab.id/surah/${params.id}`).then(
-//     async (res) => {
-//         setVersesWithAudio((await res.json()).data.verses);
-//         setLoading(false);
-//     }
-// )
-
-
-
-
-{/* <div key={versess.inQuran} className="audios">
-                        <audio
-                            controls
-                            ref={(e) => (audioRefs.current[verse.verse] = e)}
-                            onPlay={() => pauseAllExcept(verse.verse)}
-                            onEnded={() => playNextAudio(verse.verse)}
-                        >
-                            <source
-                                src={
-                                    versesWithAudio.find(
-                                        (v) => v.number.inSurah === verse.verse
-                                    ).audio.primary
-                                }
-                                type="audio/mp3"
-                            />
-                        </audio>
-                    </div> */}
-
-
-
-
-                        // const playNextAudio = (currentIndex) => {
-    //     if (currentIndex < versesWithAudio.length - 1) {
-    //         audioRefs.current[currentIndex + 1].play();
-    //     }
-    // };
-
-
-    // const pauseAllExcept = (currentIndex) => {
-    //     Object.keys(audioRefs.current).forEach((key) => {
-    //         if (parseInt(key) !== currentIndex) {
-    //             audioRefs.current[key].pause();
-    //         }
-    //     });
-    // };
-
-
-
-
-
-        // const audioRefs = useRef({});
-    // const [versesWithAudio, setVersesWithAudio] = useState([]);

@@ -1,0 +1,56 @@
+// npm start  
+// G-41FG5RD597 tracking idgoogle analytics
+
+
+
+
+
+
+// fetch(`https://api.quran.sutanlab.id/surah/${params.id}`).then(
+//     async (res) => {
+//         setVersesWithAudio((await res.json()).data.verses);
+//         setLoading(false);
+//     }
+// )
+
+
+
+
+{/* <div key={versess.inQuran} className="audios">
+                        <audio
+                            controls
+                            ref={(e) => (audioRefs.current[verse.verse] = e)}
+                            onPlay={() => pauseAllExcept(verse.verse)}
+                            onEnded={() => playNextAudio(verse.verse)}
+                        >
+                            <source
+                                src={
+                                    versesWithAudio.find(
+                                        (v) => v.number.inSurah === verse.verse
+                                    ).audio.primary
+                                }
+                                type="audio/mp3"
+                            />
+                        </audio>
+                    </div> */}
+
+
+
+
+                        // const playNextAudio = (currentIndex) => {
+    //     if (currentIndex < versesWithAudio.length - 1) {
+    //         audioRefs.current[currentIndex + 1].play();
+    //     }
+    // };
+
+
+    // const pauseAllExcept = (currentIndex) => {
+    //     Object.keys(audioRefs.current).forEach((key) => {
+    //         if (parseInt(key) !== currentIndex) {
+    //             audioRefs.current[key].pause();
+    //         }
+    //     });
+    // };
+
+           // const audioRefs = useRef({});
+    // const [versesWithAudio, setVersesWithAudio] = useState([]);

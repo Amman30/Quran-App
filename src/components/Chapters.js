@@ -9,19 +9,23 @@ import Spinner from "./Spinner";
 const Chapters = () => {
 
     const [chapters, setChapters] = useState([]);
-    const [data, setData] = useState({})
-    const [loading, setLoading] = useState(true)
+    const [data, setData] = useState({});
+    const [loading, setLoading] = useState(true);
+
+    const fetchdata=()=>{
+        fetch("https://api-scripture-iust-dev.herokuapp.com/v1/scripture/chapterMetaData/all")
+        .then(async (response) => {
+            setChapters((await response.json()).data)
+            setLoading(false)
+        });
+    fetch(`https://api.aladhan.com/v1/timingsByCity?city=Srinagar&country=india&method=8`)
+        .then(async (res) => {
+            setData((await res.json()).data)
+        })
+    }
 
     useEffect(() => {
-        fetch("https://api-scripture-iust-dev.herokuapp.com/v1/scripture/chapterMetaData/all")
-            .then(async (response) => {
-                setChapters((await response.json()).data)
-                setLoading(false)
-            });
-        fetch(`https://api.aladhan.com/v1/timingsByCity?city=Srinagar&country=india&method=8`)
-            .then(async (res) => {
-                setData((await res.json()).data)
-            })
+    fetchdata();
     }, []);
 
 

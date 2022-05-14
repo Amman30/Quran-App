@@ -1,216 +1,218 @@
-.topsearchs{
-font-size: xx-large;
-color: white;
+.topsearchs {
+  font-size: xx-large;
+  color: white;
 
 }
-.date{
+
+.date {
   font-size: xxx-large;
   margin-top: 90px;
   margin-bottom: -180px;
-  }
+}
 
- .azaan{
-margin-top: 250px;
-padding-bottom: 120px;
-font-size: xx-large;
-} 
-.timings{
+.azaan {
+  margin-top: 250px;
+  padding-bottom: 120px;
+  font-size: xx-large;
+}
+
+.timings {
   display: grid;
   font-size: xx-large;
 
 }
-.azz{
+
+.azz {
   margin-bottom: 24px;
 }
-.timing{
+
+.timing {
   display: inline-block;
   font-size: xx-large;
   padding: 20px 20px 20px 20px;
   margin-left: 20px;
   border-style: double;
-border-radius: 10px;
-margin-top: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
 
 }
-.timing:hover{
+
+.timing:hover {
   color: #B8DFD8;
 }
-.element{
- display:inline-block;
- border-radius: 10px;
- border-style: double;
- padding: 20px 20px 20px 20px;
- margin-right: 15px;
- margin-top: 70px;
- margin-bottom: 70px;
- font-size: x-large;
+
+.element {
+  display: inline-block;
+  border-radius: 10px;
+  border-style: double;
+  padding: 20px 20px 20px 20px;
+  margin-right: 15px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  font-size: x-large;
 
 }
 
 
 
-.link{
-    width: 450px;
-    height: 120px;
-  display:inline-block;
-    border: 3px solid ;
-    border-radius: 10px;
-cursor: pointer;
-    padding: 3px 3px 3px 3px;
-    background-color: #FFF8F3;
-    margin-right: 12px;
-    margin-bottom: 12px;
-    margin-top: 15px;
-    text-decoration: none;
+.link {
+  width: 420px;
+  height: 120px;
+  display: inline-block;
+  border: 3px solid;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 3px 3px 3px 3px;
+  background-color: #FFF8F3;
+  margin-right: 12px;
+  margin-bottom: 12px;
+  margin-top: 15px;
+  text-decoration: none;
 }
-.link:hover{
+
+.link:hover {
   color: white;
 }
-.bismillah{
+
+.bismillah {
   margin-top: 80px;
 }
 
-.box:hover{
+.box:hover {
   color: #92BA92;
   transition: ease-in-out;
-  
+
 }
+
 @media only screen and (max-width: 1000px) {
-  
-  .azz{
+
+  .azz {
     margin-bottom: 24px;
     font-size: large;
   }
- .azaan{
-  margin-top: 60px;
-   font-size: large;
- }
- .timing{
-  
-  display: inline-block;
 
- margin-left: 10px;
- font-size: large;
+  .azaan {
+    margin-top: 60px;
+    font-size: large;
+  }
 
+  .timing {
 
+    display: inline-block;
 
-}
-.timing:hover{
-  color: #B8DFD8;
-}
-.timings{
+    margin-left: 10px;
+    font-size: large;
 
-  flex-direction: row;
-  font-size: small;
-}
-.b{
-  margin-top: 50px;
-}
+  }
 
-.topsearchs{
-margin-top: -50px;
-padding: 10px 10px 10px 10px;
+  .timing:hover {
+    color: #B8DFD8;
+  }
 
-}
-.element{
-  
- font-size: large;
-margin-top: -30px;
+  .timings {
 
-}
-  .link{
+    flex-direction: row;
+    font-size: small;
+  }
+
+  .topsearchs {
+    margin-top: -50px;
+    padding: 10px 10px 10px 10px;
+
+  }
+
+  .element {
+
+    font-size: large;
+    margin-top: -30px;
+
+  }
+
+  .link {
     margin: 1rem 2rem;
-cursor: pointer;
-width: 370px;
-height: 100px;
+    cursor: pointer;
+    width: 315px;
+    height: 110px;
 
-    text-decoration:black;
+    text-decoration: black;
 
     text-align: justify;
     border-color: grey;
     background-color: #FFF8F3;
 
   }
- 
-  .date{
-   
+
+  .date {
+
     font-size: large;
     margin-top: 100px;
-margin-bottom: 1px;
-font-size: xx-large;
+    margin-bottom: 1px;
+    font-size: xx-large;
   }
-  .bis{
+
+  .bis {
     color: white;
   }
 
-  .englishname{
-    font-size: xx-small;
+  .englishname {
+    font-size: xxx-small;
     margin-left: -2px;
-   
-  }
-  .nameTranslation{
-    margin-left: -2px;
-  }
-  .arabicname{
 
-    font-size: xx-small;
+  }
+
+  .nameTranslation {
+    margin-left: -2px;
+  }
+
+  .arabicname {
+
+    font-size: xxx-small;
+
   }
 }
 
 /*  MEDIA QUERY END*/
-.bis{
- 
-  
-background-color: #066163;
-background-size: cover;
-background-attachment: fixed;
-position:static;
-color: white;
-
-height: 90vh;
-align-items: center;
-
-display: flex;
-flex-direction: column;
-justify-content: center;
-text-align: center;
-
-
-}
-.chap{
+.bis {
   background-color: #066163;
-
-  display:inline-block;
-
+  color: white;
 
 }
 
-.bismillah{
+.chap {
+  background-color: #066163;
+  display: inline-block;
+}
+
+.bismillah {
   font-size: xxx-large;
-margin-bottom: 400px;
+  margin-bottom: 400px;
 
 }
 
-.nameTranslation{
+.nameTranslation {
   font-size: medium;
   text-align: left;
 }
-.arabicname{
+
+.arabicname {
   font-size: medium;
- text-align: right;
- margin-top: -45px;
- margin-right: 5px;
+  text-align: right;
+  margin-top: -45px;
+  margin-right: 5px;
 
 
 
 }
-.englishname{
+
+.englishname {
   font-size: large;
 
 
 
 }
-.englishname,.nameTranslation {
-text-align: left;
-padding: 5px 5px 5px 5px;
+
+.englishname,
+.nameTranslation {
+  text-align: left;
+  padding: 5px 5px 5px 5px;
 }
