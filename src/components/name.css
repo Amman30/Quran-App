@@ -1,0 +1,61 @@
+.arabicc{
+font-size: xx-large;
+
+}
+
+.allahnames{
+    width: 420px;
+    height: 120px;
+    display: inline-block;
+    border: 3px solid;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 3px 3px 3px 3px;
+
+    margin-right: 12px;
+    margin-bottom: 12px;
+    margin-top: 15px;
+    text-decoration: none;
+    color:forestgreen;
+}
+
+.Names{
+    background-color: white;
+}
+
+.translations{
+    text-align: left;
+    padding: 5px 5px 5px 5px;
+
+}
+.meaning{
+    text-align: right;
+margin-bottom: 3px;
+
+}
+.number{
+    text-align: left;
+    margin-bottom: -30px;
+    margin-left: 3px;
+}
+
+@media only screen and (max-width: 1000px) {
+
+
+    .allahnames{
+
+     display: inline-block;
+        width: 315px;
+        height: 110px;
+        font-size: medium;
+        text-decoration: black;
+        border-color: grey;
+        background-color: #FFF8F3;
+
+    }
+
+
+
+
+}
+

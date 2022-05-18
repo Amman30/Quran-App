@@ -20,10 +20,11 @@ const Topbar = () => {
             <div className="menu-items">
               <li><Link to="/"><i className="iconn fa-solid fa-house-user"></i>Home</Link></li>
               <li><Link to="/developers"><i className="iconn fa-brands fa-connectdevelop"></i>Developers</Link></li>
-              <li><Link to="About"><i className="iconn fa-solid fa-address-card"></i>About Us</Link></li>
-              <li><Link to="Hadith"><i className="iconn fa-solid fa-book"></i>Hadith</Link></li>
-              <li><Link to="duas"><i className="iconn fa-solid fa-hands-praying"></i>Dua's(soon)</Link></li>
-              <li><Link to="audios"><i className="iconn fa-solid fa-circle-play"></i>Audios(soon)</Link></li>
+              <li><Link to="/About"><i className="iconn fa-solid fa-address-card"></i>About Us</Link></li>
+              <li><Link to="/Hadith"><i className="iconn fa-solid fa-book"></i>Hadith</Link></li>
+              <li><Link to="/duas"><i className="iconn fa-solid fa-hands-praying"></i>Dua's(soon)</Link></li>
+              <li><Link to="/audios"><i className="iconn fa-solid fa-circle-play"></i>Audios(soon)</Link></li>
+              <li><Link to="/names"><i className="fa-solid fa-list"></i>Names</Link></li>
             </div>
           </div>
         </div>

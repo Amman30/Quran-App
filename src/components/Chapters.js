@@ -5,7 +5,6 @@ import "./chapter.css"
 import Spinner from "./Spinner";
 
 
-
 const Chapters = () => {
 
     const [chapters, setChapters] = useState([]);
@@ -28,15 +27,12 @@ const Chapters = () => {
     fetchdata();
     }, []);
 
-
-
     return loading ? (<Spinner />) : (
         <div className='chapter'>
 
-
             <div className="bis">
             
-                <h1 className='b'>  ﷽ </h1>
+                <h1 className='b'> ﷽ </h1>
 
                 <div className="date">
 
@@ -45,22 +41,20 @@ const Chapters = () => {
                     {data.date.hijri.month.ar},
                     {data.date.hijri.year}   </div>
                 <div className='azaan'>
+                    
                          <div className='azz'>Azaan Timings Today In Kashmir(IST)</div>
                          <div className='timing'> Fajr <span className='timings'>&nbsp; {data.timings.Fajr}</span></div>
-                         <div className='timing'> Dhuhr <span className='timings'>&nbsp;     {data.timings.Dhuhr}</span></div>
-                         <div className='timing'> Asr <span className='timings'>&nbsp;    {data.timings.Asr}</span></div>
-                         <div className='timing'> Magrib <span className='timings'>&nbsp;  {data.timings.Maghrib}</span></div>
-                         <div className='timing'> Isha <span className='timings'>&nbsp;      {data.timings.Isha}</span></div>
+                         <div className='timing'> Dhuhr <span className='timings'>&nbsp;  {data.timings.Dhuhr}</span></div>
+                         <div className='timing'> Asr <span className='timings'>&nbsp;  {data.timings.Asr}</span></div>
+                         <div className='timing'> Magrib <span className='timings'>&nbsp;{data.timings.Maghrib}</span></div>
+                         <div className='timing'> Isha <span className='timings'>&nbsp;  {data.timings.Isha}</span></div>
                 </div>
-
-
 
             </div>
 
 
-
-
             <div className="chap">
+                
 
                 <div className="topsearchs">
                     Top Search  </div>
@@ -93,11 +87,13 @@ const Chapters = () => {
                                         </div>
                                     </h3>
                                 </ol>
+                                
 
                             </div>
 
                         )) : null
                 }
+     
 
             </div>
 
