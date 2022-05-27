@@ -1,6 +1,6 @@
 import React from "react";
 import "./dev.css";
-import Topbar from "./Topbar";
+
 const Dev = () => {
     function Card(props) {
         return (
@@ -13,7 +13,7 @@ const Dev = () => {
     return (
       <div className="dev1">
   
-        <Topbar />
+    
         <br />
         <div className="person1">
           <Card

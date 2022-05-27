@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import "./chapter.css"
 import Spinner from "./Spinner";
-import Topbar from "./Topbar";
+
 
 const Chapters = () => {
 
@@ -30,7 +30,7 @@ const Chapters = () => {
     return loading ? (<Spinner />) : (
         
         <div className='chapter'>
-            <Topbar/>
+         
             <div className="bis">
             
                 <h1 className='b'> ﷽ </h1>

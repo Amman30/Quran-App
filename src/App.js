@@ -10,6 +10,7 @@ import Dev from "./components/Dev.js";
 import Audios from "./components/Audios";
 import Duas from "./components/Duas";
 import Names from "./components/Names";
+import Topbar from "./components/Topbar";
 
 
 
@@ -18,6 +19,7 @@ function App() {
       <div className="app">
       
         <div className="route">
+          <Topbar />
           <Routes>
             <Route path="/" element={<Chapters />} />
             <Route path="/Quran-App" element={<Chapters />} />

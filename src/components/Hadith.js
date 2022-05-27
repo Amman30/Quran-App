@@ -18,7 +18,7 @@ const Hadith = () => {
         <Spinner />
     ) : (
         <div className="hddd">
-            <Topbar/>
+        
             <br />
             {
                 chapters.map((chap) => (
