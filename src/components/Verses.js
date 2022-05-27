@@ -35,6 +35,7 @@ const Verses = () => {
   return loading ? (
     <Spinner />
   ) : (
+    
     <div className="verses">
       <div className="reading">
         <button

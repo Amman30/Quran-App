@@ -3,7 +3,6 @@ import "./App.css";
 import React from "react";
 import Chapters from "./components/Chapters";
 import Verses from "./components/Verses";
-import Topbar from "./components/Topbar";
 import Footer from "./components/Footer";
 import About from "./components/About";
 import Hadith from "./components/Hadith";
@@ -17,7 +16,7 @@ import Names from "./components/Names";
 function App() {
     return (
       <div className="app">
-        <Topbar />
+      
         <div className="route">
           <Routes>
             <Route path="/" element={<Chapters />} />
