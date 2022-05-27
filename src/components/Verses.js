@@ -31,7 +31,7 @@ const Verses = () => {
         console.log(error);
       });
   }, [params.id]);
-   
+
   return loading ? (
     <Spinner />
   ) : (
@@ -50,21 +50,18 @@ const Verses = () => {
         </button>
       </div>
       <div className="surah">
-        {chapters.map((chapter) => (
-          <div key={chapter._id}>سورة &nbsp; {chapter.arabicName}</div>
-        ))}
+        <div key={chapters[0]._id}>سورة &nbsp; {chapters[0].arabicName}</div>
       </div>
-      {chapters[0].chapter!==9&&<div className="bism"> ﷽ </div>}
-      
-
+      {versess[0].chapter !== 9 && <div className="bism"> ﷽ </div>}
       <br />
 
       {versess.map((verse) => (
         <div key={verse.verse} className="text">
           &nbsp;
-          {chapters[0].chapter == 1 || verse.verse !== 1 ? (
+          {verse.chapter === 1 || verse.chapter === 9 || verse.verse !== 1 ? (
             <div className="right">{verse.data.text} ۝ </div>
-          ) : (
+          ) : (     //removing bismillah.. from first verse of every chapter execept chap 1 and
+        //        in chap 9 as there is no bismillah in chap 9 itself in the database surah tawbah
             <div className="right">{verse.data.text.slice(39)} ۝ </div>
           )}
           {showTranslation ? (

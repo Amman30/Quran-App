@@ -16,23 +16,24 @@ import Names from "./components/Names";
 
 function App() {
     return (
-        <div className="app">
-            <Topbar />
-            <div className="route">
-                <Routes>
-                    <Route path="/" element={<Chapters />} />
-                    <Route path="/:id" element={<Verses />} />
-                    <Route path="/About" element={<About />} />
-                    <Route path="/Hadith" element={<Hadith />} />
-                    <Route path="/developers" element={<Dev />} />
-                    <Route path="/audios" element={<Audios />} />
-                    <Route path="/duas" element={<Duas />} />
-                    <Route path="/names" element={<Names />} />
-                </Routes>
+      <div className="app">
+        <Topbar />
+        <div className="route">
+          <Routes>
+            <Route path="/" element={<Chapters />} />
+            <Route path="/Quran-App" element={<Chapters />} />
+            <Route path="/:id" element={<Verses />} />
+            <Route path="/About" element={<About />} />
+            <Route path="/Hadith" element={<Hadith />} />
+            <Route path="/developers" element={<Dev />} />
+            <Route path="/audios" element={<Audios />} />
+            <Route path="/duas" element={<Duas />} />
+            <Route path="/names" element={<Names />} />
+          </Routes>
 
-                <Footer />
-            </div>
+          <Footer />
         </div>
+      </div>
     );
 }
 
