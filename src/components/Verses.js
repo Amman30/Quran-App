@@ -1,6 +1,7 @@
 import React, { useState, useEffect /*useRef*/ } from "react";
 import { useParams } from "react-router-dom";
 import Spinner from "./Spinner";
+import Topbar from "./Topbar";
 
 import "./Verses.css";
 
@@ -35,8 +36,8 @@ const Verses = () => {
   return loading ? (
     <Spinner />
   ) : (
-    
     <div className="verses">
+      <Topbar />
       <div className="reading">
         <button
           style={{ color: "white" }}
@@ -61,8 +62,9 @@ const Verses = () => {
           &nbsp;
           {verse.chapter === 1 || verse.chapter === 9 || verse.verse !== 1 ? (
             <div className="right">{verse.data.text} ۝ </div>
-          ) : (     //removing bismillah.. from first verse of every chapter execept chap 1 and
-        //        in chap 9 as there is no bismillah in chap 9 itself in the database surah tawbah
+          ) : (
+            //removing bismillah.. from first verse of every chapter execept chap 1 and
+            //        in chap 9 as there is no bismillah in chap 9 itself in the database surah tawbah
             <div className="right">{verse.data.text.slice(39)} ۝ </div>
           )}
           {showTranslation ? (
