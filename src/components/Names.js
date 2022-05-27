@@ -7,7 +7,7 @@ const Names = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(()=>{
-        fetch(`http://api.aladhan.com/asmaAlHusna`)
+        fetch(`https://api.aladhan.com/asmaAlHusna`)
         .then(async (res)=>{
             setNames((await res.json()).data)
             setLoading(false);
