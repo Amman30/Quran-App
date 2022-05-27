@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import config from "../package.json";
 import App from "./App";
 import "./index.css";
 

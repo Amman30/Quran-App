@@ -20,7 +20,7 @@ const Verses = () => {
             `https://api-scripture-iust-dev.herokuapp.com/v1/scripture/chapterMetaData/chapter/${params.id}`
         ).then(async (res) => {
             setChapters((await res.json()).data);
-            setLoading(false);
+           
 
         });
 

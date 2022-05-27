@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from 'react-router-dom';
 import "./dev.css";
 const Dev = () => {
     function Card(props) {
@@ -22,9 +21,9 @@ const Dev = () => {
                 Assistant Professor Department of CSE IUST,KASHMIR
                 {
          
-                    <Link to="mailto:zubair.shah@islamicuniversity.edu.in">
+                    <a href="mailto:zubair.shah@islamicuniversity.edu.in">
                         &nbsp;<i className="icon fa-solid fa-message"></i>
-                    </Link>
+                    </a>
                 }
             </div>
             <hr />
@@ -38,14 +37,14 @@ const Dev = () => {
                     Student , Department of CSE &nbsp;
                     <br />
                     {
-                        <Link to="https://github.com/sadafshafi">
+                        <a href="https://github.com/sadafshafi">
                             <i className="icon fa-brands fa-github"></i>
-                        </Link>
+                        </a>
                     }
                     {
-                        <Link to="https://www.linkedin.com/in/sadaf-shafi-4a05b646/">
+                        <a href="https://www.linkedin.com/in/sadaf-shafi-4a05b646/">
                             <i className="icon fa-brands fa-linkedin"></i>
-                        </Link>
+                        </a>
                     }
                 </h3>
             </div>
@@ -60,14 +59,14 @@ const Dev = () => {
                     Student , Department of CSE &nbsp;
                     <br />
                     {
-                        <Link to="https://github.com/Amman30">
+                        <a href="https://github.com/Amman30">
                             <i className="icon fa-brands fa-github"></i>
-                        </Link>
+                        </a>
                     }
                     {
-                        <Link to="https://www.linkedin.com/in/mohammad-amman-5378ab20a">
+                        <a href="https://www.linkedin.com/in/mohammad-amman-5378ab20a">
                             <i className="icon fa-brands fa-linkedin"></i>
-                        </Link>
+                        </a>
                     }
                 </h3>
             </div>
@@ -81,14 +80,14 @@ const Dev = () => {
                     Student , Department of CSE &nbsp;
                     <br />
                     {
-                        <Link to="https://github.com/Tabeed-H">
+                        <a href="https://github.com/Tabeed-H">
                             <i className="icon fa-brands fa-github"></i>
-                        </Link>
+                        </a>
                     }
                     {
-                        <Link to="https://www.linkedin.com/in/tabeed-hameed-ahangar-26491b1ba/">
+                        <a href="https://www.linkedin.com/in/tabeed-hameed-ahangar-26491b1ba/">
                             <i className="icon fa-brands fa-linkedin"></i>
-                        </Link>
+                        </a>
                     }
                 </h3>
             </div>
