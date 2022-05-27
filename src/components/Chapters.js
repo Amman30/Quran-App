@@ -28,6 +28,7 @@ const Chapters = () => {
     }, []);
 
     return loading ? (<Spinner />) : (
+        
         <div className='chapter'>
 
             <div className="bis">
