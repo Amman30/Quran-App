@@ -15,7 +15,7 @@ const Topbar = () => {
               <span className="line line3"></span>
             </div>
             <div className="logo">
-              <h1>The Quran</h1>
+              <h1>Quran</h1>
             </div>
             <div className="menu-items">
               <li><Link to="/"><i className="iconn fa-solid fa-house-user"></i>Home</Link></li>

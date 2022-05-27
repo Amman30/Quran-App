@@ -132,9 +132,8 @@ body {
 .logo {
   position: absolute;
 display: inline-block;
-
-margin-left: 400px;
-  font-size: 1.2rem;
+text-align: center;
+margin-left: 43%;
   color: #0e2431;
 
 }
@@ -142,12 +141,10 @@ margin-left: 400px;
 @media screen and (max-width: 1000px) {
 
 .logo{
-  position: absolute;
+text-align: center;
+margin-left: 36%;
 display: inline-block;
 
-margin-left: 104px;
-  font-size: 1.2rem;
-  color: #0e2431;
 }
 
 
