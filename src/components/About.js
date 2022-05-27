@@ -1,11 +1,11 @@
 import React from 'react';
 import "./about.css";
-import Topbar from "./Topbar";
+
 
 const About = () => {
     return (
         <div className="about">
-    
+  
             <span className="text">
                 <h1>About us</h1>
                 The Arabic Quran is considered by Muslims to be verbatim word of God.
