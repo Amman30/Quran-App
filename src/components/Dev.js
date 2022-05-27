@@ -104,11 +104,9 @@ const Dev = () => {
                 <i className="icon fa-brands fa-github"></i>
               </a>
             }
-            {}
           </h3>
         </div>
         
-        <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
       </div>
     );
 };
