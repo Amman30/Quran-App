@@ -1,7 +1,7 @@
 import React, { useState, useEffect /*useRef*/ } from "react";
 import { useParams } from "react-router-dom";
 import Spinner from "./Spinner";
-import Topbar from "./Topbar";
+
 
 import "./Verses.css";
 
@@ -37,7 +37,7 @@ const Verses = () => {
     <Spinner />
   ) : (
     <div className="verses">
-      <Topbar />
+
       <div className="reading">
         <button
           style={{ color: "white" }}
