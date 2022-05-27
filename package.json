@@ -1,7 +1,6 @@
 {
     "name": "quran",
     "version": "0.1.0",
-    "basename": "/Quran-App",
     "homepage": "https://Amman30.github.io/Quran-App",
     "private": true,
     "dependencies": {
