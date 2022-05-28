@@ -9,7 +9,7 @@ const Duas = () => {
             </h3>
             <br />
             <span>
-                Will Be Back Soon!
+            Will Be Back With An Update!
             </span>
             <br />
             <h1>    <Link style={{ color: "green" }}  to="/">Back to Home</Link></h1>

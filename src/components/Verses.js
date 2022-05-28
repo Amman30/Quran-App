@@ -1,4 +1,4 @@
-import React, { useState, useEffect /*useRef*/ } from "react";
+import React, { useState, useEffect  } from "react";
 import { useParams } from "react-router-dom";
 import Spinner from "./Spinner";
 
@@ -28,6 +28,7 @@ const Verses = () => {
       .then(async (res) => {
         setVersess((await res.json()).data);
         setLoading(false);
+       
       })
 
       .catch((error) => {

@@ -11,7 +11,7 @@ const Audios = () => {
             </h3>
             <br />
             <span>
-                Will Be Back Soon!
+                Will Be Back With An Update!
             </span>
             <br />
             <h1>
