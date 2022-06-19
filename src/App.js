@@ -23,7 +23,6 @@ function App() {
         <Topbar />
         <Routes>
           <Route path="/" element={<Chapters />} />
-          <Route path="/Quran-App" element={<Chapters />} />
           <Route path="/:id" element={<Verses />} />
           <Route path="/About" element={<About />} />
           <Route path="/Hadith" element={<Hadith />} />
@@ -31,7 +30,7 @@ function App() {
           <Route path="/audios" element={<Audios />} />
           <Route path="/duas" element={<Duas />} />
           <Route path="/names" element={<Names />} />
-          <Route path="*" element={<Error />} />
+          <Route path={`/*`} element={<Error />} />
         </Routes>
 
         <Footer />

@@ -82,9 +82,9 @@ const Chapters = () => {
 
                     <div className="input-group">
                         <div className="form-outline">
-                            <input id="search-input" placeholder='Enter Surah Number' type="search" onChange={(e) => { setKeyword(e.target.value) }} className="form-control search" />
+                            <input id="search-input" placeholder='Enter Surah Number' type="number" onChange={(e) => { setKeyword(e.target.value) }} className="form-control search" />
                         </div>
-                        <button id="search-button" type="submit" className="btn btn-primary search search1">
+                        <button id="search-button" type="submit" className="btn btn-primary search1">
                             <i className="fas fa-search"></i>
                         </button>
                     </div>
