@@ -4,6 +4,11 @@
 
 }
 
+.search{
+  margin-left:410px;
+margin-bottom: 30px;
+
+}
 
 .date {
   font-size: xxx-large;
@@ -120,6 +125,10 @@
     margin-top: -50px;
     padding: 10px 10px 10px 10px;
 
+  }
+  .search{
+    margin-left: 50px;
+    margin-bottom: 120px;
   }
 
   .element {
