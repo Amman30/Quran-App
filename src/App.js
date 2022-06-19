@@ -23,6 +23,7 @@ function App() {
         <Topbar />
         <Routes>
           <Route path="/" element={<Chapters />} />
+          <Route path="/Quran-App" element={<Chapters />} />
           <Route path="/:id" element={<Verses />} />
           <Route path="/About" element={<About />} />
           <Route path="/Hadith" element={<Hadith />} />
