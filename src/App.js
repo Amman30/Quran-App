@@ -30,7 +30,7 @@ function App() {
           <Route path="/audios" element={<Audios />} />
           <Route path="/duas" element={<Duas />} />
           <Route path="/names" element={<Names />} />
-          <Route path={`/*`} element={<Error />} />
+          <Route path={`*`} element={<Error />} />
         </Routes>
 
         <Footer />
