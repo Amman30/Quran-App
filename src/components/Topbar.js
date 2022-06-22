@@ -22,7 +22,7 @@ const Topbar = () => {
               <li><Link to="/developers"><i className="iconn fa-brands fa-connectdevelop"></i>Developers</Link></li>
               <li><Link to="/About"><i className="iconn fa-solid fa-address-card"></i>About Us</Link></li>
               <li><Link to="/Hadith"><i className="iconn fa-solid fa-book"></i>Hadith</Link></li>
-              <li><Link to="/names"><i class="fa-solid fa-list-ol"></i>
+              <li><Link to="/names"><i className="fa-solid fa-list-ol"></i>
                 Asma Ul husna
               </Link></li>
               <li><Link to="/duas"><i className="iconn fa-solid fa-hands-praying"></i>Dua's(soon)</Link></li>

@@ -4,9 +4,10 @@
 
 }
 
-.search,.search1{
-  margin-left:410px;
-margin-bottom: 30px;
+.search,
+.search1 {
+  margin-left: 410px;
+  margin-bottom: 30px;
 
 }
 
@@ -128,12 +129,14 @@ margin-bottom: 30px;
     padding: 10px 10px 10px 10px;
 
   }
-  .search{
+
+  .search {
     margin-left: 50px;
     margin-bottom: 120px;
-width: 212px;
+    width: 212px;
   }
-  .search1{
+
+  .search1 {
     height: 39px;
     margin-left: 0px;
   }

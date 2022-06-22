@@ -3,11 +3,13 @@
 
     background-color: white;
 }
+
 .route {
     font-family: "BIZ UDPMincho", serif;
     text-align: center;
     font-size: xx-large;
 }
+
 /* @media only screen and (max-width: 400px) {
     .app{
 

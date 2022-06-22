@@ -12,7 +12,7 @@ import Duas from "./components/Duas";
 import Names from "./components/Names";
 import Topbar from "./components/Topbar";
 import Error from "./components/Error";
-
+import Location from "./components/Location";
 
 
 function App() {
@@ -22,15 +22,17 @@ function App() {
       <div className="route">
         <Topbar />
         <Routes>
+          <Route path='*' element={<Error />} />
           <Route path="/" element={<Chapters />} />
           <Route path="/:id" element={<Verses />} />
           <Route path="/About" element={<About />} />
           <Route path="/Hadith" element={<Hadith />} />
           <Route path="/developers" element={<Dev />} />
+          <Route path="/location" element={<Location />} />
           <Route path="/audios" element={<Audios />} />
           <Route path="/duas" element={<Duas />} />
           <Route path="/names" element={<Names />} />
-          <Route path={`*`} element={<Error />} />
+
         </Routes>
 
         <Footer />

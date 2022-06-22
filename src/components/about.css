@@ -1,15 +1,15 @@
-.about{
+.about {
   background-color: #066163;
-    color: white;
-   
+  color: white;
+
 }
 
 
 @media only screen and (max-width: 1000px) {
- 
-  .about{
-      font-size: medium;
-  
+
+  .about {
+    font-size: medium;
+
   }
 
 }

@@ -1,9 +1,9 @@
-.arabicc{
-font-size: xx-large;
+.arabicc {
+    font-size: xx-large;
 
 }
 
-.allahnames{
+.allahnames {
     width: 420px;
     height: 120px;
     display: inline-block;
@@ -16,24 +16,26 @@ font-size: xx-large;
     margin-bottom: 12px;
     margin-top: 15px;
     text-decoration: none;
-    color:forestgreen;
+    color: forestgreen;
 }
 
-.Names{
+.Names {
     background-color: white;
 }
 
-.translations{
+.translations {
     text-align: left;
     padding: 5px 5px 5px 5px;
 
 }
-.meaning{
+
+.meaning {
     text-align: right;
-margin-bottom: 3px;
+    margin-bottom: 3px;
 
 }
-.number{
+
+.number {
     text-align: left;
     margin-bottom: -30px;
     margin-left: 3px;
@@ -42,9 +44,9 @@ margin-bottom: 3px;
 @media only screen and (max-width: 1000px) {
 
 
-    .allahnames{
+    .allahnames {
 
-     display: inline-block;
+        display: inline-block;
         width: 315px;
         height: 110px;
         font-size: medium;
@@ -58,4 +60,3 @@ margin-bottom: 3px;
 
 
 }
-

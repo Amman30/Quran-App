@@ -1,10 +1,6 @@
-import React, { useState, useEffect  } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Spinner from "./Spinner";
-
-
-
-
 import "./Verses.css";
 
 const Verses = () => {
@@ -20,19 +16,16 @@ const Verses = () => {
       `https://api-scripture-iust-dev.herokuapp.com/v1/scripture/chapterMetaData/chapter/${params.id}`
     ).then(async (res) => {
       setChapters((await res.json()).data);
-    });
+    }).catch((err) => {
+      console.log("Error occured  " + err);
+    })
 
-    fetch(
-      `https://api-scripture-iust-dev.herokuapp.com/v1/scripture/quraan/get?language=en&author=Ahmed%20Ali&text=simple&chapter=${params.id}`
-    )
+    fetch(`https://api-scripture-iust-dev.herokuapp.com/v1/scripture/quraan/get?language=en&author=Ahmed%20Ali&text=simple&chapter=${params.id}`)
       .then(async (res) => {
         setVersess((await res.json()).data);
         setLoading(false);
-       
-      })
-
-      .catch((error) => {
-        console.log(error);
+      }).catch((error) => {
+        console.log("Error occured  " + error);
       });
   }, [params.id]);
 

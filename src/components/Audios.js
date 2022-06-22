@@ -3,16 +3,16 @@ import { Link } from 'react-router-dom';
 const Duas = () => {
     return (
         <div>
-            <br />   
+            <br />
             <h3>
-              Audios PAGE IS UNDER PROCESS....
+                Audios PAGE IS UNDER PROCESS....
             </h3>
             <br />
             <span>
-            Will Be Back With An Update!
+                Will Be Back With An Update!
             </span>
             <br />
-            <h1>    <Link style={{ color: "green" }}  to="/">Back to Home</Link></h1>
+            <h1>    <Link style={{ color: "green" }} to="/">Back to Home</Link></h1>
         </div>
     );
 }

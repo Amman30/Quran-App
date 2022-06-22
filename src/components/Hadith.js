@@ -17,11 +17,11 @@ const Hadith = () => {
         <Spinner />
     ) : (
         <div className="hddd">
-        
+
             <br />
             {
                 chapters.map((chap) => (
-                    <div key={chap.Hadith_ID}className="had">
+                    <div key={chap.Hadith_ID} className="had">
                         <span>
                             ({chap.Hadith_ID})&nbsp;
                             {chap.En_Text}

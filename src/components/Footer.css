@@ -1,61 +1,58 @@
-
 .footer {
-    display: flex;
-    flex-flow: row wrap;
-    padding: 30px 30px 20px 30px;
-    color: #2f2f2f;
-    background-color: white;
-    border-top: 1px solid #e5e5e5;
-  }
-  
-  .footer > * {
-    flex:  1 100%;
-    color: #2f2f2f;
-  }
-  
-  .footer__addr {
-    margin-right: 1.25em;
-    margin-bottom: 2em;
-    color: #2f2f2f;
-  }
-  
-  .footer__logo {
- 
-    font-weight: 400;
-  
-    font-size: 1.5rem;
-    color: #2f2f2f;
-    text-align: right;
-  }
-  
-  .footer__addr h2 {
-    margin-top: 1.3em;
-    font-size: 15px;
-    font-weight: 400;
-    color: #2f2f2f;
-  }
-  
-  .nav__title {
-    font-weight: 400;
-    font-size: 15px;
-  }
-  
-  .footer address {
-    font-style: normal;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 30px 30px 20px 30px;
+  color: #2f2f2f;
+  background-color: white;
+  border-top: 1px solid #e5e5e5;
+}
 
-    color: #2f2f2f;
+.footer>* {
+  flex: 1 100%;
+  color: #2f2f2f;
+}
+
+.footer__addr {
+  margin-right: 1.25em;
+  margin-bottom: 2em;
+  color: #2f2f2f;
+}
+
+.footer__logo {
+
+  font-weight: 400;
+
+  font-size: 1.5rem;
+  color: #2f2f2f;
+  text-align: right;
+}
+
+.footer__addr h2 {
+  margin-top: 1.3em;
+  font-size: 15px;
+  font-weight: 400;
+  color: #2f2f2f;
+}
+
+.nav__title {
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.footer address {
+  font-style: normal;
+
+  color: #2f2f2f;
+}
+
+
+
+.heart {
+  color: #2f2f2f;
+}
+
+@media screen and (max-width: 1000px) {
+  .legal {
+    font-size: large;
   }
-  
- 
-  
-  .heart {
-    color: #2f2f2f;
-  }
-  
-  @media screen and (max-width: 1000px) {
-   .legal{
-     font-size: large;
-   }
-  }
-  
-  
+}

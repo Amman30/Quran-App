@@ -3,13 +3,30 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import "./chapter.css"
 import Spinner from "./Spinner";
+let latitude
+let longitude
+
+const Todaydate = Math.floor(new Date().getTime() / 1000.0)
 
 
+navigator.geolocation.getCurrentPosition((position) => {
+
+    latitude = (position.coords.latitude)
+    longitude = (position.coords.longitude)
+    console.log(latitude);
+    console.log(longitude);
+
+
+})
 const Chapters = () => {
     const navigate = useNavigate();
     const [chapters, setChapters] = useState([]);
     const [data, setData] = useState({});
     const [loading, setLoading] = useState(true);
+
+
+
+
 
     const [keyword, setKeyword] = useState('')
 
@@ -32,19 +49,27 @@ const Chapters = () => {
 
 
 
-
     useEffect(() => {
+
+
 
         fetch("https://api-scripture-iust-dev.herokuapp.com/v1/scripture/chapterMetaData/all")
             .then(async (response) => {
                 setChapters((await response.json()).data)
                 setLoading(false)
-            });
-        fetch(`https://api.aladhan.com/v1/timingsByCity?city=Srinagar&country=india&method=8`)
+            }).catch((err) => {
+                console.log("Error occured" + err);
+            })
+        fetch(`https://api.aladhan.com/v1/timings/${Todaydate}?latitude=${latitude}&longitude=${longitude}&method=9`)
             .then(async (res) => {
                 setData((await res.json()).data)
+            }).catch((err) => {
+                console.log("Error occured" + err);
+            }).catch((err) => {
+                console.log("ERROR occured " + err);
             })
-    }, []);
+
+    }, [Todaydate, latitude, longitude]);
 
     return loading ? (<Spinner />) : (
 
