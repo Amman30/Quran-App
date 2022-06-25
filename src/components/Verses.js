@@ -31,7 +31,7 @@ const Verses = () => {
         setLoading(false);
       })
       .catch((error) => {
-        navigate('/');
+        navigate('*');
         window.location.reload(true);
         console.log('Error Occured In Verses Component second Fetch Call ' + error);
       });
