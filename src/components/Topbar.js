@@ -45,6 +45,11 @@ const Topbar = () => {
                 </Link>
               </li>
               <li>
+                <Link to='/contact'>
+                  <i className='fa-solid fa-address-book'></i>Contact
+                </Link>
+              </li>
+              <li>
                 <Link to='/duas'>
                   <i className='iconn fa-solid fa-hands-praying'></i>Dua's(soon)
                 </Link>

@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import Spinner from './Spinner';
 import './Verses.css';
 
 const Verses = () => {
+  const navigate = useNavigate();
   const params = useParams();
   const [loading, setLoading] = useState(true);
   const [versess, setVersess] = useState([]);
@@ -30,9 +31,11 @@ const Verses = () => {
         setLoading(false);
       })
       .catch((error) => {
-        console.log('Error occured  ' + error);
+        navigate('/');
+        window.location.reload(true);
+        console.log('Error Occured In Verses Component second Fetch Call ' + error);
       });
-  }, [params.id]);
+  }, [params.id, navigate]);
 
   return loading ? (
     <Spinner />
