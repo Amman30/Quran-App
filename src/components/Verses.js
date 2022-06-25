@@ -1,38 +1,38 @@
-import React, { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
-import Spinner from './Spinner'
-import './Verses.css'
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import Spinner from './Spinner';
+import './Verses.css';
 
 const Verses = () => {
-  const params = useParams()
-  const [loading, setLoading] = useState(true)
-  const [versess, setVersess] = useState([])
-  const [chapters, setChapters] = useState([])
-  const [showTranslation, setShowTranslation] = useState(true)
-  const [title, setTitle] = useState(false)
+  const params = useParams();
+  const [loading, setLoading] = useState(true);
+  const [versess, setVersess] = useState([]);
+  const [chapters, setChapters] = useState([]);
+  const [showTranslation, setShowTranslation] = useState(true);
+  const [title, setTitle] = useState(false);
 
   useEffect(() => {
     fetch(
       `https://api-scripture-iust-dev.herokuapp.com/v1/scripture/chapterMetaData/chapter/${params.id}`,
     )
       .then(async (res) => {
-        setChapters((await res.json()).data)
+        setChapters((await res.json()).data);
       })
       .catch((err) => {
-        console.log('Error occured  ' + err)
-      })
+        console.log('Error occured  ' + err);
+      });
 
     fetch(
       `https://api-scripture-iust-dev.herokuapp.com/v1/scripture/quraan/get?language=en&author=Ahmed%20Ali&text=simple&chapter=${params.id}`,
     )
       .then(async (res) => {
-        setVersess((await res.json()).data)
-        setLoading(false)
+        setVersess((await res.json()).data);
+        setLoading(false);
       })
       .catch((error) => {
-        console.log('Error occured  ' + error)
-      })
-  }, [params.id])
+        console.log('Error occured  ' + error);
+      });
+  }, [params.id]);
 
   return loading ? (
     <Spinner />
@@ -42,8 +42,8 @@ const Verses = () => {
         <button
           style={{ color: 'white' }}
           onClick={() => {
-            setShowTranslation(!showTranslation)
-            setTitle(!title)
+            setShowTranslation(!showTranslation);
+            setTitle(!title);
           }}
           type='button'
           className='btn btn-outline-info'
@@ -77,7 +77,7 @@ const Verses = () => {
         </div>
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default Verses
+export default Verses;

@@ -1,18 +1,18 @@
-import { Routes, Route } from 'react-router-dom'
-import './App.css'
-import React from 'react'
-import Chapters from './components/Chapters'
-import Verses from './components/Verses'
-import Footer from './components/Footer'
-import About from './components/About'
-import Hadith from './components/Hadith'
-import Dev from './components/Dev.js'
-import Audios from './components/Audios'
-import Duas from './components/Duas'
-import Names from './components/Names'
-import Topbar from './components/Topbar'
-import Error from './components/Error'
-import Location from './components/Location'
+import { Routes, Route } from 'react-router-dom';
+import './App.css';
+import React from 'react';
+import Chapters from './components/Chapters';
+import Verses from './components/Verses';
+import Footer from './components/Footer';
+import About from './components/About';
+import Hadith from './components/Hadith';
+import Dev from './components/Dev.js';
+import Audios from './components/Audios';
+import Duas from './components/Duas';
+import Names from './components/Names';
+import Topbar from './components/Topbar';
+import Error from './components/Error';
+import Location from './components/Location';
 
 function App() {
   return (
@@ -35,7 +35,7 @@ function App() {
         <Footer />
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 const Duas = () => {
   return (
     <div>
@@ -15,7 +15,7 @@ const Duas = () => {
         </Link>
       </h1>
     </div>
-  )
-}
+  );
+};
 
-export default Duas
+export default Duas;

@@ -1,5 +1,5 @@
-import React from 'react'
-import './about.css'
+import React from 'react';
+import './about.css';
 
 const About = () => {
   return (
@@ -33,7 +33,7 @@ const About = () => {
         being held to its upmost level.
       </span>
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;

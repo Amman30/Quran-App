@@ -1,6 +1,6 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import './Topbar.css'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './Topbar.css';
 
 const Topbar = () => {
   return (
@@ -59,7 +59,7 @@ const Topbar = () => {
         </div>
       </nav>
     </div>
-  )
-}
+  );
+};
 
-export default Topbar
+export default Topbar;

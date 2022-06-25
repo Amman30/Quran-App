@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 
-import './Footer.css'
+import './Footer.css';
 // import View from "./View";
 const Footer = () => {
-  const d = new Date()
-  const year = d.getFullYear()
+  const d = new Date();
+  const year = d.getFullYear();
   return (
     <div className='footer'>
       <footer className='footer'>
@@ -21,7 +21,7 @@ const Footer = () => {
         {/* <View /> */}
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

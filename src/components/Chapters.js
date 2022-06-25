@@ -1,51 +1,51 @@
-import React, { useState, useEffect } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
-import './chapter.css'
-import Spinner from './Spinner'
+import React, { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import './chapter.css';
+import Spinner from './Spinner';
 
-const Todaydate = Math.floor(new Date().getTime() / 1000.0)
+const Todaydate = Math.floor(new Date().getTime() / 1000.0);
 
 const Chapters = () => {
-  const navigate = useNavigate()
-  const [chapters, setChapters] = useState([])
-  const [data, setData] = useState({})
-  const [loading, setLoading] = useState(true)
+  const navigate = useNavigate();
+  const [chapters, setChapters] = useState([]);
+  const [data, setData] = useState({});
+  const [loading, setLoading] = useState(true);
 
-  const [keyword, setKeyword] = useState('')
+  const [keyword, setKeyword] = useState('');
 
   const Search = (e) => {
     if (keyword) {
-      e.preventDefault()
+      e.preventDefault();
 
-      navigate(`${keyword}`)
-    } else console.log('error')
-  }
+      navigate(`${keyword}`);
+    } else console.log('error');
+  };
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((position) => {
-      const { latitude, longitude } = position.coords
+      const { latitude, longitude } = position.coords;
       fetch(
         `https://api.aladhan.com/v1/timings/${Todaydate}?latitude=${latitude}&longitude=${longitude}&method=9`,
       )
         .then(async (res) => {
-          setData((await res.json()).data)
+          setData((await res.json()).data);
         })
         .catch((err) => {
-          console.log('Error occured' + err)
+          console.log('Error occured' + err);
         })
         .catch((err) => {
-          console.log('ERROR occured ' + err)
-        })
-    })
+          console.log('ERROR occured ' + err);
+        });
+    });
     fetch('https://api-scripture-iust-dev.herokuapp.com/v1/scripture/chapterMetaData/all')
       .then(async (response) => {
-        setChapters((await response.json()).data)
-        setLoading(false)
+        setChapters((await response.json()).data);
+        setLoading(false);
       })
       .catch((err) => {
-        console.log('Error occured' + err)
-      })
-  }, [])
+        console.log('Error occured' + err);
+      });
+  }, []);
 
   return loading ? (
     <Spinner />
@@ -92,7 +92,7 @@ const Chapters = () => {
                 placeholder='Enter Surah Number'
                 type='number'
                 onChange={(e) => {
-                  setKeyword(e.target.value)
+                  setKeyword(e.target.value);
                 }}
                 className='form-control search'
               />
@@ -149,7 +149,7 @@ const Chapters = () => {
           : null}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Chapters
+export default Chapters;

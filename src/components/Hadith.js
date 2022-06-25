@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react'
-import './hadith.css'
-import Spinner from './Spinner'
+import React, { useState, useEffect } from 'react';
+import './hadith.css';
+import Spinner from './Spinner';
 const Hadith = () => {
-  const [chapters, setChapters] = useState([])
-  const [loading, setLoading] = useState(true)
+  const [chapters, setChapters] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch('https://ahadith-api.herokuapp.com/api/ahadith/all/en').then(async (res) => {
-      setChapters((await res.json()).AllChapters)
-      setLoading(false)
-    })
-  })
+      setChapters((await res.json()).AllChapters);
+      setLoading(false);
+    });
+  });
   return loading ? (
     <Spinner />
   ) : (
@@ -26,7 +26,7 @@ const Hadith = () => {
         </div>
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default Hadith
+export default Hadith;

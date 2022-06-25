@@ -1,5 +1,5 @@
-import React from 'react'
-import './dev.css'
+import React from 'react';
+import './dev.css';
 
 const Dev = () => {
   function Card(props) {
@@ -8,7 +8,7 @@ const Dev = () => {
         <h2>{props.name}</h2>
         <h2>{props.contribution}</h2>
       </div>
-    )
+    );
   }
   return (
     <div className='dev1'>
@@ -88,7 +88,7 @@ const Dev = () => {
         </h3>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Dev
+export default Dev;
