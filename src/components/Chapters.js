@@ -96,59 +96,74 @@ const Chapters = () => {
                 className='form-control search'
               />
             </div>
-            <button id='search-button' type='submit' className='btn btn-primary search1'>
-              <i className='fas fa-search'></i>
-            </button>
-          </div>
-        </form>
 
-        <div className='topsearchs'>Top Search </div>
-        <div className='ele'>
-          <Link className='element' style={{ color: 'white' }} to='/67'>
-            Al-Mulk
-          </Link>
+            <div className='chap'>
+              <form onSubmit={Search}>
+                <div className='input-group'>
+                  <div className='form-outline'>
+                    <input
+                      id='search-input'
+                      placeholder='Enter Surah Number'
+                      type='number'
+                      onChange={(e) => {
+                        setKeyword(e.target.value);
+                      }}
+                      className='form-control search'
+                    />
+                  </div>
+                  <button id='search-button' type='submit' className='btn btn-primary search1'>
+                    <i className='fas fa-search'></i>
+                  </button>
+                </div>
+              </form>
 
-          <Link className='element' style={{ color: 'white' }} to='/112'>
-            Al-Ikhlas
-          </Link>
+              <div className='topsearchs'>Top Search </div>
+              <div className='ele'>
+                <Link className='element' style={{ color: 'white' }} to='/67'>
+                  Al-Mulk
+                </Link>
 
-          <Link className='element' style={{ color: 'white' }} to='/18'>
-            Al-Kahf
-          </Link>
+                <Link className='element' style={{ color: 'white' }} to='/112'>
+                  Al-Ikhlas
+                </Link>
 
-          <Link className='element' style={{ color: 'white' }} to='/36'>
-            Ya-Sin
-          </Link>
-        </div>
-        {Object.keys(data).length > 0
-          ? chapters.map((chapter) => (
-              <div key={chapter.chapter} className='link'>
-                <ol>
-                  <h3>
-                    <div className='box'>
-                      <Link style={{ color: '#066163' }} to={`/${chapter.chapter}`}>
-                        <div className='englishname'>
-                          <br />({chapter.chapter}
-                          )&nbsp;{chapter.name}
-                        </div>
+                <Link className='element' style={{ color: 'white' }} to='/18'>
+                  Al-Kahf
+                </Link>
 
-                        <div className='nameTranslation'> {chapter.nameTranslation}</div>
-                        <div className='arabicname'>
-                          {chapter.arabicName}
-                          <br />
-                          {chapter.totalVerses}
-                          &nbsp;Ayahs
-                        </div>
-                      </Link>
-                    </div>
-                  </h3>
-                </ol>
+                <Link className='element' style={{ color: 'white' }} to='/36'>
+                  Ya-Sin
+                </Link>
               </div>
-            ))
-          : null}
-      </div>
-    </div>
-  );
+              {Object.keys(data).length > 0
+                ? chapters.map((chapter) => (
+                  <div key={chapter.chapter} className='link'>
+                    <ol>
+                      <h3>
+                        <div className='box'>
+                          <Link style={{ color: '#066163' }} to={`/${chapter.chapter}`}>
+                            <div className='englishname'>
+                              <br />({chapter.chapter}
+                              )&nbsp;{chapter.name}
+                            </div>
+
+                            <div className='nameTranslation'> {chapter.nameTranslation}</div>
+                            <div className='arabicname'>
+                              {chapter.arabicName}
+                              <br />
+                              {chapter.totalVerses}
+                              &nbsp;Ayahs
+                            </div>
+                          </Link>
+                        </div>
+                      </h3>
+                    </ol>
+                  </div>
+                ))
+                : null}
+            </div>
+          </div>
+          );
 };
 
-export default Chapters;
+          export default Chapters;
