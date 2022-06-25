@@ -1,15 +1,37 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { useQuery } from 'react-query';
 import './chapter.css';
-import Spinner from './Spinner';
 
+import Spinner from './Spinner';
 const Todaydate = Math.floor(new Date().getTime() / 1000.0);
+
+const fetchChaptersData = () => {
+  return new Promise((resolve, reject) => {
+    navigator.geolocation.getCurrentPosition(async (position) => {
+      const { latitude, longitude } = position.coords;
+      Promise.all([
+        fetch(
+          `https://api.aladhan.com/v1/timings/${Todaydate}?latitude=${latitude}&longitude=${longitude}&method=9`,
+        ),
+        fetch('https://api-scripture-iust-dev.herokuapp.com/v1/scripture/chapterMetaData/all'),
+      ])
+        .then(([timingsResponse, chaptersResponse]) => {
+          return Promise.all([timingsResponse.json(), chaptersResponse.json()]);
+        })
+        .then(([timings, chapters]) => {
+          resolve({ timings, chapters });
+        })
+        .catch((err) => {
+          reject(err);
+        });
+    });
+  });
+};
 
 const Chapters = () => {
   const navigate = useNavigate();
-  const [chapters, setChapters] = useState([]);
-  const [data, setData] = useState({});
-  const [loading, setLoading] = useState(true);
+  const { isLoading, isError, data, error } = useQuery('chaptersData', fetchChaptersData);
 
   const [keyword, setKeyword] = useState('');
 
@@ -21,33 +43,10 @@ const Chapters = () => {
     } else console.log('error');
   };
 
-  useEffect(() => {
-    navigator.geolocation.getCurrentPosition((position) => {
-      const { latitude, longitude } = position.coords;
-      fetch(
-        `https://api.aladhan.com/v1/timings/${Todaydate}?latitude=${latitude}&longitude=${longitude}&method=9`,
-      )
-        .then(async (res) => {
-          setData((await res.json()).data);
-        })
-        .catch((err) => {
-          console.log('Error occured' + err);
-        })
-        .catch((err) => {
-          console.log('ERROR occured ' + err);
-        });
-    });
-    fetch('https://api-scripture-iust-dev.herokuapp.com/v1/scripture/chapterMetaData/all')
-      .then(async (response) => {
-        setChapters((await response.json()).data);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.log('Error occured' + err);
-      });
-  }, []);
+  const chapters = data?.chapters.data;
+  const timings = data?.timings.data;
 
-  return loading ? (
+  return isLoading ? (
     <Spinner />
   ) : (
     <div className='chapter'>
@@ -55,30 +54,30 @@ const Chapters = () => {
         <h1 className='b'> ﷽ </h1>
 
         <div className='date'>
-          {data.date.hijri.weekday.ar}({data.date.hijri.day}){data.date.hijri.month.ar},
-          {data.date.hijri.year}{' '}
+          {timings.date.hijri.weekday.ar}({timings.date.hijri.day}){timings.date.hijri.month.ar},
+          {timings.date.hijri.year}{' '}
         </div>
         <div className='azaan'>
           <div className='azz'>Azaan Timings Today In Kashmir(IST)</div>
           <div className='timing'>
             {' '}
-            Fajr <span className='timings'>&nbsp; {data.timings.Fajr}</span>
+            Fajr <span className='timings'>&nbsp; {timings.timings.Fajr}</span>
           </div>
           <div className='timing'>
             {' '}
-            Dhuhr <span className='timings'>&nbsp; {data.timings.Dhuhr}</span>
+            Dhuhr <span className='timings'>&nbsp; {timings.timings.Dhuhr}</span>
           </div>
           <div className='timing'>
             {' '}
-            Asr <span className='timings'>&nbsp; {data.timings.Asr}</span>
+            Asr <span className='timings'>&nbsp; {timings.timings.Asr}</span>
           </div>
           <div className='timing'>
             {' '}
-            Magrib <span className='timings'>&nbsp;{data.timings.Maghrib}</span>
+            Magrib <span className='timings'>&nbsp;{timings.timings.Maghrib}</span>
           </div>
           <div className='timing'>
             {' '}
-            Isha <span className='timings'>&nbsp; {data.timings.Isha}</span>
+            Isha <span className='timings'>&nbsp; {timings.timings.Isha}</span>
           </div>
         </div>
       </div>

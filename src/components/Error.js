@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import Errrr from './386.gif';
 
 const Error = () => {
   return (
