@@ -20,7 +20,7 @@ const Verses = () => {
         setChapters((await res.json()).data);
       })
       .catch((err) => {
-        console.log('Error occured  ' + err);
+        console.log('Error occured in first fetch call in Verses component ' + err);
       });
 
     fetch(
