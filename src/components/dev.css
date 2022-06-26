@@ -19,14 +19,16 @@
     border-radius: 14em;
 }
 
-.person2:hover,
-.person3:hover,
-.person4:hover {
+.person2:hover {
+    color: olivedrab;
+}
+
+
+.person3:hover {
     color: purple;
 }
 
-.person3,
-.person4 {
+.person3 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: medium;
     margin-top: 10px;
@@ -35,6 +37,8 @@
 
 
 }
+
+.otherDev {}
 
 
 

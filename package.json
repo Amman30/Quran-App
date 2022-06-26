@@ -7,7 +7,7 @@
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.26.1",
-    "bootstrap": "^5.0.1",
+    "bootstrap": "^5.0.2",
     "countapi": "^1.0.0",
     "countapi-js": "^1.0.2",
     "eslint-plugin-prettier": "^4.0.0",

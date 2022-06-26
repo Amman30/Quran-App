@@ -30,8 +30,9 @@ const fetchChaptersData = () => {
   return new Promise((resolve, reject) => {
     navigator.geolocation.getCurrentPosition(
       (position) => getData(position.coords, resolve, reject),
-      (_) =>
-        getData({ latitude: 34.08389040473574, longitude: 74.79815206818213 }, resolve, reject),
+      (_) => {
+        getData({ latitude: 34.08389040473574, longitude: 74.79815206818213 }, resolve, reject)
+      }
     );
   });
 };
@@ -48,7 +49,6 @@ const Chapters = () => {
       navigate(`${keyword}`);
     } else console.log('error');
   };
-
   const chapters = data?.chapters.data;
   const timings = data?.timings.data;
 
@@ -64,22 +64,13 @@ const Chapters = () => {
           {timings.date.hijri.year}
         </div>
         <div className='azaan'>
-          <div className='azz'>Azaan Timings Today In Your Region(Local Time)</div>
-          <div className='timing'>
-            {' '}
-            Fajr <span className='timings'>&nbsp; {timings.timings.Fajr}</span>
+          <div id="textt" className='azz'>Azaan Timings Today In Your Region(Local Time)  <Link style={{ color: "black" }} to="/contact">Issue?</Link></div>
+          <div className='timing'> Fajr <span className='timings'>&nbsp; {timings.timings.Fajr}</span>
           </div>
-          <div className='timing'>
-            Dhuhr <span className='timings'>&nbsp; {timings.timings.Dhuhr}</span>
-          </div>
-          <div className='timing'>
-            Asr <span className='timings'>&nbsp; {timings.timings.Asr}</span>
-          </div>
-          <div className='timing'>
-            Magrib <span className='timings'>&nbsp;{timings.timings.Maghrib}</span>
-          </div>
-          <div className='timing'>
-            Isha <span className='timings'>&nbsp; {timings.timings.Isha}</span>
+          <div className='timing'>  Dhuhr <span className='timings'>&nbsp; {timings.timings.Dhuhr}</span> </div>
+          <div className='timing'>  Asr <span className='timings'>&nbsp; {timings.timings.Asr}</span>
+          </div>  <div className='timing'>   Magrib <span className='timings'>&nbsp;{timings.timings.Maghrib}</span>  </div>
+          <div className='timing'>Isha <span className='timings'>&nbsp; {timings.timings.Isha}</span>
           </div>
         </div>
       </div>
@@ -119,28 +110,28 @@ const Chapters = () => {
         </div>
         {Object.keys(data).length > 0
           ? chapters.map((chapter) => (
-              <div key={chapter.chapter} className='link'>
-                <ol>
-                  <h3>
-                    <div className='box'>
-                      <Link style={{ color: '#066163' }} to={`/${chapter.chapter}`}>
-                        <div className='englishname'>
-                          <br />({chapter.chapter}
-                          )&nbsp;{chapter.name}
-                        </div>
-                        <div className='nameTranslation'> {chapter.nameTranslation}</div>
-                        <div className='arabicname'>
-                          {chapter.arabicName}
-                          <br />
-                          {chapter.totalVerses}
-                          &nbsp;Ayahs
-                        </div>
-                      </Link>
-                    </div>
-                  </h3>
-                </ol>
-              </div>
-            ))
+            <div key={chapter.chapter} className='link'>
+              <ol>
+                <h3>
+                  <div className='box'>
+                    <Link style={{ color: '#066163' }} to={`/${chapter.chapter}`}>
+                      <div className='englishname'>
+                        <br />({chapter.chapter}
+                        )&nbsp;{chapter.name}
+                      </div>
+                      <div className='nameTranslation'> {chapter.nameTranslation}</div>
+                      <div className='arabicname'>
+                        {chapter.arabicName}
+                        <br />
+                        {chapter.totalVerses}
+                        &nbsp;Ayahs
+                      </div>
+                    </Link>
+                  </div>
+                </h3>
+              </ol>
+            </div>
+          ))
           : null}
       </div>
     </div>

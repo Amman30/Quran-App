@@ -74,10 +74,17 @@ const Dev = () => {
             </a>
           }
         </h3>
+
       </div>
-      <div className='person4'>
-        <Card className='card1' name='Zaid Rafi Dento' contribution='Front-End Developer' />
-        <h3>
+
+      <hr />
+      <br />
+      <h3>Also a Part of Project </h3>
+      <br />  <br />
+      <div className='otherDev'>
+
+        <h4>Zaid Rafi Dento</h4>
+        <h4>
           Student , Department of CSE &nbsp;
           <br />
           {
@@ -85,7 +92,7 @@ const Dev = () => {
               <i className='icon fa-brands fa-github'></i>
             </a>
           }
-        </h3>
+        </h4>
       </div>
     </div>
   );
