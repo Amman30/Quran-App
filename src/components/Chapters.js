@@ -6,27 +6,33 @@ import './chapter.css';
 import Spinner from './Spinner';
 const Todaydate = Math.floor(new Date().getTime() / 1000.0);
 
+const getData = (coords, resolve, reject) => {
+  const { latitude, longitude } = coords;
+  Promise.all([
+    fetch(
+      `https://api.aladhan.com/v1/timings/${Todaydate}?latitude=${latitude}&longitude=${longitude}&method=9`,
+    ),
+    fetch('https://api-scripture-iust-dev.herokuapp.com/v1/scripture/chapterMetaData/all'),
+  ])
+    .then(([timingsResponse, chaptersResponse]) => {
+      return Promise.all([timingsResponse.json(), chaptersResponse.json()]);
+    })
+    .then(([timings, chapters]) => {
+      resolve({ timings, chapters });
+    })
+    .catch((err) => {
+      reject(err);
+      console.log('Error Occured in fetchChapterData');
+    });
+};
+
 const fetchChaptersData = () => {
   return new Promise((resolve, reject) => {
-    navigator.geolocation.getCurrentPosition(async (position) => {
-      const { latitude, longitude } = position.coords;
-      Promise.all([
-        fetch(
-          `https://api.aladhan.com/v1/timings/${Todaydate}?latitude=${latitude}&longitude=${longitude}&method=9`,
-        ),
-        fetch('https://api-scripture-iust-dev.herokuapp.com/v1/scripture/chapterMetaData/all'),
-      ])
-        .then(([timingsResponse, chaptersResponse]) => {
-          return Promise.all([timingsResponse.json(), chaptersResponse.json()]);
-        })
-        .then(([timings, chapters]) => {
-          resolve({ timings, chapters });
-        })
-        .catch((err) => {
-          reject(err);
-          console.log("Error Occured in fetchChapterData");
-        });
-    });
+    navigator.geolocation.getCurrentPosition(
+      (position) => getData(position.coords, resolve, reject),
+      (_) =>
+        getData({ latitude: 34.08389040473574, longitude: 74.79815206818213 }, resolve, reject),
+    );
   });
 };
 
@@ -58,17 +64,22 @@ const Chapters = () => {
           {timings.date.hijri.year}
         </div>
         <div className='azaan'>
-
           <div className='azz'>Azaan Timings Today In Your Region(Local Time)</div>
-          <div className='timing'> Fajr <span className='timings'>&nbsp; {timings.timings.Fajr}</span>
+          <div className='timing'>
+            {' '}
+            Fajr <span className='timings'>&nbsp; {timings.timings.Fajr}</span>
           </div>
-          <div className='timing'>Dhuhr <span className='timings'>&nbsp; {timings.timings.Dhuhr}</span>
+          <div className='timing'>
+            Dhuhr <span className='timings'>&nbsp; {timings.timings.Dhuhr}</span>
           </div>
-          <div className='timing'>Asr <span className='timings'>&nbsp; {timings.timings.Asr}</span>
+          <div className='timing'>
+            Asr <span className='timings'>&nbsp; {timings.timings.Asr}</span>
           </div>
-          <div className='timing'>Magrib <span className='timings'>&nbsp;{timings.timings.Maghrib}</span>
+          <div className='timing'>
+            Magrib <span className='timings'>&nbsp;{timings.timings.Maghrib}</span>
           </div>
-          <div className='timing'>Isha <span className='timings'>&nbsp; {timings.timings.Isha}</span>
+          <div className='timing'>
+            Isha <span className='timings'>&nbsp; {timings.timings.Isha}</span>
           </div>
         </div>
       </div>
@@ -106,9 +117,8 @@ const Chapters = () => {
             Ya-Sin
           </Link>
         </div>
-        {
-          Object.keys(data).length > 0
-            ? chapters.map((chapter) => (
+        {Object.keys(data).length > 0
+          ? chapters.map((chapter) => (
               <div key={chapter.chapter} className='link'>
                 <ol>
                   <h3>
@@ -119,7 +129,8 @@ const Chapters = () => {
                           )&nbsp;{chapter.name}
                         </div>
                         <div className='nameTranslation'> {chapter.nameTranslation}</div>
-                        <div className='arabicname'>{chapter.arabicName}
+                        <div className='arabicname'>
+                          {chapter.arabicName}
                           <br />
                           {chapter.totalVerses}
                           &nbsp;Ayahs
@@ -130,11 +141,9 @@ const Chapters = () => {
                 </ol>
               </div>
             ))
-            : null}
+          : null}
       </div>
     </div>
-
-
   );
 };
 
