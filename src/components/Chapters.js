@@ -1,30 +1,30 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { useQuery } from 'react-query';
-import './chapter.css';
+import React, { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import { useQuery } from 'react-query'
+import './chapter.css'
 
 import Spinner from './Spinner';
-const Todaydate = Math.floor(new Date().getTime() / 1000.0);
+const Todaydate = Math.floor(new Date().getTime() / 1000.0)
 
 const getData = (coords, resolve, reject) => {
-  const { latitude, longitude } = coords;
+  const { latitude, longitude } = coords
   Promise.all([
     fetch(
-      `https://api.aladhan.com/v1/timings/${Todaydate}?latitude=${latitude}&longitude=${longitude}&method=9`,
+      `https://api.aladhan.com/v1/timings/${Todaydate}?latitude=${latitude}&longitude=${longitude}&method=9`
     ),
-    fetch('https://api-scripture-iust-dev.herokuapp.com/v1/scripture/chapterMetaData/all'),
+    fetch('https://api-scripture-iust-dev.herokuapp.com/v1/scripture/chapterMetaData/all')
   ])
     .then(([timingsResponse, chaptersResponse]) => {
-      return Promise.all([timingsResponse.json(), chaptersResponse.json()]);
+      return Promise.all([timingsResponse.json(), chaptersResponse.json()])
     })
     .then(([timings, chapters]) => {
-      resolve({ timings, chapters });
+      resolve({ timings, chapters })
     })
     .catch((err) => {
-      reject(err);
-      console.log('Error Occured in fetchChapterData');
-    });
-};
+      reject(err)
+      console.log('Error Occured in fetchChapterData')
+    })
+}
 
 const fetchChaptersData = () => {
   return new Promise((resolve, reject) => {
@@ -33,41 +33,39 @@ const fetchChaptersData = () => {
       (_) => {
         getData({ latitude: 34.08389040473574, longitude: 74.79815206818213 }, resolve, reject)
       }
-    );
-  });
-};
+    )
+  })
+}
 
 const Chapters = () => {
-  const navigate = useNavigate();
-  const { isLoading, isError, data, error } = useQuery('chaptersData', fetchChaptersData);
-
-  const [keyword, setKeyword] = useState('');
-
+  const navigate = useNavigate()
+  const { isLoading, data } = useQuery('chaptersData', fetchChaptersData)
+  const [keyword, setKeyword] = useState('')
   const Search = (e) => {
     if (keyword) {
-      e.preventDefault();
-      navigate(`${keyword}`);
-    } else console.log('error');
-  };
+      e.preventDefault()
+      navigate(`/${keyword}`)
+    } else console.log('error occured in search function ')
+  }
   const chapters = data?.chapters.data;
   const timings = data?.timings.data;
 
   return isLoading ? (
-    <Spinner />
+    < Spinner />
   ) : (
     <div className='chapter'>
       <div className='bis'>
-        <h1 className='b'> ﷽ </h1>
-
+        <h1 className='b'> ﷽</h1>
         <div className='date'>
-          {timings.date.hijri.weekday.ar}({timings.date.hijri.day}){timings.date.hijri.month.ar},
+          {timings.date.hijri.weekday.ar}
+          ({timings.date.hijri.day})
+          {timings.date.hijri.month.ar},
           {timings.date.hijri.year}
         </div>
         <div className='azaan'>
           <div id="textt" className='azz'>Azaan Timings Today In Your Region(Local Time)  <Link style={{ color: "black" }} to="/contact">Issue?</Link></div>
           <div className='timing'> Fajr <span className='timings'>&nbsp; {timings.timings.Fajr}</span>
-          </div>
-          <div className='timing'>  Dhuhr <span className='timings'>&nbsp; {timings.timings.Dhuhr}</span> </div>
+          </div>          <div className='timing'>  Dhuhr <span className='timings'>&nbsp; {timings.timings.Dhuhr}</span> </div>
           <div className='timing'>  Asr <span className='timings'>&nbsp; {timings.timings.Asr}</span>
           </div>  <div className='timing'>   Magrib <span className='timings'>&nbsp;{timings.timings.Maghrib}</span>  </div>
           <div className='timing'>Isha <span className='timings'>&nbsp; {timings.timings.Isha}</span>
@@ -110,7 +108,7 @@ const Chapters = () => {
         </div>
         {Object.keys(data).length > 0
           ? chapters.map((chapter) => (
-            <div key={chapter.chapter} className='link'>
+            <div key={chapter.chapter} className="link">
               <ol>
                 <h3>
                   <div className='box'>

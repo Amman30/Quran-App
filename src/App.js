@@ -15,6 +15,7 @@ import Names from './components/Names';
 import Topbar from './components/Topbar'; // navbar or the topbar
 import Error from './components/Error'; // error page for any invalid url entered by user
 import Contact from './components/Contact';
+import Login from './components/Login';
 
 // query-client is now being used  for fetch call and would replace all fetch call in all the componenets soon
 
@@ -33,6 +34,7 @@ function App() {
             <Route path='/:id' element={<Verses />} />
             <Route path='/About' element={<About />} />
             <Route path='/Hadith' element={<Hadith />} />
+            <Route path='/login' element={<Login />} />
             <Route path='/developers' element={<Dev />} />
             <Route path='/audios' element={<Audios />} />
             <Route path='/contact' element={<Contact />} />

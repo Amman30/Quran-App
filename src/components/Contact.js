@@ -16,9 +16,10 @@ const Contact = () => {
         <br />
         <div>
           <p>If Azan Timing are not correct then by default Region
-            is set to Srinagar(Kashmir).</p> <p>In that case please allow location access and try loading again. If the problem still continues, please mail us the same.  </p>
+            is set to Srinagar(Kashmir).</p> <p>In that case please allow location access and try loading again.
+              If the problem still continues, please mail us the same.  </p>
           <h3>
-            You Can Mail Us <a href='mailto:zubair.shah@islamicuniversity.edu.in'>Here</a>{' '}
+            You Can Mail Us <a href='mailto:zubair.shah@islamicuniversity.edu.in'>Here</a>
           </h3>
         </div>
         <br /> <br />

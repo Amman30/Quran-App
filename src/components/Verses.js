@@ -42,15 +42,10 @@ const Verses = () => {
   ) : (
     <div className='verses'>
       <div className='reading'>
-        <button
-          style={{ color: 'white' }}
-          onClick={() => {
-            setShowTranslation(!showTranslation);
-            setTitle(!title);
-          }}
-          type='button'
-          className='btn btn-outline-info'
-        >
+        <button style={{ color: 'white' }} onClick={() => {
+          setShowTranslation(!showTranslation);
+          setTitle(!title);
+        }} type='button' className='btn btn-outline-info'   >
           {`${title ? 'Read With Translation' : 'Read Without Translation'}`}
         </button>
       </div>
@@ -70,6 +65,7 @@ const Verses = () => {
           )}
           {showTranslation ? (
             <>
+              sfgjhsf
               <div className='left'>
                 ({verse.verse}). {verse.data.translation}
               </div>

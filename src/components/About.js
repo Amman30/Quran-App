@@ -21,14 +21,18 @@ const About = () => {
           This project wouldn't have been possible without the open source libraries and projects
           we've used:
           <li># Hadith API Documentation</li>
+          <li># aladhan.com</li>
         </ul>
       </span>
       <hr color='white' />
       <h2>Privacy policy</h2>
       <span className='privacy'>
-        We do not serve you ads, so we do not need to track you or use your personal data to provide
-        you with better ads to increase our revenues. We don’t gather any personally identifiable
-        information. There is no login, there is also no request for location permissions Our code
+        We do not serve you ads,so we don't use your personal data to provide
+        ads.We don’t gather any personally identifiable
+        information. There is no login,There is a location permission to use this app that is being you
+        to get only azan timings in your region
+        but its compeletly your choice to provide one. If you deny the location permission
+        we have set default to srinagar(Kashmir).Our code
         is open source, so the community can easily inspect and ensure that our stance on privacy is
         being held to its upmost level.
       </span>
