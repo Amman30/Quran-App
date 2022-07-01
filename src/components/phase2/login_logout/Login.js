@@ -1,8 +1,9 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { post } from '../lib/api';
+import { post } from '../../phase1/lib/api';
 import "./login.css";
+import Logout from '../Logout';
 
 
 
@@ -30,12 +31,12 @@ const Login = () => {
             "https://api-scripture-iust-dev.herokuapp.com/v1/scripture/user/login/",
             { email, password }
         ).then(data => console.log(data));
-        navigate("/")
+
 
     }
 
     const signup = (e) => {        // navigates to signup.
-        navigate('/')
+        navigate('/logout')
         e.preventDefault();
         console.log("sign Up button clicked");
 

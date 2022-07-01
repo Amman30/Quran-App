@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useQuery } from 'react-query'
 import './chapter.css'
+import Spinner from '../spinner/Spinner';
 
-import Spinner from './Spinner';
+
 const Todaydate = Math.floor(new Date().getTime() / 1000.0)
 
 const getData = (coords, resolve, reject) => {

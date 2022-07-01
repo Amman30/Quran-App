@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './hadith.css';
-import Spinner from './Spinner';
+import Spinner from '../spinner/Spinner';
 const Hadith = () => {
   const [chapters, setChapters] = useState([]);
   const [loading, setLoading] = useState(true);

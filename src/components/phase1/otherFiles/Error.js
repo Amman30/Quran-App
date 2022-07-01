@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Err from './386.gif'
+import Err from '../assets/386.gif';
 
 
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useQuery } from 'react-query';
+import Spinner from '../spinner/Spinner';
 
-import Spinner from './Spinner';
 import './name.css';
 
 const fetchNamesData = () =>

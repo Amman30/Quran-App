@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import Spinner from './Spinner';
+import Spinner from '../spinner/Spinner';
 import './Verses.css';
 
 const Verses = () => {
@@ -65,7 +65,7 @@ const Verses = () => {
           )}
           {showTranslation ? (
             <>
-              sfgjhsf
+
               <div className='left'>
                 ({verse.verse}). {verse.data.translation}
               </div>

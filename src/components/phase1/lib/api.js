@@ -10,3 +10,7 @@ export const post = (url, data, headers = {}, extras = []) => {
         ...extras
     }).then(response => response.json());
 }
+
+// export const logout=()=>{
+
+// }
