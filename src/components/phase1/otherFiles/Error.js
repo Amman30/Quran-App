@@ -17,6 +17,7 @@ const Error = () => {
       <img src={Err} />
       <br /> <br />
       <span>You have landed on invalid page </span>
+
       <br /> <br />
       <span> Back to  <Link to={'/'}>Home</Link> </span>
       <br /> <br />

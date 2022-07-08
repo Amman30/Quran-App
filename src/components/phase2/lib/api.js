@@ -1,4 +1,6 @@
-export const post = (url, data, headers = {}, extras = []) => {
+
+
+export const post1 = (url, data, headers = {}, extras = []) => {
     return fetch(url, {
         method: "POST",
         headers: {
@@ -11,6 +13,3 @@ export const post = (url, data, headers = {}, extras = []) => {
     }).then(response => response.json());
 }
 
-// export const logout=()=>{
-
-// }

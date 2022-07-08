@@ -1,13 +1,12 @@
 .app {
-    box-sizing: border-box;
-
     background-color: white;
+    box-sizing: border-box;
 }
 
 .route {
     font-family: "BIZ UDPMincho", serif;
-    text-align: center;
     font-size: xx-large;
+    text-align: center
 }
 
 /* @media only screen and (max-width: 400px) {
@@ -38,10 +37,15 @@
 } */
 
 @media screen and (min-width: 769px) {
+
+
     .route {
         font-family: "BIZ UDPMincho", serif;
+
         text-align: center;
+
         font-size: large;
+
     }
 }
 

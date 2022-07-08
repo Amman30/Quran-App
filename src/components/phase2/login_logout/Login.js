@@ -1,49 +1,57 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { post } from '../../phase1/lib/api';
+import { post1 } from '../lib/api';
 import "./login.css";
-import Logout from '../Logout';
+import Signup from './Signup';
 
 
 
 const Login = () => {
 
-
-    const [email, setEmail] = useState(" ");
+    const navigate = useNavigate();
+    const [email, setEmail] = useState("");
 
     const [password, setPassword] = useState(" ");
 
 
-
-    useEffect(() => {
-        if (localStorage.getItem("user-info")) {
-            // navigate('/')
-        }
-    }, [])
-
     const login = async (e) => {    // for login
 
         e.preventDefault();
-        console.log("email:" + email + "passowrd " + password);
+        console.log("email: " + email + "passowrd " + password);
 
-        post(
+        await post1(
             "https://api-scripture-iust-dev.herokuapp.com/v1/scripture/user/login/",
             { email, password }
-        ).then(data => console.log(data));
+        ).then(data => {
+            const message = data.message;
+            if (message === "User Successfully Logged-in!") {
+
+                console.log(data.data.username);
+                navigate('/adminlogin')
+            }
+            else if (message === "User With the Given Credentials Not Found!") {
+                alert("User With the Given Credentials Not Found! " + ".. Please Try Again");
+                navigate('/login')
+            }
+
+
+        })
+
+
 
 
     }
 
     const signup = (e) => {        // navigates to signup.
-        navigate('/logout')
+        navigate('/signup')
         e.preventDefault();
         console.log("sign Up button clicked");
 
     }
 
 
-    const navigate = useNavigate();
+
 
 
 
@@ -67,12 +75,14 @@ const Login = () => {
                     </div>
                     <div className="action">
 
-                        <button className='signup' onClick={signup}> Sign Up</button>
+                        <button type='button' className='signup' onClick={signup}> Sign Up</button>
                         <button type='submit' className='loginbutton' onClick={login}>Sign in</button>
                     </div>
                 </form>
 
+
             </div>
+            <h1> <Link to="/">Home</Link> </h1>
 
         </div>
     );

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Topbar.css';
+import logoo from "./quran1.png"
 
 const Topbar = () => {
   return (
@@ -16,7 +17,9 @@ const Topbar = () => {
             </div>
             <div className='logo'>
               <h1>Quran</h1>
+
             </div>
+            <Link to="/login"><div className='logo-pp'><img className='logo-pp' src={logoo} /></div></Link>
             <div className='menu-items'>
               <li>
                 <Link to='/'><i className='iconn fa-solid fa-house-user'></i>Home</Link>
@@ -42,7 +45,9 @@ const Topbar = () => {
               <li>
                 <Link to='/audios'>  <i className='iconn fa-solid fa-circle-play'></i>Audios(soon) </Link>
               </li>
+
             </div>
+
           </div>
         </div>
       </nav>
