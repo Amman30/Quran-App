@@ -40,13 +40,13 @@ function App() { // {''}
             <Route path='/About' element={<About />} />{''}
             <Route path='/Hadith' element={<Hadith />} />{''}
             <Route path='/developers' element={<Dev />} />{''}
-            <Route path="/adminlogin" element={<Adminlogin />} />{''}
+            {/* <Route path="/adminlogin" element={<Adminlogin />} />{''} */}
             <Route path='/audios' element={<Audios />} />{''}
             <Route path='/contact' element={<Contact />} />{''}
             <Route path='/duas' element={<Duas />} />{''}
             <Route path='/names' element={<Names />} />{''}
-            <Route path='/login' element={<Login />} />{''}
-            <Route path='/signup' element={<Signup />} />{''}
+            {/* <Route path='/login' element={<Login />} />{''}
+            <Route path='/signup' element={<Signup />} />{''} */}
 
 
           </Routes>

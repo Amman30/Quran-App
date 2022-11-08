@@ -39,15 +39,20 @@
 
 .right {
     text-align: right;
+    margin-left: 700px;
     font-size: xx-large;
     font-family: "Bebas Neue", cursive;
+
 }
 
 
 .left {
     font-size: x-large;
-    margin-top: 50px;
+    margin-top: -45px;
+    width: 550px;
 }
+
+
 
 
 @media only screen and (max-width: 1000px) {
@@ -87,7 +92,7 @@
 
     .bism {
 
-      display: none; 
+        display: none;
 
 
     }

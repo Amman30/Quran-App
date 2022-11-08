@@ -1,11 +1,11 @@
-import React from 'react';
+// import React from 'react';
 
-const Signup = () => {
-    return (
-        <div>
-            <div>Signup Page</div>
-        </div>
-    );
-}
+// const Signup = () => {
+//     return (
+//         <div>
+//             <div>Signup Page</div>
+//         </div>
+//     );
+// }
 
-export default Signup;
+// export default Signup;

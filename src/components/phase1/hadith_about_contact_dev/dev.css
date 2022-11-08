@@ -38,7 +38,10 @@
 
 }
 
-.otherDev {}
+.otherDev {
+    display: inline-block;
+    padding: 20px 20px 20px 20px;
+}
 
 
 

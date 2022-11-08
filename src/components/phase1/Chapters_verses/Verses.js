@@ -1,9 +1,11 @@
+import { Checkbox } from '@mui/material';
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Spinner from '../spinner/Spinner';
 import './Verses.css';
 
 const Verses = () => {
+
   const navigate = useNavigate();
   const params = useParams();
   const [loading, setLoading] = useState(true);
@@ -12,7 +14,12 @@ const Verses = () => {
   const [showTranslation, setShowTranslation] = useState(true);
   const [title, setTitle] = useState(false);
 
+
+
+
+
   useEffect(() => {
+
     fetch(
       `https://api-scripture-iust-dev.herokuapp.com/v1/scripture/chapterMetaData/chapter/${params.id}`,
     )
@@ -24,7 +31,7 @@ const Verses = () => {
       });
 
     fetch(
-      `https://api-scripture-iust-dev.herokuapp.com/v1/scripture/quraan/get?language=en&author=Ahmed%20Ali&text=simple&chapter=${params.id}`,
+      `https://api-scripture-iust-dev.herokuapp.com/v1/scripture/quraan/get?language=en&author=Ahmed%20Raza&text=simple&chapter=${params.id}`,
     )
       .then(async (res) => {
         setVersess((await res.json()).data);
@@ -48,6 +55,9 @@ const Verses = () => {
         }} type='button' className='btn btn-outline-info'   >
           {`${title ? 'Read With Translation' : 'Read Without Translation'}`}
         </button>
+      </div>
+      <div>
+        {/* <Checkbox type="checkbox" onClick={x} /> */}
       </div>
       <div className='surah'>
         <div key={chapters[0]._id}>سورة &nbsp; {chapters[0].arabicName}</div>

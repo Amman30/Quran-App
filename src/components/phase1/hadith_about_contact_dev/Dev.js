@@ -84,11 +84,29 @@ const Dev = () => {
       <div className='otherDev'>
 
         <h4>Zaid Rafi Dento</h4>
+        <h4>Developer</h4>
         <h4>
           Student , Department of CSE &nbsp;
           <br />
           {
             <a href='https://github.com/dento65'>
+              <i className='icon fa-brands fa-github'></i>
+            </a>
+          }
+        </h4>
+
+      </div>
+      <div className='otherDev'>
+
+        <h4>Syed Hamza Kamili</h4>
+
+        <h4>Project Management</h4>
+
+        <h4>
+          Student , Department of CSE &nbsp;
+          <br />
+          {
+            <a href='https://github.com/Hamzahkamili'>
               <i className='icon fa-brands fa-github'></i>
             </a>
           }

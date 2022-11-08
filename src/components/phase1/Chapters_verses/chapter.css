@@ -65,18 +65,18 @@
 
 
 .link {
-  width: 420px;
-  height: 120px;
+  min-height: 90px;
+  min-width: 380px;
   display: inline-block;
   border: 3px solid;
   border-radius: 10px;
   cursor: pointer;
   padding: 3px 3px 3px 3px;
   background-color: #FFF8F3;
-  margin-right: 12px;
+  margin-right: 20px;
   margin-bottom: 12px;
   margin-top: 15px;
-  text-decoration: none;
+
 }
 
 .link:hover {
@@ -201,6 +201,7 @@
 .chap {
   background-color: #066163;
   display: inline-block;
+
 }
 
 .bismillah {
