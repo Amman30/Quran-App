@@ -68,6 +68,11 @@ body {
   height: 60px;
 }
 
+
+
+
+
+
 .nav-container .checkbox {
   position: absolute;
   display: block;
@@ -78,6 +83,7 @@ body {
   z-index: 5;
   opacity: 0;
   cursor: pointer;
+
 }
 
 .nav-container .hamburger-lines {

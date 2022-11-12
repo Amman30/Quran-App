@@ -19,7 +19,7 @@ const Topbar = () => {
               <h1>Quran</h1>
 
             </div>
-            <Link to="/login"><div className='logo-pp'><img className='logo-pp' src={logoo} /></div></Link>
+            {/* <Link to="/login"><div className='logo-pp'><img className='logo-pp' src={logoo} /></div></Link> */}
             <div className='menu-items'>
               <li>
                 <Link to='/'><i className='iconn fa-solid fa-house-user'></i>Home</Link>
@@ -33,9 +33,9 @@ const Topbar = () => {
               <li>
                 <Link to='/Hadith'> <i className='iconn fa-solid fa-book'></i>Hadith </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to='/names'><i className='fa-solid fa-list-ol'></i> Asma Ul husna </Link>
-              </li>
+              </li> */}
               <li>
                 <Link to='/contact'> <i className='fa-solid fa-address-book'></i>Contact  </Link>
               </li>

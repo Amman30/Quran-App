@@ -1,103 +1,68 @@
-.verses {
-    display: grid;
-    text-align: left;
-    padding: 20px 20px 20px 20px;
-    margin-top: 0;
-    background-color: #066163;
-    color: white;
+.right {
+    margin-bottom: 30px;
+    text-align: right;
+    font-size: xx-large;
+    margin-left: 700px;
+    max-width: 601px;
     cursor: pointer;
-    overflow: auto;
+
+}
+
+/* .num {
+    margin-top: -20px;
+    margin-left: 611px;
+
+} */
+
+.left {
+    margin-top: -7.5em;
+    margin-left: 100px;
+    font-size: x-large;
+    text-align: left;
+    width: 510px;
+    cursor: pointer;
+    padding: 5px 5px 5px 5px;
+}
+
+.divider {
+    margin-left: 560px;
 }
 
 .surah {
-    margin-left: 600px;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     font-size: xxx-large;
-    color: white;
-}
-
-.bis {
-    text-align: center;
-}
-
-.text {
-    font-size: x-large;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-        sans-serif;
-    color: white;
-    text-decoration: double;
-
-
 }
 
 .bism {
-    margin-left: 600px;
-    margin-bottom: 20px;
-    margin-top: -9px;
+    margin-bottom: 40px;
     font-size: xx-large;
 }
 
-.right {
-    text-align: right;
-    margin-left: 700px;
-    font-size: xx-large;
-    font-family: "Bebas Neue", cursive;
-
-}
-
-
-.left {
-    font-size: x-large;
-    margin-top: -45px;
-    width: 550px;
+.button {
+    text-align: left;
 }
 
 
 
 
-@media only screen and (max-width: 1000px) {
-    .verses {
-        justify-content: left;
+
+
+@media only screen and (max-width: 700px) {
+
+    .left {
+        font-size: medium;
         text-align: left;
-        color: white;
-        padding: 20px 20px 20px 20px;
-        margin-top: 30px;
-        background-color: #066163;
+        margin-left: -2px;
+        padding: 5px 5px 35px 5px;
     }
 
-    .buttonn {
-
-        width: 130px;
-        font-size: x-small;
-
-    }
-
-    .surah {
-        margin-left: 70px;
+    .right {
         text-align: center;
-        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-        font-size: xxx-large;
-        color: white;
+        margin-left: -1px;
+        margin-bottom: 90px;
+        font-size: x-large;
     }
 
-    .text {
-        font-size: large;
-        color: white;
-        font-family: "Times New Roman", Times, serif;
-    }
-
-    .bis {
-        text-align: center;
-    }
-
-    .bism {
-
+    .divider {
         display: none;
-
-
     }
-}
-
-.controls button {
-    background-color: transparent;
 }

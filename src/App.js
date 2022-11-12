@@ -12,13 +12,13 @@ import Hadith from './components/phase1/hadith_about_contact_dev/Hadith';
 import Dev from './components/phase1/hadith_about_contact_dev/Dev';
 import Audios from './components/phase1/hadith_about_contact_dev/Audios';
 import Duas from './components/phase1/otherFiles/Duas';
-import Names from './components/phase1/otherFiles/Names';
+// import Names from './components/phase1/otherFiles/Names';
 import Topbar from './components/phase1/Topbar_footer/Topbar'; // navbar or the topbar
 import Error from './components/phase1/otherFiles/Error'; // error page for any invalid url entered by user
 import Contact from './components/phase1/hadith_about_contact_dev/Contact';
-import Login from './components/phase2/login_logout/Login';
-import Signup from './components/phase2/login_logout/Signup';
-import Adminlogin from './components/phase2/login_logout/Adminlogin';
+// import Login from './components/phase2/login_logout/Login';
+// import Signup from './components/phase2/login_logout/Signup';
+// import Adminlogin from './components/phase2/login_logout/Adminlogin';
 
 
 
@@ -34,8 +34,8 @@ function App() { // {''}
           <Topbar /> {/* universal */}{''}
           <Routes>{''}
             {/* routes */}
-            <Route path='*' element={<Error />} />{''}
-            <Route path='/' element={<Chapters />} />{''}
+            <Route path='*' element={<Error />} />
+            <Route path='/' element={<Chapters />} />
             <Route path='/:id' element={<Verses />} />{''}
             <Route path='/About' element={<About />} />{''}
             <Route path='/Hadith' element={<Hadith />} />{''}
@@ -44,7 +44,7 @@ function App() { // {''}
             <Route path='/audios' element={<Audios />} />{''}
             <Route path='/contact' element={<Contact />} />{''}
             <Route path='/duas' element={<Duas />} />{''}
-            <Route path='/names' element={<Names />} />{''}
+            {/* <Route path='/names' element={<Names />} />{''} */}
             {/* <Route path='/login' element={<Login />} />{''}
             <Route path='/signup' element={<Signup />} />{''} */}
 

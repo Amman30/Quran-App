@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useQuery } from 'react-query'
 import './chapter.css'
 import Spinner from '../spinner/Spinner';
-
+import Backtotop from '../otherFiles/BacktoTop';
 
 const Todaydate = Math.floor(new Date().getTime() / 1000.0)
 
@@ -94,16 +94,16 @@ const Chapters = () => {
         </form>
         <div className='topsearchs'>Top Search </div>
         <div className='ele'>
-          <Link className='element' style={{ color: 'white' }} to='/67'>
+          <Link className='element' style={{ color: 'black' }} to='/67'>
             Al-Mulk
           </Link>
-          <Link className='element' style={{ color: 'white' }} to='/112'>
+          <Link className='element' style={{ color: 'black' }} to='/112'>
             Al-Ikhlas
           </Link>
-          <Link className='element' style={{ color: 'white' }} to='/18'>
+          <Link className='element' style={{ color: 'black' }} to='/18'>
             Al-Kahf
           </Link>
-          <Link className='element' style={{ color: 'white' }} to='/36'>
+          <Link className='element' style={{ color: 'black' }} to='/36'>
             Ya-Sin
           </Link>
         </div>
@@ -132,6 +132,9 @@ const Chapters = () => {
             </div>
           ))
           : null}
+      </div>
+      <div className='BacktoTop'>
+        <Backtotop />
       </div>
     </div>
   );

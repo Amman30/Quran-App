@@ -1,6 +1,6 @@
 .topsearchs {
   font-size: xx-large;
-  color: white;
+  color: black;
 
 }
 
@@ -59,10 +59,14 @@
   margin-top: 70px;
   margin-bottom: 70px;
   font-size: x-large;
+  /* background-color: black; */
 
 }
 
-
+.BacktoTop {
+  text-align: left;
+  margin-left: 20px;
+}
 
 .link {
   min-height: 90px;
@@ -79,9 +83,7 @@
 
 }
 
-.link:hover {
-  color: white;
-}
+
 
 .bismillah {
   margin-top: 80px;
@@ -171,7 +173,7 @@
   }
 
   .bis {
-    color: white;
+    color: black;
   }
 
   .englishname {
@@ -193,13 +195,13 @@
 
 /*  MEDIA QUERY END*/
 .bis {
-  background-color: #066163;
-  color: white;
+  /* background-color: #066163; */
+  color: black;
 
 }
 
 .chap {
-  background-color: #066163;
+  /* background-color: #066163; */
   display: inline-block;
 
 }
