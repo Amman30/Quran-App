@@ -6,10 +6,8 @@ import Spinner from '../spinner/Spinner';
 import './Verses.css';
 import Backtotop from '../otherFiles/BacktoTop';
 
-
-
 const getVersesData = async (chapterId, author) => {
-  const response = await fetch(`https://api-scripture-iust-dev.herokuapp.com/v1/scripture/quraan/get?language=en&author=${author}&text=simple&chapter=${chapterId}`);
+  const response = await fetch(`http://35.154.192.23:5000/v1/scripture/quraan/get?language=en&author=${author}&text=uthmani&chapter=${chapterId}`);
   return (await response.json())?.data
 }
 
@@ -20,22 +18,28 @@ const Verses = () => {
   const [chapters, setChapters] = useState([]);
   const [showTranslation, setShowTranslation] = useState(true);
   const [title, setTitle] = useState(false);
-  const [authors, setAuthors] = useState(["Ahmed Raza", "Ahmed Ali"]);
+  const [authors, setAuthors] = useState(["Ahmed Raza", "Ahmed Ali", "daryabadi", "sahih", "qaribullah", "shakir", "hilali", "mubarakpuri", "wahiduddin"]);
   const [enabledAuthors, setEnabledAuthors] = useState([0]);
-  const [verseTranslations, setVerseTranslations] = useState([]);
+  const [verseTranslations, setVerseTranslations] = useState({});
 
   useEffect(async () => {
     setLoading(true);
     const data = await Promise.all(enabledAuthors.map((authorIndex) => {
       return getVersesData(params.id, authors[authorIndex]);
     }));
-    setVerseTranslations(data);
+    setVerseTranslations(() => {
+      const newData = {};
+      enabledAuthors.forEach((authorIndex, index) => {
+        newData[authorIndex] = data[index];
+      })
+      return newData;
+    });
     setLoading(false);
   }, [enabledAuthors, authors, params.id]);
 
   useEffect(() => {
     fetch(
-      `https://api-scripture-iust-dev.herokuapp.com/v1/scripture/chapterMetaData/chapter/${params.id}`,
+      `http://35.154.192.23:5000/v1/scripture/chapterMetaData/chapter/${params.id}`,
     )
       .then(async (res) => {
         setChapters((await res.json()).data);
@@ -46,10 +50,10 @@ const Verses = () => {
   }, [params.id, navigate]);
 
   const toggleAuthor = index => {
-    if (index in enabledAuthors) {
-      setEnabledAuthors(enabledAuthors.filter(author => author === index));
+    if (enabledAuthors.includes(index)) {
+      setEnabledAuthors(authors => authors.filter(author => author !== index));
     } else {
-      setEnabledAuthors((authors) => [...authors, index]);
+      setEnabledAuthors(authors => [...authors, index]);
     }
   }
 
@@ -59,7 +63,7 @@ const Verses = () => {
     <div className='verses'>
       {authors.map((name, index) =>
         <FormGroup key={name}>
-          <FormControlLabel control={<Checkbox checked={index in enabledAuthors} />} label={name} onChange={() => toggleAuthor(index)} disabled={index === 0} />
+          <FormControlLabel control={<Checkbox checked={enabledAuthors.includes(index)} />} label={name} onChange={() => toggleAuthor(index)} disabled={index === 0} />
         </FormGroup>
       )}
       <div className='button'>
@@ -94,7 +98,7 @@ const Verses = () => {
             {showTranslation ? (
               <>
 
-                {verseTranslations.map((translation, authorIndex) => {
+                {Object.entries(verseTranslations).map(([authorIndex, translation]) => {
                   return <div className='left' key={authors[authorIndex]}>
                     < br />
                     ({verse.verse}). {translation[index].data.translation}
@@ -115,6 +119,7 @@ const Verses = () => {
         ))
       }
       <Backtotop />
+
     </div >
   );
 };
