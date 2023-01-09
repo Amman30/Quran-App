@@ -13,7 +13,7 @@ const getData = (coords, resolve, reject) => {
     fetch(
       `https://api.aladhan.com/v1/timings/${Todaydate}?latitude=${latitude}&longitude=${longitude}&method=9`
     ),
-    fetch('https://api-scripture-iust-dev.herokuapp.com/v1/scripture/chapterMetaData/all')
+    fetch('http://35.154.192.23:5000/v1/scripture/chapterMetaData/all')
   ])
     .then(([timingsResponse, chaptersResponse]) => {
       return Promise.all([timingsResponse.json(), chaptersResponse.json()])

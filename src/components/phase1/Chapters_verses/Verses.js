@@ -7,7 +7,7 @@ import './Verses.css';
 import Backtotop from '../otherFiles/BacktoTop';
 
 const getVersesData = async (chapterId, author) => {
-  const response = await fetch(`http://35.154.192.23:5000/v1/scripture/quraan/get?language=en&author=${author}&text=uthmani&chapter=${chapterId}`);
+  const response = await fetch(`http://35.154.192.23:5000/v1/scripture/quraan/get?language=en&author=${author}&text=simple&chapter=${chapterId}`);
   return (await response.json())?.data
 }
 
@@ -84,15 +84,17 @@ const Verses = () => {
       {
         verseTranslations[0]?.map((verse, index) => (
           <div key={verse.verse} className='text'>
-            &nbsp;
-            {verse.chapter === 1 || verse.chapter === 9 || verse.verse !== 1 ? (
+            {verse.verse}
+
+            {verse.chapter === 1 || verse.chapter === 9 ? (
 
 
-              < div className='right'> {verse.data.text} ۝ </div>
+              < div className='right'> {verse.data.text} </div>
 
 
             ) : (
-              <div className='right'> {verse.data.text.slice(39)}۝ </div>
+
+              <div className='right'> {verse.data.text.slice(39)}  &nbsp;   </div>
 
             )}
             {showTranslation ? (
@@ -101,7 +103,7 @@ const Verses = () => {
                 {Object.entries(verseTranslations).map(([authorIndex, translation]) => {
                   return <div className='left' key={authors[authorIndex]}>
                     < br />
-                    ({verse.verse}). {translation[index].data.translation}
+                    ({verse.verse}) {translation[index].data.translation}
                     <br />
 
                     <h6> ({authors[authorIndex]})  </h6>
