@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Topbar.css';
-import logoo from "./quran1.png"
+// import logoo from "./quran1.png"
 
 const Topbar = () => {
   return (
@@ -30,9 +30,9 @@ const Topbar = () => {
               <li>
                 <Link to='/About'> <i className='iconn fa-solid fa-address-card'></i>About Us  </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to='/Hadith'> <i className='iconn fa-solid fa-book'></i>Hadith </Link>
-              </li>
+              </li> */}
               {/* <li>
                 <Link to='/names'><i className='fa-solid fa-list-ol'></i> Asma Ul husna </Link>
               </li> */}

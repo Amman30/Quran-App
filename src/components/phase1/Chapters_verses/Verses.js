@@ -56,7 +56,6 @@ const Verses = () => {
       setEnabledAuthors(authors => [...authors, index]);
     }
   }
-
   return loading ? (
     <Spinner />
   ) : (
@@ -81,6 +80,7 @@ const Verses = () => {
       </div>
       {verseTranslations[0][0].chapter !== 9 && <div className='bism'> ﷽ </div>}
       <br />
+
       {
         verseTranslations[0]?.map((verse, index) => (
           <div key={verse.verse} className='text'>
@@ -94,7 +94,17 @@ const Verses = () => {
 
             ) : (
 
-              <div className='right'> {verse.data.text.slice(39)}  &nbsp;   </div>
+
+              <div className='right'>
+                {verse.verse === 1 ? (<div>
+
+                  {verse.data.text.slice(39)}
+                </div>) : (<div>
+
+                  {verse.data.text}
+                </div>)}
+
+              </div>
 
             )}
             {showTranslation ? (
