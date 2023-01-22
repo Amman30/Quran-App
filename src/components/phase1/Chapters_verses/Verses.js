@@ -6,10 +6,8 @@ import Spinner from '../spinner/Spinner';
 import './Verses.css';
 import Backtotop from '../otherFiles/BacktoTop';
 
-const getVersesData = async (chapterId, author) => {
-  const response = await fetch(`http://35.154.192.23:5000/v1/scripture/quraan/get?language=en&author=${author}&text=simple&chapter=${chapterId}`);
-  return (await response.json())?.data
-}
+
+
 
 const Verses = () => {
   const navigate = useNavigate();
@@ -21,6 +19,18 @@ const Verses = () => {
   const [authors, setAuthors] = useState(["Ahmed Raza", "Ahmed Ali", "daryabadi", "sahih", "qaribullah", "shakir", "hilali", "mubarakpuri", "wahiduddin"]);
   const [enabledAuthors, setEnabledAuthors] = useState([0]);
   const [verseTranslations, setVerseTranslations] = useState({});
+  const [showAvailableTranslations, setShowAvailableTranslations] = useState(true);
+  const [languageTranslation, setLanguageTranslation] = useState(true);
+  const getVersesData = async (chapterId, author) => {
+
+    if (chapterId >= 1 && chapterId <= 114) {
+      const response = await fetch(`http://35.154.192.23:5000/v1/scripture/quraan/get?language=en&author=${author}&text=simple&chapter=${chapterId}`);
+      return (await response.json())?.data
+    }
+    else {
+      navigate("*")
+    }
+  }
 
   useEffect(async () => {
     setLoading(true);
@@ -60,12 +70,24 @@ const Verses = () => {
     <Spinner />
   ) : (
     <div className='verses'>
-      {authors.map((name, index) =>
-        <FormGroup key={name}>
-          <FormControlLabel control={<Checkbox checked={enabledAuthors.includes(index)} />} label={name} onChange={() => toggleAuthor(index)} disabled={index === 0} />
-        </FormGroup>
-      )}
+
+
       <div className='button'>
+        <div className="ToggleButton">
+          <button style={{ color: 'black' }} onClick={() => {
+            setShowAvailableTranslations(!showAvailableTranslations);
+            setTitle(!title);
+          }} type='button' className='btn btn-outline-info'    >
+            {`${title ? 'Close Available Translations' : 'Show Available translations'}`}
+          </button>
+          {authors.map((name, index) =>
+            showAvailableTranslations ?
+              null : <FormGroup key={name}>
+                <FormControlLabel control={<Checkbox checked={enabledAuthors.includes(index)} />} label={name} onChange={() => toggleAuthor(index)} disabled={index === 0} />
+              </FormGroup>
+          )}
+        </div>
+
         <button style={{ color: 'black' }} onClick={() => {
           setShowTranslation(!showTranslation);
           setTitle(!title);
@@ -76,6 +98,7 @@ const Verses = () => {
       <div>
       </div>
       <div className='surah'>
+
         <div key={chapters[0]._id}>سورة &nbsp; {chapters[0].arabicName}</div>
       </div>
       {verseTranslations[0][0].chapter !== 9 && <div className='bism'> ﷽ </div>}

@@ -39,6 +39,7 @@
 
 .button {
     text-align: left;
+    margin-left: 10px;
 }
 
 
@@ -53,6 +54,7 @@
         text-align: left;
         margin-left: -2px;
         padding: 5px 5px 35px 5px;
+        margin-top: 1px;
     }
 
     .right {

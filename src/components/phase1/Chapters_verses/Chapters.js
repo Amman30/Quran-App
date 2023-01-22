@@ -4,6 +4,7 @@ import { useQuery } from 'react-query'
 import './chapter.css'
 import Spinner from '../spinner/Spinner';
 import Backtotop from '../otherFiles/BacktoTop';
+import Button from '@mui/material/Button';
 
 const Todaydate = Math.floor(new Date().getTime() / 1000.0)
 
@@ -39,7 +40,7 @@ const fetchChaptersData = () => {
 }
 
 const Chapters = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const { isLoading, data } = useQuery('chaptersData', fetchChaptersData)
   const [keyword, setKeyword] = useState('')
   const Search = (e) => {
@@ -64,7 +65,7 @@ const Chapters = () => {
           {timings.date.hijri.year}
         </div>
         <div className='azaan'>
-          <div id="textt" className='azz'>Azaan Timings Today In Your Region(Local Time)  <Link style={{ color: "black" }} to="/contact">Issue?</Link></div>
+          <div id="textt" className='azz'>Azaan Timings Today In Your Region(Local Time) <Button variant='text' color='secondary' onClick={() => { navigate('/contact') }}>Issues?</Button></div>
           <div className='timing'> Fajr <span className='timings'>&nbsp; {timings.timings.Fajr}</span>
           </div>          <div className='timing'>  Dhuhr <span className='timings'>&nbsp; {timings.timings.Dhuhr}</span> </div>
           <div className='timing'>  Asr <span className='timings'>&nbsp; {timings.timings.Asr}</span>
