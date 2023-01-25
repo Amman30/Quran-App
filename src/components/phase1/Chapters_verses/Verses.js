@@ -24,7 +24,7 @@ const Verses = () => {
   const getVersesData = async (chapterId, author) => {
 
     if (chapterId >= 1 && chapterId <= 114) {
-      const response = await fetch(`http://35.154.192.23:5000/v1/scripture/quraan/get?language=en&author=${author}&text=simple&chapter=${chapterId}`);
+      const response = await fetch(`https://api.illustriousquran.com//v1/scripture/quraan/get?language=en&author=${author}&text=simple&chapter=${chapterId}`);
       return (await response.json())?.data
     }
     else {
