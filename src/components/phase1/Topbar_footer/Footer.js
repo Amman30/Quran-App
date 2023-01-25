@@ -18,6 +18,10 @@ const Footer = () => {
           <div className='legal'>
             <p>&copy; {year} All rights reserved.</p>
           </div>
+          <div className='credits'>
+
+            A Product of Department of Computer Science and Engineering, Islamic University of Science and Technology, Kashmir
+          </div>
         </footer>
       </div>
     </div>

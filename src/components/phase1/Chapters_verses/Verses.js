@@ -49,13 +49,14 @@ const Verses = () => {
 
   useEffect(() => {
     fetch(
-      `http://35.154.192.23:5000/v1/scripture/chapterMetaData/chapter/${params.id}`,
+      `https://api.illustriousquran.com/v1/scripture/chapterMetaData/chapter/${params.id}`,
     )
       .then(async (res) => {
         setChapters((await res.json()).data);
       })
       .catch((err) => {
         console.log('Error occured in first fetch call in Verses component ' + err);
+
       });
   }, [params.id, navigate]);
 
@@ -99,7 +100,7 @@ const Verses = () => {
       </div>
       <div className='surah'>
 
-        <div key={chapters[0]._id}>سورة &nbsp; {chapters[0].arabicName}</div>
+        <div key={chapters._id}>سورة &nbsp; {chapters.arabicName}</div>
       </div>
       {verseTranslations[0][0].chapter !== 9 && <div className='bism'> ﷽ </div>}
       <br />

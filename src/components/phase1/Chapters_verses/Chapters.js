@@ -39,6 +39,10 @@ const fetchChaptersData = () => {
   })
 }
 
+
+
+
+
 const Chapters = () => {
   const navigate = useNavigate();
   const { isLoading, data } = useQuery('chaptersData', fetchChaptersData)
@@ -110,7 +114,7 @@ const Chapters = () => {
         </div>
         {Object.keys(data).length > 0
           ? chapters.map((chapter) => (
-            <div key={chapter.chapter} className="link">
+            <div key={chapter.chapter} className="link" id='AMMAN'>
               <ol>
                 <h3>
                   <div className='box'>

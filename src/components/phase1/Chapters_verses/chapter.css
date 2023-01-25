@@ -83,8 +83,6 @@
 
 }
 
-
-
 .bismillah {
   margin-top: 80px;
 }
@@ -94,6 +92,34 @@
   transition: ease-in-out;
 
 }
+
+.outer {
+  display: flex;
+  flex-direction: row;
+}
+
+.bis,
+.ele,
+.input-group {
+  animation: slide-in-animation 1s ease-in-out;
+  animation-fill-mode: both;
+  visibility: hidden;
+}
+
+@keyframes slide-in-animation {
+  0% {
+    transform: translateY(350%);
+    visibility: hidden;
+  }
+
+  100% {
+    transform: translateX(0);
+    visibility: visible;
+  }
+}
+
+
+
 
 @media only screen and (max-width: 1000px) {
 

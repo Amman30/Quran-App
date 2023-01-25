@@ -1,15 +1,71 @@
-.about {
-  background-color: #066163;
-  color: white;
-
-}
-
-
-@media only screen and (max-width: 1000px) {
-
-  .about {
-    font-size: medium;
+@media only screen and (max-width: 900px) {
+  .outer {
+    display: flex;
+    flex-direction: row;
 
   }
 
+  .TEXTABC {
+    width: 350px;
+    font-size: medium;
+    color: #066163;
+  }
+
+  .privarcy {
+    width: 350px;
+    font-size: medium;
+    color: #066163;
+    font-size: medium;
+
+  }
+}
+
+/* --------- */
+@media only screen and (min-width: 1000px) {
+  .TEXTABC {
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #066163;
+    width: 640px;
+    text-align: left;
+    padding: 0 20px;
+    margin-left: 125px;
+    margin-right: 200px;
+
+
+  }
+
+  .privarcy {
+    text-align: center;
+    width: 380px;
+    padding: 30px 30px 30px 30px;
+    color: #066163;
+    font-weight: 300;
+    font-size: 20px;
+  }
+
+  .outer {
+    display: flex;
+    flex-direction: row;
+  }
+
+}
+
+.outer {
+  animation: slide-in-animation 1s ease-in-out;
+  animation-fill-mode: both;
+  visibility: hidden;
+}
+
+@keyframes slide-in-animation {
+  0% {
+    transform: translateY(-350%);
+    visibility: hidden;
+  }
+
+  100% {
+    transform: translateY(0);
+    visibility: visible;
+  }
 }
