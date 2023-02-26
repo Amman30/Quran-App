@@ -63,10 +63,10 @@
 
 }
 
-.BacktoTop {
+/* .BacktoTop {
   text-align: left;
   margin-left: 20px;
-}
+} */
 
 .link {
   min-height: 90px;
@@ -118,7 +118,10 @@
   }
 }
 
-
+.app.dark {
+  background-color: #333;
+  color: #fff;
+}
 
 
 @media only screen and (max-width: 1000px) {

@@ -1,17 +1,17 @@
-import React, { useEffect } from 'react';
-import ReactGa from 'react-ga';
-const View = () => {
-  useEffect(() => {
-    ReactGa.initialize('G-41FG5RD597 ');
 
-    ReactGa.pageview(window.location.pathname + window.location.search);
-  }, []);
+import React, { useState } from 'react';
+import Chapters from '../Chapters_verses/Chapters';
+
+const View = () => {
+  const [views, setViews] = useState(0);
+
 
   return (
     <div>
-      This page has {ReactGa.pageview(window.location.pathname + window.location.search)} views
+      {views}
     </div>
   );
-};
+}
 
 export default View;
+

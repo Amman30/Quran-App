@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-
+// import View from '../otherFiles/View';
 const Footer = () => {
   const d = new Date();
   const year = d.getFullYear();
@@ -19,7 +19,7 @@ const Footer = () => {
             <p>&copy; {year} All rights reserved.</p>
           </div>
           <div className='credits'>
-
+            {/* {View()} */}
             A Product of Department of Computer Science and Engineering, Islamic University of Science and Technology, Kashmir
           </div>
         </footer>

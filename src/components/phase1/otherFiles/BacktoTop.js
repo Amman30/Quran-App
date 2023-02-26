@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react';
 
-
+import { useNavigate, useParams } from 'react-router-dom';
 
 const Backtotop = () => {
-
+    const navigate = useNavigate();
+    const params = useParams()
     const [backtoTop, setBacktoTop] = useState(false);
+
+
+
 
     useEffect(() => {
         window.addEventListener("scroll", () => {
@@ -15,7 +19,12 @@ const Backtotop = () => {
                 setBacktoTop(false);
             }
         })
-    })
+
+
+
+
+
+    }, [])
 
     const scroll = () => {
         window.scrollTo({
@@ -30,14 +39,20 @@ const Backtotop = () => {
             {backtoTop && (<button style={{
                 position: "fixed",
                 bottom: "50px",
-                height: "50px",
+                height: "55px",
                 width: "50px",
                 fontSize: "50px"
 
             }} onClick={scroll}>
                 ^
             </button>)}
-        </div>
+
+
+            {/* --------- */}
+
+
+
+        </div >
     );
 }
 

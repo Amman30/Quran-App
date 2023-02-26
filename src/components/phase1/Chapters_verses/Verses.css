@@ -1,31 +1,7 @@
-.right {
-    margin-bottom: 30px;
-    text-align: right;
-    font-size: xx-large;
-    margin-left: 700px;
-    max-width: 601px;
-    cursor: pointer;
-
-}
-
-/* .num {
-    margin-top: -20px;
-    margin-left: 611px;
-
-} */
-
-.left {
-    margin-top: -6.3em;
-    margin-left: 100px;
-    font-size: x-large;
-    text-align: left;
-    width: 510px;
-    cursor: pointer;
-    padding: 5px 5px 5px 5px;
-}
-
 .divider {
-    margin-left: 560px;
+    /* margin-left: 560px; */
+    float: center;
+    margin-left: 720px;
 }
 
 .surah {
@@ -43,6 +19,30 @@
 }
 
 
+.text {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+
+.left,
+.right {
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+
+}
+
+.left {
+    margin-top: -33px;
+    float: left;
+    font-size: x-large;
+}
+
+.right {
+    float: right;
+    font-size: xx-large;
+}
 
 
 

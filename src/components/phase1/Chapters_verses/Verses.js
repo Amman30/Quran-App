@@ -9,18 +9,22 @@ import Backtotop from '../otherFiles/BacktoTop';
 
 
 
+
 const Verses = () => {
   const navigate = useNavigate();
   const params = useParams();
   const [loading, setLoading] = useState(true);
-  const [chapters, setChapters] = useState([]);
+  const [chapters, setChapters] = useState({});
   const [showTranslation, setShowTranslation] = useState(true);
   const [title, setTitle] = useState(false);
-  const [authors, setAuthors] = useState(["Ahmed Raza", "Ahmed Ali", "daryabadi", "sahih", "qaribullah", "shakir", "hilali", "mubarakpuri", "wahiduddin"]);
+  const [Translationtitle, setTranslationTitle] = useState(false);
+  const [authors, setAuthors] = useState(["Ahmed Ali", "Ahmed Raza", "daryabadi", "sahih", "qaribullah", "shakir", "hilali", "mubarakpuri", "wahiduddin"]);
   const [enabledAuthors, setEnabledAuthors] = useState([0]);
   const [verseTranslations, setVerseTranslations] = useState({});
   const [showAvailableTranslations, setShowAvailableTranslations] = useState(true);
-  const [languageTranslation, setLanguageTranslation] = useState(true);
+  const [disabled, setDisabled] = useState(false);
+  const [showButtons, setShowButtons] = useState(false);
+
   const getVersesData = async (chapterId, author) => {
 
     if (chapterId >= 1 && chapterId <= 114) {
@@ -44,6 +48,7 @@ const Verses = () => {
       })
       return newData;
     });
+
     setLoading(false);
   }, [enabledAuthors, authors, params.id]);
 
@@ -52,13 +57,29 @@ const Verses = () => {
       `https://api.illustriousquran.com/v1/scripture/chapterMetaData/chapter/${params.id}`,
     )
       .then(async (res) => {
-        setChapters((await res.json()).data);
+        setChapters((await res.json()).data)
       })
       .catch((err) => {
         console.log('Error occured in first fetch call in Verses component ' + err);
 
       });
+
   }, [params.id, navigate]);
+
+
+  useEffect(() => {
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 150) {
+        setShowButtons(true)
+      }
+      else {
+        setShowButtons(false);
+      }
+    })
+
+  }, [])
+
 
   const toggleAuthor = index => {
     if (enabledAuthors.includes(index)) {
@@ -67,19 +88,46 @@ const Verses = () => {
       setEnabledAuthors(authors => [...authors, index]);
     }
   }
+  const disableButton = () => {
+
+    setDisabled(prevDisabled => !prevDisabled);
+
+  }
+
+  const perviousPageButton = () => {
+    if (params.id > 1 && params.id <= 113) {
+      navigate(`/${--(params.id)}`)
+    }
+    else {
+      setShowButtons(prevDisabled => !prevDisabled)
+    }
+
+  }
+
+  const NextPageButton = () => {
+    if (params.id >= 1 && params.id <= 113) {
+      navigate(`/${++(params.id)}`)
+    }
+    else {
+      setShowButtons(prevDisabled => !prevDisabled)
+    }
+
+  }
+
+
+
   return loading ? (
     <Spinner />
   ) : (
     <div className='verses'>
-
-
       <div className='button'>
-        <div className="ToggleButton">
-          <button style={{ color: 'black' }} onClick={() => {
+        <div className="ToggleButton" >
+          <button disabled={disabled} style={{ color: 'black' }} onClick={() => {
             setShowAvailableTranslations(!showAvailableTranslations);
-            setTitle(!title);
+            setTranslationTitle(!Translationtitle);
+
           }} type='button' className='btn btn-outline-info'    >
-            {`${title ? 'Close Available Translations' : 'Show Available translations'}`}
+            {`${Translationtitle ? 'Close Available Translations' : 'Show Available translations'}`}
           </button>
           {authors.map((name, index) =>
             showAvailableTranslations ?
@@ -91,6 +139,7 @@ const Verses = () => {
 
         <button style={{ color: 'black' }} onClick={() => {
           setShowTranslation(!showTranslation);
+          disableButton();
           setTitle(!title);
         }} type='button' className='btn btn-outline-info'    >
           {`${title ? 'Read With Translation' : 'Read Without Translation'}`}
@@ -100,15 +149,52 @@ const Verses = () => {
       </div>
       <div className='surah'>
 
-        <div key={chapters._id}>سورة &nbsp; {chapters.arabicName}</div>
+        <div key={verseTranslations[0][0]._id}>سورة &nbsp; {chapters[0].arabicName}</div>
+
       </div>
-      {verseTranslations[0][0].chapter !== 9 && <div className='bism'> ﷽ </div>}
+      {
+        verseTranslations[0][0].chapter !== 9 ? (<div className='bism'> ﷽ </div>) : null
+      }
       <br />
+
+      {showButtons && (<button style={{
+        position: "fixed",
+        bottom: "50px",
+        height: "55px",
+        width: "85px",
+        left: "630px",
+        fontSize: "15px"
+
+      }} onClick={() => {
+        perviousPageButton()
+
+
+      }}>
+        Pervious Chapter
+      </button>)}
+      {/* ---------------- */}
+
+      {showButtons && (<button style={{
+        position: "fixed",
+        bottom: "50px",
+        right: "580px",
+        height: "55px",
+        width: "85px",
+        fontSize: "15px"
+
+      }} onClick={() => {
+        NextPageButton()
+      }
+
+      } >
+        Next Chapter
+      </button>)
+      }
 
       {
         verseTranslations[0]?.map((verse, index) => (
           <div key={verse.verse} className='text'>
-            {verse.verse}
+
 
             {verse.chapter === 1 || verse.chapter === 9 ? (
 
@@ -142,7 +228,7 @@ const Verses = () => {
 
                     <h6> ({authors[authorIndex]})  </h6>
                     <br />
-                    <hr className='divider' style={{ height: "100px", width: "1px" }} color='green' />
+                    <hr className='divider' style={{ height: "200px", width: "1px" }} color='green' />
                   </div>
 
                 })}
@@ -154,6 +240,7 @@ const Verses = () => {
           </div>
         ))
       }
+
       <Backtotop />
 
     </div >
