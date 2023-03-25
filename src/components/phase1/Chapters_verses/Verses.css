@@ -1,15 +1,8 @@
-.divider {
-    /* margin-left: 560px; */
-    float: center;
-    margin-left: 720px;
-}
-
 .surah {
     font-size: xxx-large;
 }
 
 .bism {
-    margin-bottom: 40px;
     font-size: xx-large;
 }
 
@@ -27,22 +20,26 @@
 
 .left,
 .right {
-    display: inline-block;
     width: 45%;
-    vertical-align: top;
 
 }
 
 .left {
+    margin-left: 45px;
+    text-align: left;
+    align-items: left;
     margin-top: -33px;
-    float: left;
     font-size: x-large;
 }
 
 .right {
     float: right;
+    margin-right: 45px;
+    text-align: right;
+    align-items: right;
     font-size: xx-large;
 }
+
 
 
 
@@ -66,5 +63,13 @@
 
     .divider {
         display: none;
+    }
+
+    .Lbutton {
+        margin-left: -470px;
+    }
+
+    .Rbutton {
+        margin-right: -470px;
     }
 }

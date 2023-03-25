@@ -5,6 +5,8 @@ import { useParams, useNavigate } from 'react-router-dom';
 import Spinner from '../spinner/Spinner';
 import './Verses.css';
 import Backtotop from '../otherFiles/BacktoTop';
+import ArrowCircleLeftSharpIcon from '@mui/icons-material/ArrowCircleLeftSharp';
+import ArrowCircleRightSharpIcon from '@mui/icons-material/ArrowCircleRightSharp';
 
 
 
@@ -153,42 +155,41 @@ const Verses = () => {
 
       </div>
       {
-        verseTranslations[0][0].chapter !== 9 ? (<div className='bism'> ﷽ </div>) : null
+        verseTranslations[0][0].chapter !== 9 && verseTranslations[0][0].chapter !== 1 ? (<div className='bism'> ﷽ </div>) : null
       }
       <br />
 
-      {showButtons && (<button style={{
+      {showButtons && (<ArrowCircleLeftSharpIcon className='Lbutton' style={{
         position: "fixed",
         bottom: "50px",
         height: "55px",
         width: "85px",
         left: "630px",
-        fontSize: "15px"
+        fontSize: "15px",
+        cursor: "pointer"
 
       }} onClick={() => {
         perviousPageButton()
 
 
-      }}>
-        Pervious Chapter
-      </button>)}
-      {/* ---------------- */}
+      }} />)}
 
-      {showButtons && (<button style={{
+
+
+      {showButtons && (<ArrowCircleRightSharpIcon className='Rbutton' style={{
         position: "fixed",
         bottom: "50px",
         right: "580px",
         height: "55px",
         width: "85px",
-        fontSize: "15px"
+        fontSize: "15px",
+        cursor: "pointer"
 
       }} onClick={() => {
         NextPageButton()
       }
 
-      } >
-        Next Chapter
-      </button>)
+      } />)
       }
 
       {
@@ -228,11 +229,11 @@ const Verses = () => {
 
                     <h6> ({authors[authorIndex]})  </h6>
                     <br />
-                    <hr className='divider' style={{ height: "200px", width: "1px" }} color='green' />
+
                   </div>
 
                 })}
-
+                <hr className='divider' style={{ height: "200px", width: "1px" }} color='green' />
 
               </>
             ) : null}

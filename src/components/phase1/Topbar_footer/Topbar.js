@@ -26,7 +26,7 @@ const Topbar = () => {
               <span className='line line3'></span>
             </div>
             <div className='logo'>
-              <h1>Quran</h1>
+              <h1><Link style={{ color: "black" }} to="/">ILLUSTRIOUS QURAN</Link></h1>
 
             </div>
 
@@ -50,12 +50,12 @@ const Topbar = () => {
               <li className="litag" onClick={handleClick}>
                 <Link to='/contact'> <i className='fa-solid fa-address-book'></i>Contact  </Link>
               </li>
-              <li className="litag" onClick={handleClick}>
+              {/* <li className="litag" onClick={handleClick}>
                 <Link to='/duas'><i className='iconn fa-solid fa-hands-praying'></i>Dua's(soon)  </Link>
               </li>
               <li className="litag" onClick={handleClick}>
                 <Link to='/audios'>  <i className='iconn fa-solid fa-circle-play'></i>Audios(soon) </Link>
-              </li>
+              </li> */}
 
             </div>
 

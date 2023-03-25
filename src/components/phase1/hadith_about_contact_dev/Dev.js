@@ -8,7 +8,7 @@ const Dev = () => {
         <h2>{props.name}</h2>
         <h2>{props.contribution}</h2>
       </div>
-    );
+    )
   }
   return (
     <div className='dev1'>
@@ -79,39 +79,6 @@ const Dev = () => {
 
       <hr />
       <br />
-      <h3>Also a Part of Project </h3>
-      <br />  <br />
-      <div className='otherDev'>
-
-        <h4>Zaid Rafi Dento</h4>
-        <h4>Developer</h4>
-        <h4>
-          Student , Department of CSE &nbsp;
-          <br />
-          {
-            <a href='https://github.com/dento65'>
-              <i className='icon fa-brands fa-github'></i>
-            </a>
-          }
-        </h4>
-
-      </div>
-      <div className='otherDev'>
-
-        <h4>Syed Hamza Kamili</h4>
-
-        <h4>Project Management</h4>
-
-        <h4>
-          Student , Department of CSE &nbsp;
-          <br />
-          {
-            <a href='https://github.com/Hamzahkamili'>
-              <i className='icon fa-brands fa-github'></i>
-            </a>
-          }
-        </h4>
-      </div>
     </div>
   );
 };

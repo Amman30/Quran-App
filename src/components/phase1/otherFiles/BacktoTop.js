@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import ArrowCircleUpSharpIcon from '@mui/icons-material/ArrowCircleUpSharp';
 
-import { useNavigate, useParams } from 'react-router-dom';
+
 
 const Backtotop = () => {
-    const navigate = useNavigate();
-    const params = useParams()
+
     const [backtoTop, setBacktoTop] = useState(false);
 
 
@@ -20,10 +20,6 @@ const Backtotop = () => {
             }
         })
 
-
-
-
-
     }, [])
 
     const scroll = () => {
@@ -36,22 +32,17 @@ const Backtotop = () => {
 
     return (
         <div>
-            {backtoTop && (<button style={{
+            {backtoTop && (<ArrowCircleUpSharpIcon style={{
                 position: "fixed",
                 bottom: "50px",
                 height: "55px",
                 width: "50px",
-                fontSize: "50px"
+                fontSize: "50px",
+                cursor: "pointer"
 
-            }} onClick={scroll}>
-                ^
-            </button>)}
+            }} onClick={scroll} />
 
-
-            {/* --------- */}
-
-
-
+            )}
         </div >
     );
 }
